@@ -1,0 +1,177 @@
+.container {
+    display: flex;
+    height: 85vh;
+    /* border: 2px solid red */
+}
+
+.displayNone {
+    display: none;
+}
+
+.visibleHide {
+    visibility: hidden;
+    width: 40%;
+}
+
+.visibleHide img {
+    display: none;
+}
+
+.imgContainer,
+.lightImgContainer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    /* border: 2px solid green; */
+    margin: 0 5rem;
+}
+
+.imgContainer img,
+.lightImgContainer img {
+    max-width: 40vw;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+.introduction {
+    display: flex;
+    align-items: flex-end;
+    font-size: 1.8rem;
+    color: #ffb300;
+    padding: 0 0 20vh 0;
+}
+
+.lightIntroduction {
+    display: flex;
+    align-items: flex-end;
+    font-size: 1.8rem;
+    color: #112240;
+    padding: 0 0 20vh 0;
+    font-weight: bold;
+}
+
+/* For Tablet View */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .container{
+        height: auto;
+        margin-top: 5rem;
+    }
+    .imgContainer, .lightImgContainer{
+        margin: 0;
+    }
+    .introduction, .lightIntroduction{
+        font-size: 1.1rem;
+        padding-bottom: 2rem;
+    }
+    .imgContainer img, .lightImgContainer img{
+        max-width: 50vw;
+    }
+}
+
+/* For Mobile Portrait View */
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+    .container{
+        height: auto;
+        margin-top: 5rem;
+    }
+    .imgContainer, .lightImgContainer{
+        margin: 0;
+    }
+    .introduction, .lightIntroduction{
+        font-size: 1.1rem;
+        padding-bottom: 2rem;
+    }
+    .imgContainer img, .lightImgContainer img{
+        max-width: 50vw;
+    }
+}
+
+/* For Mobile Landscape View */
+@media screen and (max-device-width: 640px) and (orientation: landscape) {
+    .container{
+        height: auto;
+        margin-top: 5rem;
+    }
+    .imgContainer, .lightImgContainer{
+        margin: 0;
+    }
+    .introduction, .lightIntroduction{
+        font-size: 1.1rem;
+        padding-bottom: 2rem;
+    }
+    .imgContainer img, .lightImgContainer img{
+        max-width: 50vw;
+    }
+}
+
+/* For Mobile Phones Portrait or Landscape View */
+@media screen and (max-device-width: 640px) {
+    .container{
+        height: auto;
+        margin-top: 5rem;
+    }
+    .imgContainer, .lightImgContainer{
+        margin: 0;
+    }
+    .introduction, .lightIntroduction{
+        font-size: 1.1rem;
+        padding-bottom: 2rem;
+    }
+    .imgContainer img, .lightImgContainer img{
+        max-width: 50vw;
+    }
+}
+
+/* For iPhone 4 Portrait or Landscape View */
+@media screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+    .container{
+        height: auto;
+        margin-top: 5rem;
+    }
+    .imgContainer, .lightImgContainer{
+        margin: 0;
+    }
+    .introduction, .lightIntroduction{
+        font-size: 1.1rem;
+        padding-bottom: 2rem;
+    }
+    .imgContainer img, .lightImgContainer img{
+        max-width: 50vw;
+    }
+}
+
+/* For iPhone 5 Portrait or Landscape View */
+@media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+    .container{
+        height: auto;
+        margin-top: 5rem;
+    }
+    .imgContainer, .lightImgContainer{
+        margin: 0;
+    }
+    .introduction, .lightIntroduction{
+        font-size: 1.1rem;
+        padding-bottom: 2rem;
+    }
+    .imgContainer img, .lightImgContainer img{
+        max-width: 50vw;
+    }
+}
+
+/* For iPhone 6 and 6 plus Portrait or Landscape View */
+@media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3) {
+    .container{
+        height: auto;
+        margin-top: 5rem;
+    }
+    .imgContainer, .lightImgContainer{
+        margin: 0;
+    }
+    .introduction, .lightIntroduction{
+        font-size: 1.1rem;
+        padding-bottom: 2rem;
+    }
+    .imgContainer img, .lightImgContainer img{
+        max-width: 50vw;
+    }
+}

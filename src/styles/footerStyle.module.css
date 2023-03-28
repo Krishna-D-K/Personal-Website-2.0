@@ -1,0 +1,160 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.copyright {
+    color: aliceblue;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0.5rem 0;
+}
+.copyright a{
+    color: #3eb0ef;
+    font-size: 1rem
+}
+
+.lightCopyright {
+    color: #242b8f;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0.5rem 0;
+}
+.lightCopyright a{
+    color: #3eb0ef;
+    font-size: 1rem
+}
+
+.social {
+    display: flex;
+    width: 30%;
+    justify-content: space-evenly;
+    color: aliceblue;
+    margin: 0.5rem 0 0 0;
+}
+
+.social a {
+    font-size: 1.2rem;
+}
+
+/* For Tablet View */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .copyright, .lightCopyright{
+        font-size: 0.8rem;
+    }
+    .copyright a, .lightCopyright a{
+        font-size: 0.6rem;
+    }
+    .social{
+        width: 60vw;
+        justify-content: space-around;
+    }
+    .social a{
+        font-size: 0.8rem;
+    }
+}
+
+/* For Mobile Portrait View */
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+    .copyright, .lightCopyright{
+        font-size: 0.8rem;
+    }
+    .copyright a, .lightCopyright a{
+        font-size: 0.6rem;
+    }
+    .social{
+        width: 60vw;
+        justify-content: space-around;
+    }
+    .social a{
+        font-size: 0.8rem;
+    }
+}
+
+/* For Mobile Landscape View */
+@media screen and (max-device-width: 640px) and (orientation: landscape) {
+    .copyright, .lightCopyright{
+        font-size: 0.8rem;
+    }
+    .copyright a, .lightCopyright a{
+        font-size: 0.6rem;
+    }
+    .social{
+        width: 60vw;
+        justify-content: space-around;
+    }
+    .social a{
+        font-size: 0.8rem;
+    }
+}
+
+/* For Mobile Phones Portrait or Landscape View */
+@media screen and (max-device-width: 640px) {
+    .copyright, .lightCopyright{
+        font-size: 0.8rem;
+    }
+    .copyright a, .lightCopyright a{
+        font-size: 0.6rem;
+    }
+    .social{
+        width: 60vw;
+        justify-content: space-around;
+    }
+    .social a{
+        font-size: 0.8rem;
+    }
+}
+
+/* For iPhone 4 Portrait or Landscape View */
+@media screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+    .copyright, .lightCopyright{
+        font-size: 0.8rem;
+    }
+    .copyright a, .lightCopyright a{
+        font-size: 0.6rem;
+    }
+    .social{
+        width: 60vw;
+        justify-content: space-around;
+    }
+    .social a{
+        font-size: 0.8rem;
+    }
+}
+
+/* For iPhone 5 Portrait or Landscape View */
+@media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+    .copyright, .lightCopyright{
+        font-size: 0.8rem;
+    }
+    .copyright a, .lightCopyright a{
+        font-size: 0.6rem;
+    }
+    .social{
+        width: 60vw;
+        justify-content: space-around;
+    }
+    .social a{
+        font-size: 0.8rem;
+    }
+}
+
+/* For iPhone 6 and 6 plus Portrait or Landscape View */
+@media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3) {
+    .copyright, .lightCopyright{
+        font-size: 0.8rem;
+    }
+    .copyright a, .lightCopyright a{
+        font-size: 0.6rem;
+    }
+    .social{
+        width: 60vw;
+        justify-content: space-around;
+    }
+    .social a{
+        font-size: 0.8rem;
+    }
+}

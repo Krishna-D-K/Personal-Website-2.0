@@ -1,0 +1,522 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.lightContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.container h1 {
+    color: aliceblue;
+}
+
+.projectLeft {
+    display: flex;
+    width: 90%;
+    justify-content: flex-start;
+    /* border: 2px solid pink; */
+    margin: 2rem auto;
+}
+
+.projectRight {
+    display: flex;
+    width: 90%;
+    justify-content: flex-end;
+    /* border: 2px solid pink; */
+    margin: 2rem auto;
+}
+
+.projectPreview {
+    width: auto;
+    height: 50vh;
+    /* border: 2px solid green; */
+    opacity: 0.7;
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-delay: 0;
+    transition-timing-function: ease-out;
+}
+
+.lightProjectPreview {
+    width: auto;
+    height: 50vh;
+    /* border: 2px solid green; */
+    opacity: 0.9;
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-delay: 0;
+    transition-timing-function: ease-out;
+}
+
+.projectPreview:hover,
+.lightProjectPreview:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.projectPreview img,
+.lightProjectPreview img {
+    border-radius: 0.8rem;
+}
+
+.projectInfo,
+.lightProjectInfo {
+    width: 30%;
+    /* border: 2px solid red; */
+}
+
+.featured {
+    color: #64ffda;
+    font-family: SF Mono, Fira Code, Fira Mono, Roboto Mono, monospace;
+}
+
+.lightFeatured {
+    color: #6f009b;
+    font-family: SF Mono, Fira Code, Fira Mono, Roboto Mono, monospace;
+}
+
+.projectInfo h1 {
+    color: #ccd6f6;
+    margin: 0.4rem 0;
+}
+
+.lightProjectInfo h1 {
+    color: rgb(17, 34, 64);
+    margin: 0.4rem 0;
+}
+
+.rightDescription {
+    width: 120%;
+    position: relative;
+    right: 5rem;
+    font-size: 1rem;
+    margin: 2rem 0;
+    z-index: 2;
+}
+
+.leftDescription {
+    width: 120%;
+    position: relative;
+    left: 0rem;
+    font-size: 1rem;
+    margin: 2rem 0;
+    z-index: 2;
+}
+
+.stack,
+.lightStack {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.stack span {
+    color: #a8b2d1;
+    font-family: SF Mono, Fira Code, Fira Mono, Roboto Mono, monospace;
+}
+
+.lightStack span {
+    color: rgb(83, 83, 83);
+    font-family: SF Mono, Fira Code, Fira Mono, Roboto Mono, monospace;
+}
+
+.links,
+.lightLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.links a {
+    color: #a8b2d1;
+    margin: 0 1rem;
+    font-size: 1.2rem;
+}
+
+.lightLinks a {
+    color: rgb(83, 83, 83);
+    margin: 0 1rem;
+    font-size: 1.2rem;
+}
+
+.links a:hover {
+    color: #64ffda
+}
+
+.lightLinks a:hover {
+    color: #6f009b;
+}
+
+/* For Tablet View */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .container h1, .lightContainer h1{
+        font-size: 1.3rem;
+    }
+    .projectRight, .projectLeft{
+        display: flex;
+        flex-direction: column;
+    }
+    .projectPreview, .lightProjectPreview{
+        height: auto;
+        margin: 0 0 2rem 0;
+    }
+    .projectInfo h1, .lightProjectInfo h1{
+        margin-top: 0.2rem;
+    }
+    .projectInfo, .lightProjectInfo{
+        width: 99%
+    }
+    .rightDescription, .leftDescription{
+        width: 100%;
+        position: static;
+        margin: 0 auto 0.5rem auto;
+    }
+}
+
+/* For Mobile Portrait View */
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+    .container h1, .lightContainer h1{
+        font-size: 1.3rem;
+    }
+    .projectRight, .projectLeft{
+        display: flex;
+        flex-direction: column;
+    }
+    .projectPreview, .lightProjectPreview{
+        height: auto;
+        margin: 0 0 2rem 0;
+    }
+    .projectInfo h1, .lightProjectInfo h1{
+        margin-top: 0.2rem;
+    }
+    .projectInfo, .lightProjectInfo{
+        width: 99%
+    }
+    .rightDescription, .leftDescription{
+        width: 100%;
+        position: static;
+        margin: 0 auto 0.5rem auto;
+    }
+}
+
+/* For Mobile Landscape View */
+@media screen and (max-device-width: 640px) and (orientation: landscape) {
+    .container h1, .lightContainer h1{
+        font-size: 1.3rem;
+    }
+    .projectRight, .projectLeft{
+        display: flex;
+        flex-direction: column;
+    }
+    .projectPreview, .lightProjectPreview{
+        height: auto;
+        margin: 0 0 2rem 0;
+    }
+    .projectInfo h1, .lightProjectInfo h1{
+        margin-top: 0.2rem;
+    }
+    .projectInfo, .lightProjectInfo{
+        width: 99%
+    }
+    .rightDescription, .leftDescription{
+        width: 100%;
+        position: static;
+        margin: 0 auto 0.5rem auto;
+    }
+}
+
+/* For Mobile Phones Portrait or Landscape View */
+@media screen and (max-device-width: 640px) {
+    .container h1, .lightContainer h1{
+        font-size: 1.3rem;
+    }
+    .projectRight, .projectLeft{
+        display: flex;
+        flex-direction: column;
+    }
+    .projectPreview, .lightProjectPreview{
+        height: auto;
+        margin: 0 0 2rem 0;
+    }
+    .projectInfo h1, .lightProjectInfo h1{
+        margin-top: 0.2rem;
+    }
+    .projectInfo, .lightProjectInfo{
+        width: 99%
+    }
+    .rightDescription, .leftDescription{
+        width: 100%;
+        position: static;
+        margin: 0 auto 0.5rem auto;
+    }
+}
+
+/* For iPhone 4 Portrait or Landscape View */
+@media screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+    .container h1, .lightContainer h1{
+        font-size: 1.3rem;
+    }
+    .projectRight, .projectLeft{
+        display: flex;
+        flex-direction: column;
+    }
+    .projectPreview, .lightProjectPreview{
+        height: auto;
+        margin: 0 0 2rem 0;
+    }
+    .projectInfo h1, .lightProjectInfo h1{
+        margin-top: 0.2rem;
+    }
+    .projectInfo, .lightProjectInfo{
+        width: 99%
+    }
+    .rightDescription, .leftDescription{
+        width: 100%;
+        position: static;
+        margin: 0 auto 0.5rem auto;
+    }
+}
+
+/* For iPhone 5 Portrait or Landscape View */
+@media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+    .container h1, .lightContainer h1{
+        font-size: 1.3rem;
+    }
+    .projectRight, .projectLeft{
+        display: flex;
+        flex-direction: column;
+    }
+    .projectPreview, .lightProjectPreview{
+        height: auto;
+        margin: 0 0 2rem 0;
+    }
+    .projectInfo h1, .lightProjectInfo h1{
+        margin-top: 0.2rem;
+    }
+    .projectInfo, .lightProjectInfo{
+        width: 99%
+    }
+    .rightDescription, .leftDescription{
+        width: 100%;
+        position: static;
+        margin: 0 auto 0.5rem auto;
+    }
+}
+
+/* For iPhone 6 and 6 plus Portrait or Landscape View */
+@media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3) {
+    .container h1, .lightContainer h1{
+        font-size: 1.3rem;
+    }
+    .projectRight, .projectLeft{
+        display: flex;
+        flex-direction: column;
+    }
+    .projectPreview, .lightProjectPreview{
+        height: auto;
+        margin: 0 0 2rem 0;
+    }
+    .projectInfo h1, .lightProjectInfo h1{
+        margin-top: 0.2rem;
+    }
+    .projectInfo, .lightProjectInfo{
+        width: 99%
+    }
+    .rightDescription, .leftDescription{
+        width: 100%;
+        position: static;
+        margin: 0 auto 0.5rem auto;
+    }
+}
+
+/* For Tablet View */
+/* @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .container h1, .lightContainer h1{
+        font-size: 1.3rem;
+    }
+    .projectRight, .projectLeft{
+        display: flex;
+        flex-direction: column;
+    }
+    .projectPreview, .lightProjectPreview{
+        height: auto;
+        margin: 0 0 2rem 0;
+    }
+    .projectInfo h1, .lightProjectInfo h1{
+        margin-top: 0.2rem;
+    }
+    .projectInfo, .lightProjectInfo{
+        width: 99%
+    }
+    .rightDescription, .leftDescription{
+        width: 100%;
+        position: static;
+        margin: 0 auto 0.5rem auto;
+    }
+} */
+
+/* For Mobile Portrait View */
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+    .container h1, .lightContainer h1{
+        font-size: 1.3rem;
+    }
+    .projectRight, .projectLeft{
+        display: flex;
+        flex-direction: column;
+    }
+    .projectPreview, .lightProjectPreview{
+        height: auto;
+        margin: 0 0 2rem 0;
+    }
+    .projectInfo h1, .lightProjectInfo h1{
+        margin-top: 0.2rem;
+    }
+    .projectInfo, .lightProjectInfo{
+        width: 99%
+    }
+    .rightDescription, .leftDescription{
+        width: 100%;
+        position: static;
+        margin: 0 auto 0.5rem auto;
+    }
+}
+
+/* For Mobile Landscape View */
+@media screen and (max-device-width: 640px) and (orientation: landscape) {
+    .container h1, .lightContainer h1{
+        font-size: 1.3rem;
+    }
+    .projectRight, .projectLeft{
+        display: flex;
+        flex-direction: column;
+    }
+    .projectPreview, .lightProjectPreview{
+        height: auto;
+        margin: 0 0 2rem 0;
+    }
+    .projectInfo h1, .lightProjectInfo h1{
+        margin-top: 0.2rem;
+    }
+    .projectInfo, .lightProjectInfo{
+        width: 99%
+    }
+    .rightDescription, .leftDescription{
+        width: 100%;
+        position: static;
+        margin: 0 auto 0.5rem auto;
+    }
+}
+
+/* For Mobile Phones Portrait or Landscape View */
+@media screen and (max-device-width: 640px) {
+    .container h1, .lightContainer h1{
+        font-size: 1.3rem;
+    }
+    .projectRight, .projectLeft{
+        display: flex;
+        flex-direction: column;
+    }
+    .projectPreview, .lightProjectPreview{
+        height: auto;
+        margin: 0 0 2rem 0;
+    }
+    .projectInfo h1, .lightProjectInfo h1{
+        margin-top: 0.2rem;
+    }
+    .projectInfo, .lightProjectInfo{
+        width: 99%
+    }
+    .rightDescription, .leftDescription{
+        width: 100%;
+        position: static;
+        margin: 0 auto 0.5rem auto;
+    }
+}
+
+/* For iPhone 4 Portrait or Landscape View */
+@media screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+    .container h1, .lightContainer h1{
+        font-size: 1.3rem;
+    }
+    .projectRight, .projectLeft{
+        display: flex;
+        flex-direction: column;
+    }
+    .projectPreview, .lightProjectPreview{
+        height: auto;
+        margin: 0 0 2rem 0;
+    }
+    .projectInfo h1, .lightProjectInfo h1{
+        margin-top: 0.2rem;
+    }
+    .projectInfo, .lightProjectInfo{
+        width: 99%
+    }
+    .rightDescription, .leftDescription{
+        width: 100%;
+        position: static;
+        margin: 0 auto 0.5rem auto;
+    }
+}
+
+/* For iPhone 5 Portrait or Landscape View */
+@media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+    .container h1, .lightContainer h1{
+        font-size: 1.3rem;
+    }
+    .projectRight, .projectLeft{
+        display: flex;
+        flex-direction: column;
+    }
+    .projectPreview, .lightProjectPreview{
+        height: auto;
+        margin: 0 0 2rem 0;
+    }
+    .projectInfo h1, .lightProjectInfo h1{
+        margin-top: 0.2rem;
+    }
+    .projectInfo, .lightProjectInfo{
+        width: 99%
+    }
+    .rightDescription, .leftDescription{
+        width: 100%;
+        position: static;
+        margin: 0 auto 0.5rem auto;
+    }
+}
+
+/* For iPhone 6 and 6 plus Portrait or Landscape View */
+@media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3) {
+    .container h1, .lightContainer h1{
+        font-size: 1.3rem;
+    }
+    .projectRight, .projectLeft{
+        display: flex;
+        flex-direction: column;
+    }
+    .projectPreview, .lightProjectPreview{
+        height: auto;
+        margin: 0 0 2rem 0;
+    }
+    .projectInfo h1, .lightProjectInfo h1{
+        margin-top: 0.2rem;
+    }
+    .projectInfo, .lightProjectInfo{
+        width: 99%
+    }
+    .rightDescription, .leftDescription{
+        width: 100%;
+        position: static;
+        margin: 0 auto 0.5rem auto;
+    }
+}

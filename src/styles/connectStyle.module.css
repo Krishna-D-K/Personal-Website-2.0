@@ -1,0 +1,481 @@
+.container {
+    background-color: #0e24397a;
+    padding: 1rem 0;
+}
+
+.lightContainer {
+    background: rgb(157, 151, 255);
+    background: linear-gradient(157deg, rgba(157, 151, 255, 1) 0%, rgba(71, 71, 226, 1) 21%, rgba(156, 10, 141, 1) 100%);
+    padding: 1rem 0;
+}
+
+.message {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.2rem;
+    color: azure;
+}
+
+.formGroup,
+.lightFormGroup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+    width: 60%;
+}
+
+.formGroup span,
+.lightFormGroup span {
+    display: flex;
+    width: 89%;
+    justify-content: space-around;
+}
+
+.formGroup>span>input {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    border: 0.5px solid azure;
+    border-radius: 0.4rem;
+    padding: 0.4rem;
+    color: azure;
+    font-size: 1.2rem;
+    width: 40%;
+    margin: 0.5rem auto;
+}
+
+.lightFormGroup>span>input {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    border: 0.5px solid azure;
+    border-radius: 0.4rem;
+    padding: 0.4rem;
+    color: azure;
+    font-size: 1.2rem;
+    width: 40%;
+    margin: 0.5rem auto;
+}
+
+.formGroup input {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    border: 0.5px solid azure;
+    border-radius: 0.4rem;
+    padding: 0.4rem;
+    color: azure;
+    font-size: 1.2rem;
+    margin: 0.5rem;
+    height: 5vh;
+    width: 20vw;
+}
+
+.lightFormGroup input {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    border: 0.5px solid azure;
+    border-radius: 0.4rem;
+    padding: 0.4rem;
+    color: azure;
+    font-size: 1.2rem;
+    margin: 0.5rem;
+    height: 5vh;
+    width: 20vw;
+}
+
+.lightFormGroup ::placeholder {
+    color: gainsboro;
+}
+
+#subject {
+    width: 80%;
+}
+
+#message {
+    display: flex;
+    align-items: flex-start;
+    width: 80%;
+    height: 30vh;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    border: 0.5px solid azure;
+    border-radius: 0.4rem;
+    padding: 0.4rem;
+    color: azure;
+    font-size: 1.2rem;
+    margin: 0.5rem;
+    font-family: 'Roboto Flex', sans-serif;
+    resize: vertical;
+}
+
+#buttons {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    width: 80%;
+    margin: 0.5rem 0;
+}
+
+#submitButton {
+    background-color: #3eb0ef;
+    border: 1px solid #3eb0ef;
+    color: azure;
+    font-size: 1.2rem;
+    padding: 0.2rem 0.8rem;
+    border-radius: 0.3rem;
+    margin-right: 1.5rem;
+}
+
+#lightSubmitButton {
+    background-color: #3e4aef;
+    border: 1px solid #3e4aef;
+    color: azure;
+    font-size: 1.2rem;
+    padding: 0.2rem 0.8rem;
+    border-radius: 0.3rem;
+    margin-right: 1.5rem;
+}
+
+#resetButton {
+    background-color: transparent;
+    border: 1px solid #3eb0ef;
+    color: #3eb0ef;
+    font-size: 1.2rem;
+    padding: 0.2rem 0.8rem;
+    border-radius: 0.3rem;
+    margin-right: 1.5rem;
+}
+
+#lightResetButton {
+    background-color: transparent;
+    border: 1px solid #242b8f;
+    color: #242b8f;
+    font-size: 1.2rem;
+    padding: 0.2rem 0.8rem;
+    border-radius: 0.3rem;
+    margin-right: 1.5rem;
+}
+
+#submitButton:hover {
+    cursor: pointer;
+    background-color: #3eb0efd1;
+}
+
+#lightSubmitButton:hover {
+    cursor: pointer;
+    background-color: #242b8f;
+}
+
+#resetButton:hover {
+    cursor: pointer;
+}
+
+#lightResetButton:hover {
+    cursor: pointer;
+    background-color: #242b8f;
+    color: aliceblue;
+    border: 1px solid #242b8f;
+}
+
+#success {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    border: 2px solid green;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    background-color: #58e593;
+    color: green;
+}
+
+#error {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    border: 2px solid red;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    background-color: #ffa7b7;
+    color: red;
+}
+
+/* For Tablet View */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .message {
+        width: 85%;
+        font-size: 1rem;
+    }
+
+    .container h1,
+    .lightContainer h1 {
+        font-size: 1.3rem;
+    }
+
+    .formGroup,
+    .lightFormGroup {
+        width: 90%;
+        overflow-x: hidden;
+    }
+
+    .formGroup input,
+    .lightFormGroup input,
+    .formGroup>span>input,
+    .lightFormGroup>span>input {
+        font-size: 1rem;
+        height: auto;
+    }
+
+    #message {
+        font-size: 1rem;
+        height: 25vh;
+    }
+
+    #submitButton,
+    #lightSubmitButton,
+    #resetButton,
+    #lightResetButton {
+        font-size: 1rem;
+    }
+}
+
+/* For Mobile Portrait View */
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+    .message {
+        width: 85%;
+        font-size: 1rem;
+    }
+
+    .container h1,
+    .lightContainer h1 {
+        font-size: 1.3rem;
+    }
+
+    .formGroup,
+    .lightFormGroup {
+        width: 90%;
+        overflow-x: hidden;
+    }
+
+    .formGroup input,
+    .lightFormGroup input,
+    .formGroup>span>input,
+    .lightFormGroup>span>input {
+        font-size: 1rem;
+        height: auto;
+    }
+
+    #message {
+        font-size: 1rem;
+        height: 25vh;
+    }
+
+    #submitButton,
+    #lightSubmitButton,
+    #resetButton,
+    #lightResetButton {
+        font-size: 1rem;
+    }
+}
+
+/* For Mobile Landscape View */
+@media screen and (max-device-width: 640px) and (orientation: landscape) {
+    .message {
+        width: 85%;
+        font-size: 1rem;
+    }
+
+    .container h1,
+    .lightContainer h1 {
+        font-size: 1.3rem;
+    }
+
+    .formGroup,
+    .lightFormGroup {
+        width: 90%;
+        overflow-x: hidden;
+    }
+
+    .formGroup input,
+    .lightFormGroup input,
+    .formGroup>span>input,
+    .lightFormGroup>span>input {
+        font-size: 1rem;
+        height: auto;
+    }
+
+    #message {
+        font-size: 1rem;
+        height: 25vh;
+    }
+
+    #submitButton,
+    #lightSubmitButton,
+    #resetButton,
+    #lightResetButton {
+        font-size: 1rem;
+    }
+}
+
+/* For Mobile Phones Portrait or Landscape View */
+@media screen and (max-device-width: 640px) {
+    .message {
+        width: 85%;
+        font-size: 1rem;
+    }
+
+    .container h1,
+    .lightContainer h1 {
+        font-size: 1.3rem;
+    }
+
+    .formGroup,
+    .lightFormGroup {
+        width: 90%;
+        overflow-x: hidden;
+    }
+
+    .formGroup input,
+    .lightFormGroup input,
+    .formGroup>span>input,
+    .lightFormGroup>span>input {
+        font-size: 1rem;
+        height: auto;
+    }
+
+    #message {
+        font-size: 1rem;
+        height: 25vh;
+    }
+
+    #submitButton,
+    #lightSubmitButton,
+    #resetButton,
+    #lightResetButton {
+        font-size: 1rem;
+    }
+}
+
+/* For iPhone 4 Portrait or Landscape View */
+@media screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+    .message {
+        width: 85%;
+        font-size: 1rem;
+    }
+
+    .container h1,
+    .lightContainer h1 {
+        font-size: 1.3rem;
+    }
+
+    .formGroup,
+    .lightFormGroup {
+        width: 90%;
+        overflow-x: hidden;
+    }
+
+    .formGroup input,
+    .lightFormGroup input,
+    .formGroup>span>input,
+    .lightFormGroup>span>input {
+        font-size: 1rem;
+        height: auto;
+    }
+
+    #message {
+        font-size: 1rem;
+        height: 25vh;
+    }
+
+    #submitButton,
+    #lightSubmitButton,
+    #resetButton,
+    #lightResetButton {
+        font-size: 1rem;
+    }
+}
+
+/* For iPhone 5 Portrait or Landscape View */
+@media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+    .message {
+        width: 85%;
+        font-size: 1rem;
+    }
+
+    .container h1,
+    .lightContainer h1 {
+        font-size: 1.3rem;
+    }
+
+    .formGroup,
+    .lightFormGroup {
+        width: 90%;
+        overflow-x: hidden;
+    }
+
+    .formGroup input,
+    .lightFormGroup input,
+    .formGroup>span>input,
+    .lightFormGroup>span>input {
+        font-size: 1rem;
+        height: auto;
+    }
+
+    #message {
+        font-size: 1rem;
+        height: 25vh;
+    }
+
+    #submitButton,
+    #lightSubmitButton,
+    #resetButton,
+    #lightResetButton {
+        font-size: 1rem;
+    }
+}
+
+/* For iPhone 6 and 6 plus Portrait or Landscape View */
+@media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3) {
+    .message {
+        width: 85%;
+        font-size: 1rem;
+    }
+
+    .container h1,
+    .lightContainer h1 {
+        font-size: 1.3rem;
+    }
+
+    .formGroup,
+    .lightFormGroup {
+        width: 90%;
+        overflow-x: hidden;
+    }
+
+    .formGroup input,
+    .lightFormGroup input,
+    .formGroup>span>input,
+    .lightFormGroup>span>input {
+        font-size: 1rem;
+        height: auto;
+    }
+
+    #message {
+        font-size: 1rem;
+        height: 25vh;
+    }
+
+    #submitButton,
+    #lightSubmitButton,
+    #resetButton,
+    #lightResetButton {
+        font-size: 1rem;
+    }
+}

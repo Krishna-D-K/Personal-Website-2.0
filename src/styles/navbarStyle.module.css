@@ -1,0 +1,219 @@
+.container {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+    color: #f5f5f5b5;
+    padding: 0.5rem 0;
+}
+
+.lightContainer {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+    color: #1d33d69c;
+    font-weight: bold;
+    padding: 0.5rem 0;
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* width: 60%; */
+    padding: 0 0 0 5rem;
+}
+
+.options,
+.lightOptions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 40%; */
+}
+
+.options>a, .lightOptions>a{
+    text-decoration: none;
+}
+
+.options span {
+    text-decoration: none;
+    font-size: 1.3rem;
+    margin: 0 1.5rem;
+    color: #f5f5f5b5;
+}
+
+.lightOptions span {
+    text-decoration: none;
+    font-size: 1.3rem;
+    margin: 0 1.5rem;
+    color: #1d33d69c;
+    font-weight: bold;
+}
+
+.options span:hover,
+.options div:hover {
+    cursor: pointer;
+    color: whitesmoke;
+}
+
+.options div,
+.lightOptions div {
+    font-size: 1.3rem;
+    margin: 0 1.5rem;
+}
+
+.lightOptions span:hover,
+.lightOptions div:hover {
+    cursor: pointer;
+    color: #001effaf;
+}
+
+.toggleMode {
+    font-size: 1rem;
+    margin: 0;
+}
+
+#scrollToTop:hover {
+    cursor: pointer;
+}
+
+/* For Tablet View */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .avatar {
+        padding: 0;
+        font-size: 2rem;
+    }
+
+    .options div,
+    .lightOptions div {
+        font-size: 1.3rem;
+        margin: 0 0.5rem;
+    }
+
+    .options span,
+    .lightOptions span {
+        margin: 0 0.5rem;
+        font-size: 1.1rem
+    }
+}
+
+/* For Mobile Portrait View */
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+    .avatar {
+        padding: 0;
+        font-size: 2rem;
+    }
+
+    .options div,
+    .lightOptions div {
+        font-size: 1.3rem;
+        margin: 0 0.5rem;
+    }
+
+    .options span,
+    .lightOptions span {
+        margin: 0 0.5rem;
+        font-size: 1.1rem
+    }
+}
+
+/* For Mobile Landscape View */
+@media screen and (max-device-width: 640px) and (orientation: landscape) {
+    .avatar {
+        padding: 0;
+        font-size: 2rem;
+    }
+
+    .options div,
+    .lightOptions div {
+        font-size: 1.3rem;
+        margin: 0 0.5rem;
+    }
+
+    .options span,
+    .lightOptions span {
+        margin: 0 0.5rem;
+        font-size: 1.1rem
+    }
+}
+
+/* For Mobile Phones Portrait or Landscape View */
+@media screen and (max-device-width: 640px) {
+    .avatar {
+        padding: 0;
+        font-size: 2rem;
+    }
+
+    .options div,
+    .lightOptions div {
+        font-size: 1.3rem;
+        margin: 0 0.5rem;
+    }
+
+    .options span .lightOptions span {
+        margin: 0 0.5rem;
+        font-size: 1.1rem
+    }
+}
+
+/* For iPhone 4 Portrait or Landscape View */
+@media screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+    .avatar {
+        padding: 0;
+        font-size: 2rem;
+    }
+
+    .options div,
+    .lightOptions div {
+        font-size: 1.3rem;
+        margin: 0 0.5rem;
+    }
+
+    .options span .lightOptions span {
+        margin: 0 0.5rem;
+        font-size: 1.1rem
+    }
+}
+
+/* For iPhone 5 Portrait or Landscape View */
+@media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+    .avatar {
+        padding: 0;
+        font-size: 2rem;
+    }
+
+    .options div,
+    .lightOptions div {
+        font-size: 1.3rem;
+        margin: 0 0.5rem;
+    }
+
+    .options span .lightOptions span {
+        margin: 0 0.5rem;
+        font-size: 1.1rem
+    }
+
+}
+
+/* For iPhone 6 and 6 plus Portrait or Landscape View */
+@media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3) {
+    .avatar {
+        padding: 0;
+        font-size: 2rem;
+    }
+
+    .options div,
+    .lightOptions div {
+        font-size: 1.3rem;
+        margin: 0 0.5rem;
+    }
+
+    .options span .lightOptions span {
+        margin: 0 0.5rem;
+        font-size: 1.1rem
+    }
+}

@@ -1,0 +1,208 @@
+.container {
+    width: 100%;
+    background-color: #0e24397a;
+    padding: 4rem 0;
+}
+
+.lightContainer {
+    width: 100%;
+    background: rgb(157, 151, 255);
+    background: linear-gradient(157deg, rgba(157, 151, 255, 1) 0%, rgba(71, 71, 226, 1) 21%, rgba(156, 10, 141, 1) 100%);
+    padding: 4rem 0;
+}
+
+.container h1,
+.lightContainer h1 {
+    color: azure;
+    margin-top: 0;
+    text-align: center;
+}
+
+.stack {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    opacity: 0.8;
+}
+
+.stackObject,
+.lightStackObject {
+    /* border: 2px solid pink; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #f0f8ffa3;
+    padding: 1rem;
+    font-size: 2rem;
+    margin: 2rem;
+}
+
+.stackObject img {
+    margin: 0 0.4rem;
+    filter: grayscale(1) invert(1);
+    object-fit: contain;
+    max-height: 3.5rem;
+}
+
+.lightStackObject img {
+    margin: 0 0.4rem;
+    filter: grayscale(0.1) invert(2);
+    object-fit: contain;
+    max-height: 3.5rem;
+}
+
+#expanding{
+    width: 100%;
+    padding: 0 10rem;
+    text-align: right;
+    font-size: 2rem;
+    color: #f0f8ffa3;
+}
+
+/* For Tablet View */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+    .container h1,
+    .lightContainer h1 {
+        font-size: 1.3rem
+    }
+    .stackObject, .lightStackObject{
+        font-size: 1.2rem;
+        margin: 1rem;
+        padding: 0.5rem;
+    }
+    .stackObject img, .lightStackObject img{
+        max-height: 2.5rem;
+    }
+    #expanding{
+        padding: 0 2rem;
+        font-size: 1.1rem;
+    }
+}
+
+/* For Mobile Portrait View */
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+
+    .container h1,
+    .lightContainer h1 {
+        font-size: 1.3rem
+    }
+    .stackObject, .lightStackObject{
+        font-size: 1.2rem;
+        margin: 1rem;
+        padding: 0.5rem;
+    }
+    .stackObject img, .lightStackObject img{
+        max-height: 2.5rem;
+    }
+    #expanding{
+        padding: 0 2rem;
+        font-size: 1.1rem;
+    }
+}
+
+/* For Mobile Landscape View */
+@media screen and (max-device-width: 640px) and (orientation: landscape) {
+
+    .container h1,
+    .lightContainer h1 {
+        font-size: 1.3rem
+    }
+    .stackObject, .lightStackObject{
+        font-size: 1.2rem;
+        margin: 1rem;
+        padding: 0.5rem;
+    }
+    .stackObject img, .lightStackObject img{
+        max-height: 2.5rem;
+    }
+    #expanding{
+        padding: 0 2rem;
+        font-size: 1.1rem;
+    }
+}
+
+/* For Mobile Phones Portrait or Landscape View */
+@media screen and (max-device-width: 640px) {
+
+    .container h1,
+    .lightContainer h1 {
+        font-size: 1.3rem
+    }
+    .stackObject, .lightStackObject{
+        font-size: 1.2rem;
+        margin: 1rem;
+        padding: 0.5rem;
+    }
+    .stackObject img, .lightStackObject img{
+        max-height: 2.5rem;
+    }
+    #expanding{
+        padding: 0 2rem;
+        font-size: 1.1rem;
+    }
+}
+
+/* For iPhone 4 Portrait or Landscape View */
+@media screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+
+    .container h1,
+    .lightContainer h1 {
+        font-size: 1.3rem
+    }
+    .stackObject, .lightStackObject{
+        font-size: 1.2rem;
+        margin: 1rem;
+        padding: 0.5rem;
+    }
+    .stackObject img, .lightStackObject img{
+        max-height: 2.5rem;
+    }
+    #expanding{
+        padding: 0 2rem;
+        font-size: 1.1rem;
+    }
+}
+
+/* For iPhone 5 Portrait or Landscape View */
+@media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+
+    .container h1,
+    .lightContainer h1 {
+        font-size: 1.3rem
+    }
+    .stackObject, .lightStackObject{
+        font-size: 1.2rem;
+        margin: 1rem;
+        padding: 0.5rem;
+    }
+    .stackObject img, .lightStackObject img{
+        max-height: 2.5rem;
+    }
+    #expanding{
+        padding: 0 2rem;
+        font-size: 1.1rem;
+    }
+}
+
+/* For iPhone 6 and 6 plus Portrait or Landscape View */
+@media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3) {
+
+    .container h1,
+    .lightContainer h1 {
+        font-size: 1.3rem
+    }
+    .stackObject, .lightStackObject{
+        font-size: 1.2rem;
+        margin: 1rem;
+        padding: 0.5rem;
+    }
+    .stackObject img, .lightStackObject img{
+        max-height: 2.5rem;
+    }
+    #expanding{
+        padding: 0 2rem;
+        font-size: 1.1rem;
+    }
+}
