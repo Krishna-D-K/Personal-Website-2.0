@@ -48,7 +48,6 @@ query singleBlogQuery($id: String!){
   }
 `
 function blogTemplate({ data }) {
-  document.body.style.background = "#0a192f";
   const { blog, featured } = data;
   const date = new Date(blog.createdAt);
   return (

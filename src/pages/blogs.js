@@ -5,12 +5,17 @@ import BlogCards from "../Components/BlogCards"
 import * as Styles from "../styles/blogPageStyle.module.css";
 import CategoryBlogs from '../Components/CategoryBlogs';
 
+// Check if window is defined (so if in the browser or in node.js).
+const isBrowser = typeof window !== "undefined"
+
 function Blogs({ data }) {
   const { categories, featured, blogs } = data;
   const [category, setCategory] = useState(categories.nodes[0].title);
   const [Index, setIndex] = useState(0);
 
-  document.body.style.background = "#0a192f";
+  if (isBrowser) {
+    document.body.style.background = "#0a192f";
+  }
 
   return (
     <Layout>
