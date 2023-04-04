@@ -4,8 +4,17 @@
     justify-content: center;
     align-items: center;
     padding: 1rem;
+    width: 90%;
+    margin: 0 auto;
 }
-
+.container hr{
+    height: 2px;
+    border: none;
+    border-radius: 1rem;
+    background-color: #64ffdb33;
+    width: 100%;
+    /* margin: 0 0 1.5rem 2rem; */
+}
 .copyright {
     color: aliceblue;
     font-size: 1.2rem;
@@ -13,7 +22,7 @@
     margin: 0.5rem 0;
 }
 .copyright a{
-    color: #3eb0ef;
+    color: #64ffda;
     font-size: 1rem
 }
 

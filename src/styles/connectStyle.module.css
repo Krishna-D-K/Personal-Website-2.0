@@ -1,18 +1,34 @@
 .container {
-    background-color: #0e24397a;
     padding: 1rem 0;
+    width: 90%;
+    margin: 0 auto;
 }
 
-.lightContainer {
-    background: rgb(157, 151, 255);
-    background: linear-gradient(157deg, rgba(157, 151, 255, 1) 0%, rgba(71, 71, 226, 1) 21%, rgba(156, 10, 141, 1) 100%);
-    padding: 1rem 0;
+.heading{
+    display: flex;
+    align-items: center;
+    margin: 0 0 4rem 0;
+    width: 100%;
+}
+.heading span{
+    color: #64ffda;
+    margin-top: 0;
+    text-align: center;
+    margin: 0 0.5rem 0 4rem;
+    font-size: 1.8rem;
+}
+.heading hr{
+    height: 2px;
+    border: none;
+    border-radius: 1rem;
+    background-color: #64ffdb33;
+    width: 100%;
 }
 
 .message {
     width: 50%;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
     font-size: 1.2rem;
     color: azure;
 }
@@ -24,7 +40,7 @@
     justify-content: center;
     align-items: center;
     margin: 2rem auto;
-    width: 60%;
+    width: 70%;
 }
 
 .formGroup span,
@@ -123,19 +139,9 @@
 }
 
 #submitButton {
-    background-color: #3eb0ef;
-    border: 1px solid #3eb0ef;
-    color: azure;
-    font-size: 1.2rem;
-    padding: 0.2rem 0.8rem;
-    border-radius: 0.3rem;
-    margin-right: 1.5rem;
-}
-
-#lightSubmitButton {
-    background-color: #3e4aef;
-    border: 1px solid #3e4aef;
-    color: azure;
+    background-color: #64ffda;
+    border: 1px solid #64ffda;
+    color: #0000009e;
     font-size: 1.2rem;
     padding: 0.2rem 0.8rem;
     border-radius: 0.3rem;
@@ -144,8 +150,8 @@
 
 #resetButton {
     background-color: transparent;
-    border: 1px solid #3eb0ef;
-    color: #3eb0ef;
+    border: 1px solid #64ffda;
+    color: #64ffda;
     font-size: 1.2rem;
     padding: 0.2rem 0.8rem;
     border-radius: 0.3rem;
@@ -164,7 +170,7 @@
 
 #submitButton:hover {
     cursor: pointer;
-    background-color: #3eb0efd1;
+    background-color: #00ffc3;
 }
 
 #lightSubmitButton:hover {
@@ -211,7 +217,14 @@
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
     .message {
         width: 85%;
-        font-size: 1rem;
+        font-size: 0.8rem;
+    }
+    .heading{
+        margin: 0 0 2rem 0;
+    }
+    .heading span{
+        font-size: 1.1rem;
+        margin: 0;
     }
 
     .container h1,
@@ -221,7 +234,7 @@
 
     .formGroup,
     .lightFormGroup {
-        width: 90%;
+        width: 95%;
         overflow-x: hidden;
     }
 
@@ -250,7 +263,14 @@
 @media screen and (max-device-width: 480px) and (orientation: portrait) {
     .message {
         width: 85%;
-        font-size: 1rem;
+        font-size: 0.8rem;
+    }
+    .heading{
+        margin: 0 0 2rem 0;
+    }
+    .heading span{
+        font-size: 1.1rem;
+        margin: 0;
     }
 
     .container h1,
@@ -260,7 +280,7 @@
 
     .formGroup,
     .lightFormGroup {
-        width: 90%;
+        width: 95%;
         overflow-x: hidden;
     }
 
@@ -289,7 +309,14 @@
 @media screen and (max-device-width: 640px) and (orientation: landscape) {
     .message {
         width: 85%;
-        font-size: 1rem;
+        font-size: 0.8rem;
+    }
+    .heading{
+        margin: 0 0 2rem 0;
+    }
+    .heading span{
+        font-size: 1.1rem;
+        margin: 0;
     }
 
     .container h1,
@@ -299,7 +326,7 @@
 
     .formGroup,
     .lightFormGroup {
-        width: 90%;
+        width: 95%;
         overflow-x: hidden;
     }
 
@@ -328,7 +355,14 @@
 @media screen and (max-device-width: 640px) {
     .message {
         width: 85%;
-        font-size: 1rem;
+        font-size: 0.8rem;
+    }
+    .heading{
+        margin: 0 0 2rem 0;
+    }
+    .heading span{
+        font-size: 1.1rem;
+        margin: 0;
     }
 
     .container h1,
@@ -338,7 +372,7 @@
 
     .formGroup,
     .lightFormGroup {
-        width: 90%;
+        width: 95%;
         overflow-x: hidden;
     }
 
@@ -367,7 +401,14 @@
 @media screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
     .message {
         width: 85%;
-        font-size: 1rem;
+        font-size: 0.8rem;
+    }
+    .heading{
+        margin: 0 0 2rem 0;
+    }
+    .heading span{
+        font-size: 1.1rem;
+        margin: 0;
     }
 
     .container h1,
@@ -377,7 +418,7 @@
 
     .formGroup,
     .lightFormGroup {
-        width: 90%;
+        width: 95%;
         overflow-x: hidden;
     }
 
@@ -406,7 +447,14 @@
 @media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
     .message {
         width: 85%;
-        font-size: 1rem;
+        font-size: 0.8rem;
+    }
+    .heading{
+        margin: 0 0 2rem 0;
+    }
+    .heading span{
+        font-size: 1.1rem;
+        margin: 0;
     }
 
     .container h1,
@@ -416,7 +464,7 @@
 
     .formGroup,
     .lightFormGroup {
-        width: 90%;
+        width: 95%;
         overflow-x: hidden;
     }
 
@@ -445,7 +493,14 @@
 @media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3) {
     .message {
         width: 85%;
-        font-size: 1rem;
+        font-size: 0.8rem;
+    }
+    .heading{
+        margin: 0 0 2rem 0;
+    }
+    .heading span{
+        font-size: 1.1rem;
+        margin: 0;
     }
 
     .container h1,
@@ -455,7 +510,7 @@
 
     .formGroup,
     .lightFormGroup {
-        width: 90%;
+        width: 95%;
         overflow-x: hidden;
     }
 

@@ -1,16 +1,15 @@
 import React, { useEffect } from 'react'
 import * as Styles from "../styles/projectStyle.module.css";
 import averageSatti from "../Images/average-satti.png";
+import blogWebsite from "../Images/blog-website.png";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LaunchIcon from '@mui/icons-material/Launch';
 import { Paper } from '@mui/material';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+function Projects() {
 
-function Projects(props) {
-    
-    const darkTheme = props.darkTheme;
     useEffect(() => {
         AOS.init({
           offset: 200,
@@ -21,15 +20,16 @@ function Projects(props) {
       }, [])
     
     return (
-        <div className={darkTheme?Styles.container:Styles.lightContainer} id="Projects">
-            <h1>PROJECTS</h1>
+        <div className={Styles.container} id="Projects">
+            <span className={Styles.heading}><span>PROJECTS</span><hr /></span>
 
             <div className={Styles.projectRight} data-aos="zoom-in">
-                <div className={darkTheme?Styles.projectPreview:Styles.lightProjectPreview}>
-                    <img src={averageSatti} alt="html" style={{ objectFit: "cover", maxHeight: "100%", maxWidth: "100%" }} />
+                <div className={Styles.projectPreview}>
+                    <img src={averageSatti} alt="html" placeholder='blurred' style={{ objectFit: "cover", maxHeight: "100%", maxWidth: "100%" }} />
+                    {/* <StaticImage src="../Images/average-satti.png" alt="error" objectFit='cover' imgStyle={{ objectFit: "cover", maxHeight: "100%", maxWidth: "100%" }} /> */}
                 </div>
-                <div className={darkTheme?Styles.projectInfo:Styles.lightProjectInfo}>
-                    <div className={darkTheme?Styles.featured:Styles.lightFeatured} style={{ textAlign: "right" }}>Featured Project</div>
+                <div className={Styles.projectInfo}>
+                    <div className={Styles.featured} style={{ textAlign: "right" }}>Featured Project</div>
                     <h1 style={{ textAlign: "right" }}>Average_Satti</h1>
                     <div className={Styles.rightDescription}>
                         <div className={Styles.descriptionText} style={{ textAlign: "right" }}>
@@ -38,47 +38,45 @@ function Projects(props) {
                             </Paper>
                         </div>
                     </div>
-                    <div className={darkTheme?Styles.stack:Styles.lightStack}>
+                    <div className={Styles.stack}>
                         <span>Reactjs</span>
                         <span>Nodejs</span>
                         <span>MongoDb</span>
                         <span>JWT</span>
                         <span>Drive API</span>
                     </div>
-                    <div className={darkTheme?Styles.links:Styles.lightLinks}>
-                        <a href="https://github.com/Krishna-D-K/Average_Satti-Frontend" target="_blank" rel="noreferrer"><GitHubIcon /></a>
-                        <a href="https://average-satti.vercel.app/" target="_blank" rel="noreferrer"><LaunchIcon /></a>
+                    <div className={Styles.links}>
+                        <a href="https://github.com/Krishna-D-K/Average_Satti-Frontend" target="_blank" rel="noreferrer" aria-label="Link"><GitHubIcon /></a>
+                        <a href="https://average-satti.vercel.app/" target="_blank" rel="noreferrer" aria-label="Link"><LaunchIcon /></a>
                     </div>
                 </div>
             </div>
 
-            {/* <div className={Styles.projectLeft}>
-                <div className={darkTheme?Styles.projectInfo:Styles.lightProjectInfo}>
-                    <div className={darkTheme?Styles.featured:Styles.lightFeatured} style={{ textAlign: "left" }}>Featured Project</div>
-                    <h1 style={{ textAlign: "left" }}>Average_Satti</h1>
+            <div className={Styles.projectLeft} data-aos="zoom-in">
+                <div className={Styles.projectInfo}>
+                    <div className={Styles.featured} style={{ textAlign: "left" }}>Featured Project</div>
+                    <h1 style={{ textAlign: "left" }}>Blog Website</h1>
                     <div className={Styles.leftDescription}>
                         <div className={Styles.descriptionText} style={{ textAlign: "left" }}>
                             <Paper style={{ backgroundColor: "#112240", padding: "2rem", color: "#a8b2d1", borderRadius: "1rem" }} elevation={3}>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, assumenda. Dolores illum repudiandae nam, magni et architecto nisi eaque, dolorum eligendi mollitia voluptatem cupiditate nemo itaque praesentium! Quo, quam voluptate.
+                                My personal blog website featuring blogs about my experiences, understandings and opinions about everything under the sun!!!
                             </Paper>
                         </div>
                     </div>
-                    <div className={darkTheme?Styles.stack:Styles.lightStack}>
-                        <span>Reactjs</span>
-                        <span>Nodejs</span>
-                        <span>MongoDb</span>
-                        <span>JWT</span>
-                        <span>Drive API</span>
+                    <div className={Styles.stack}>
+                        <span>Gatsby</span>
+                        <span>Sanity.io</span>
+                        <span>MaterialUI</span>
                     </div>
-                    <div className={darkTheme?Styles.links:Styles.lightLinks}>
+                    <div className={Styles.links}>
                         <a href="" target="_blank" rel="noreferrer"><GitHubIcon /></a>
                         <a href="" target="_blank" rel="noreferrer"><LaunchIcon /></a>
                     </div>
                 </div>
-                <div className={darkTheme?Styles.projectPreview:Styles.lightProjectPreview}>
-                    <img src={averageSatti} alt="html" style={{ objectFit: "cover", maxHeight: "100%", maxWidth: "100%" }} />
+                <div className={Styles.projectPreview}>
+                    <img src={blogWebsite} alt="html" style={{ objectFit: "cover", maxHeight: "100%", maxWidth: "100%", border: "0.5px solid #64ffdb33" }} />
                 </div>
-            </div> */}
+            </div>
             
         </div>
     )

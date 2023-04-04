@@ -5,7 +5,7 @@ import 'aos/dist/aos.css';
 import axios from 'axios';
 import CloseIcon from '@mui/icons-material/Close';
 
-function Connect(props) {
+function Connect() {
 
     const [name, setName] = useState("");
     const [subject, setSubject] = useState("");
@@ -15,7 +15,6 @@ function Connect(props) {
     const [error, setError] = useState(false);
     const [loading, isLoading] = useState(false);
 
-    const darkTheme = props.darkTheme;
     useEffect(() => {
         AOS.init({
             offset: 200,
@@ -24,6 +23,13 @@ function Connect(props) {
             delay: 200,
         });
     }, [])
+
+    const resetData = () => {
+        setEmail("");
+        setName("");
+        setSubject("");
+        setMessage("");
+    }
 
     const handleSubmit = (e) =>{
         isLoading(true);
@@ -53,14 +59,14 @@ function Connect(props) {
     }
 
     return (
-        <div className={darkTheme ? Styles.container : Styles.lightContainer} id='Connect'>
-            <h1 style={{ color: "aliceblue", "textAlign": "center" }}>CONNECT</h1>
-            <div className={Styles.division}>
+        <div className={Styles.container} id='Connect'>
+            <span className={Styles.heading}><span>CONNECT</span><hr /></span>
+            <div>
                 <div className={Styles.message}>
                     Message me if you wish to know me, collaborate with me, ask me something, or just for a casual chit-chat !!
                 </div>
                 <div >
-                    <form onSubmit={handleSubmit} className={darkTheme ? Styles.formGroup : Styles.lightFormGroup}>
+                    <form onSubmit={handleSubmit} className={Styles.formGroup}>
                         <span>
                             <input data-aos="fade-right" value={name} onChange={(e)=>setName(e.target.value)} type="text" name="Name" placeholder='Name' required />
                             <input data-aos="fade-left" value={email} onChange={(e)=>setEmail(e.target.value)} type="email" name="email" placeholder='Email' required />
@@ -77,8 +83,8 @@ function Connect(props) {
                             <CloseIcon onClick={()=>setError(false)}/>
                         </div>}
                         <span id={Styles.buttons}>
-                            <button id={darkTheme ? Styles.submitButton : Styles.lightSubmitButton} type="submit">Submit</button>
-                            <button id={darkTheme ? Styles.resetButton : Styles.lightResetButton} type="reset">Reset</button>
+                            <button id={Styles.submitButton} type="submit">Submit</button>
+                            <button id={Styles.resetButton} onClick={()=>resetData()}>Reset</button>
                         </span>
                     </form>
                 </div>

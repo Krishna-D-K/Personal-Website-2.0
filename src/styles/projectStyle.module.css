@@ -4,8 +4,29 @@
     justify-content: center;
     align-items: center;
     padding: 2rem 0;
+    width: 90%;
+    margin: 0 auto;
 }
-
+.heading{
+    display: flex;
+    align-items: center;
+    margin: 0 0 4rem 0;
+    width: 100%;
+}
+.heading span{
+    color: #64ffda;
+    margin-top: 0;
+    text-align: center;
+    margin: 0 0.5rem 0 4rem;
+    font-size: 1.8rem;
+}
+.heading hr{
+    height: 2px;
+    border: none;
+    border-radius: 1rem;
+    background-color: #64ffdb33;
+    width: 100%;
+}
 .lightContainer {
     display: flex;
     flex-direction: column;
@@ -14,16 +35,12 @@
     padding: 2rem 0;
 }
 
-.container h1 {
-    color: aliceblue;
-}
-
 .projectLeft {
     display: flex;
     width: 90%;
     justify-content: flex-start;
     /* border: 2px solid pink; */
-    margin: 2rem auto;
+    margin: 2rem auto 5rem auto;
 }
 
 .projectRight {
@@ -31,7 +48,7 @@
     width: 90%;
     justify-content: flex-end;
     /* border: 2px solid pink; */
-    margin: 2rem auto;
+    margin: 2rem auto 5rem auto;
 }
 
 .projectPreview {
@@ -42,6 +59,7 @@
     transition-property: all;
     transition-duration: 300ms;
     transition-delay: 0;
+    background: "#64ffdb33";
     transition-timing-function: ease-out;
 }
 
@@ -65,6 +83,7 @@
 .projectPreview img,
 .lightProjectPreview img {
     border-radius: 0.8rem;
+    z-index: -1;
 }
 
 .projectInfo,
@@ -123,10 +142,9 @@
     color: #a8b2d1;
     font-family: SF Mono, Fira Code, Fira Mono, Roboto Mono, monospace;
 }
-
-.lightStack span {
-    color: rgb(83, 83, 83);
-    font-family: SF Mono, Fira Code, Fira Mono, Roboto Mono, monospace;
+.stack span:hover {
+    color: #64ffda;
+    cursor: default;
 }
 
 .links,
@@ -162,9 +180,20 @@
     .container h1, .lightContainer h1{
         font-size: 1.3rem;
     }
+    .heading{
+        margin: 0 0 2rem 0;
+    }
+    .heading span{
+        font-size: 1.1rem;
+        margin: 0;
+    }
     .projectRight, .projectLeft{
         display: flex;
         flex-direction: column;
+        margin: 2.5rem auto;
+    }
+    .featured{
+        font-size: 0.8rem;
     }
     .projectPreview, .lightProjectPreview{
         height: auto;
@@ -180,6 +209,10 @@
         width: 100%;
         position: static;
         margin: 0 auto 0.5rem auto;
+        font-size: 0.rem;
+    }
+    .stack span{
+        font-size: 0.8rem;
     }
 }
 
@@ -188,9 +221,20 @@
     .container h1, .lightContainer h1{
         font-size: 1.3rem;
     }
+    .heading{
+        margin: 0 0 2rem 0;
+    }
+    .heading span{
+        font-size: 1.1rem;
+        margin: 0;
+    }
     .projectRight, .projectLeft{
         display: flex;
         flex-direction: column;
+        margin: 2.5rem auto;
+    }
+    .featured{
+        font-size: 0.8rem;
     }
     .projectPreview, .lightProjectPreview{
         height: auto;
@@ -206,6 +250,10 @@
         width: 100%;
         position: static;
         margin: 0 auto 0.5rem auto;
+        font-size: 0.rem;
+    }
+    .stack span{
+        font-size: 0.8rem;
     }
 }
 
@@ -214,9 +262,20 @@
     .container h1, .lightContainer h1{
         font-size: 1.3rem;
     }
+    .heading{
+        margin: 0 0 2rem 0;
+    }
+    .heading span{
+        font-size: 1.1rem;
+        margin: 0;
+    }
     .projectRight, .projectLeft{
         display: flex;
         flex-direction: column;
+        margin: 2.5rem auto;
+    }
+    .featured{
+        font-size: 0.8rem;
     }
     .projectPreview, .lightProjectPreview{
         height: auto;
@@ -232,6 +291,10 @@
         width: 100%;
         position: static;
         margin: 0 auto 0.5rem auto;
+        font-size: 0.rem;
+    }
+    .stack span{
+        font-size: 0.8rem;
     }
 }
 
@@ -240,9 +303,20 @@
     .container h1, .lightContainer h1{
         font-size: 1.3rem;
     }
+    .heading{
+        margin: 0 0 2rem 0;
+    }
+    .heading span{
+        font-size: 1.1rem;
+        margin: 0;
+    }
     .projectRight, .projectLeft{
         display: flex;
         flex-direction: column;
+        margin: 2.5rem auto;
+    }
+    .featured{
+        font-size: 0.8rem;
     }
     .projectPreview, .lightProjectPreview{
         height: auto;
@@ -258,6 +332,10 @@
         width: 100%;
         position: static;
         margin: 0 auto 0.5rem auto;
+        font-size: 0.rem;
+    }
+    .stack span{
+        font-size: 0.8rem;
     }
 }
 
@@ -266,9 +344,20 @@
     .container h1, .lightContainer h1{
         font-size: 1.3rem;
     }
+    .heading{
+        margin: 0 0 2rem 0;
+    }
+    .heading span{
+        font-size: 1.1rem;
+        margin: 0;
+    }
     .projectRight, .projectLeft{
         display: flex;
         flex-direction: column;
+        margin: 2.5rem auto;
+    }
+    .featured{
+        font-size: 0.8rem;
     }
     .projectPreview, .lightProjectPreview{
         height: auto;
@@ -284,6 +373,10 @@
         width: 100%;
         position: static;
         margin: 0 auto 0.5rem auto;
+        font-size: 0.rem;
+    }
+    .stack span{
+        font-size: 0.8rem;
     }
 }
 
@@ -292,9 +385,20 @@
     .container h1, .lightContainer h1{
         font-size: 1.3rem;
     }
+    .heading{
+        margin: 0 0 2rem 0;
+    }
+    .heading span{
+        font-size: 1.1rem;
+        margin: 0;
+    }
     .projectRight, .projectLeft{
         display: flex;
         flex-direction: column;
+        margin: 2.5rem auto;
+    }
+    .featured{
+        font-size: 0.8rem;
     }
     .projectPreview, .lightProjectPreview{
         height: auto;
@@ -310,6 +414,10 @@
         width: 100%;
         position: static;
         margin: 0 auto 0.5rem auto;
+        font-size: 0.rem;
+    }
+    .stack span{
+        font-size: 0.8rem;
     }
 }
 
@@ -318,9 +426,20 @@
     .container h1, .lightContainer h1{
         font-size: 1.3rem;
     }
+    .heading{
+        margin: 0 0 2rem 0;
+    }
+    .heading span{
+        font-size: 1.1rem;
+        margin: 0;
+    }
     .projectRight, .projectLeft{
         display: flex;
         flex-direction: column;
+        margin: 2.5rem auto;
+    }
+    .featured{
+        font-size: 0.8rem;
     }
     .projectPreview, .lightProjectPreview{
         height: auto;
@@ -336,6 +455,10 @@
         width: 100%;
         position: static;
         margin: 0 auto 0.5rem auto;
+        font-size: 0.rem;
+    }
+    .stack span{
+        font-size: 0.8rem;
     }
 }
 
@@ -344,9 +467,20 @@
     .container h1, .lightContainer h1{
         font-size: 1.3rem;
     }
+    .heading{
+        margin: 0 0 2rem 0;
+    }
+    .heading span{
+        font-size: 1.1rem;
+        margin: 0;
+    }
     .projectRight, .projectLeft{
         display: flex;
         flex-direction: column;
+        margin: 2.5rem auto;
+    }
+    .featured{
+        font-size: 0.8rem;
     }
     .projectPreview, .lightProjectPreview{
         height: auto;
@@ -362,6 +496,10 @@
         width: 100%;
         position: static;
         margin: 0 auto 0.5rem auto;
+        font-size: 0.rem;
+    }
+    .stack span{
+        font-size: 0.8rem;
     }
 } */
 
@@ -370,9 +508,20 @@
     .container h1, .lightContainer h1{
         font-size: 1.3rem;
     }
+    .heading{
+        margin: 0 0 2rem 0;
+    }
+    .heading span{
+        font-size: 1.1rem;
+        margin: 0;
+    }
     .projectRight, .projectLeft{
         display: flex;
         flex-direction: column;
+        margin: 2.5rem auto;
+    }
+    .featured{
+        font-size: 0.8rem;
     }
     .projectPreview, .lightProjectPreview{
         height: auto;
@@ -388,6 +537,10 @@
         width: 100%;
         position: static;
         margin: 0 auto 0.5rem auto;
+        font-size: 0.rem;
+    }
+    .stack span{
+        font-size: 0.8rem;
     }
 }
 
@@ -396,9 +549,20 @@
     .container h1, .lightContainer h1{
         font-size: 1.3rem;
     }
+    .heading{
+        margin: 0 0 2rem 0;
+    }
+    .heading span{
+        font-size: 1.1rem;
+        margin: 0;
+    }
     .projectRight, .projectLeft{
         display: flex;
         flex-direction: column;
+        margin: 2.5rem auto;
+    }
+    .featured{
+        font-size: 0.8rem;
     }
     .projectPreview, .lightProjectPreview{
         height: auto;
@@ -414,6 +578,10 @@
         width: 100%;
         position: static;
         margin: 0 auto 0.5rem auto;
+        font-size: 0.rem;
+    }
+    .stack span{
+        font-size: 0.8rem;
     }
 }
 
@@ -422,9 +590,20 @@
     .container h1, .lightContainer h1{
         font-size: 1.3rem;
     }
+    .heading{
+        margin: 0 0 2rem 0;
+    }
+    .heading span{
+        font-size: 1.1rem;
+        margin: 0;
+    }
     .projectRight, .projectLeft{
         display: flex;
         flex-direction: column;
+        margin: 2.5rem auto;
+    }
+    .featured{
+        font-size: 0.8rem;
     }
     .projectPreview, .lightProjectPreview{
         height: auto;
@@ -440,6 +619,10 @@
         width: 100%;
         position: static;
         margin: 0 auto 0.5rem auto;
+        font-size: 0.rem;
+    }
+    .stack span{
+        font-size: 0.8rem;
     }
 }
 
@@ -448,9 +631,20 @@
     .container h1, .lightContainer h1{
         font-size: 1.3rem;
     }
+    .heading{
+        margin: 0 0 2rem 0;
+    }
+    .heading span{
+        font-size: 1.1rem;
+        margin: 0;
+    }
     .projectRight, .projectLeft{
         display: flex;
         flex-direction: column;
+        margin: 2.5rem auto;
+    }
+    .featured{
+        font-size: 0.8rem;
     }
     .projectPreview, .lightProjectPreview{
         height: auto;
@@ -466,6 +660,10 @@
         width: 100%;
         position: static;
         margin: 0 auto 0.5rem auto;
+        font-size: 0.rem;
+    }
+    .stack span{
+        font-size: 0.8rem;
     }
 }
 
@@ -474,9 +672,20 @@
     .container h1, .lightContainer h1{
         font-size: 1.3rem;
     }
+    .heading{
+        margin: 0 0 2rem 0;
+    }
+    .heading span{
+        font-size: 1.1rem;
+        margin: 0;
+    }
     .projectRight, .projectLeft{
         display: flex;
         flex-direction: column;
+        margin: 2.5rem auto;
+    }
+    .featured{
+        font-size: 0.8rem;
     }
     .projectPreview, .lightProjectPreview{
         height: auto;
@@ -492,6 +701,10 @@
         width: 100%;
         position: static;
         margin: 0 auto 0.5rem auto;
+        font-size: 0.rem;
+    }
+    .stack span{
+        font-size: 0.8rem;
     }
 }
 
@@ -500,9 +713,20 @@
     .container h1, .lightContainer h1{
         font-size: 1.3rem;
     }
+    .heading{
+        margin: 0 0 2rem 0;
+    }
+    .heading span{
+        font-size: 1.1rem;
+        margin: 0;
+    }
     .projectRight, .projectLeft{
         display: flex;
         flex-direction: column;
+        margin: 2.5rem auto;
+    }
+    .featured{
+        font-size: 0.8rem;
     }
     .projectPreview, .lightProjectPreview{
         height: auto;
@@ -518,5 +742,9 @@
         width: 100%;
         position: static;
         margin: 0 auto 0.5rem auto;
+        font-size: 0.rem;
+    }
+    .stack span{
+        font-size: 0.8rem;
     }
 }
