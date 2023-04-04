@@ -9,6 +9,7 @@ import { Link } from 'gatsby';
 const isBrowser = typeof window !== "undefined"
 
 function Navbar() {
+    const [visible, setVisible] = useState(false);
     if (isBrowser) {
         const scrollToView = (id) => {
             const element = document.getElementById(id);
@@ -17,7 +18,6 @@ function Navbar() {
             }
         }
 
-        const [visible, setVisible] = useState(false);
 
         const toggleVisible = () => {
             const scrolled = document.documentElement.scrollTop;
