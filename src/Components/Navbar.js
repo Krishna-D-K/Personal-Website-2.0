@@ -1,6 +1,6 @@
 import { Avatar, Tooltip } from '@mui/material';
 import React, { useState } from 'react'
-import * as Styles from "../Styles/NavbarStyle.module.css";
+import * as Styles from "../Styles/navbarStyle.module.css";
 import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
 import avatar from "../Images/avatar.png";
 import { Link } from 'gatsby';
