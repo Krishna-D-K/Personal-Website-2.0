@@ -1,0 +1,133 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 3rem auto;
+}
+
+.title {
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 200;
+    color: azure;
+    margin: 1rem auto;
+}
+.subtitle{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+}
+.subtitle div{
+    display: flex;
+}
+.author, .date{
+    font-size: 1.1rem;
+    color: slategrey;
+    margin: 0 0.5rem 0.5rem 0;
+    display: flex;
+    align-items: center;
+}
+.hr{
+    color: #64ffdb33;
+    width: 100%;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+}
+.blogContent{
+    width: 95%;
+    margin: 1rem auto;
+}
+.coverImage{
+    max-height: 60vh;
+}
+.categories span{
+    color: #64ffda;
+}
+.otherBlogs{
+    width: 80%;
+    margin: 1rem auto;
+}
+.heading, .heading1{
+    display: flex;
+    align-items: center;
+    margin: 0 0 1rem 0;
+    width: 100%;
+}
+.heading span, .heading1 span{
+    color: #64ffda;
+    font-size: 1.2rem;
+    margin-top: 0;
+    text-align: center;
+    margin: 0 0.5rem 0 0;
+    display: flex;
+}
+.heading hr{
+    height: 2px;
+    border: none;
+    border-radius: 1rem;
+    background-color: #64ffdb33;
+    width: 100%;
+    margin-top: 2rem;
+}
+.heading1 hr{
+    height: 2px;
+    border: none;
+    border-radius: 1rem;
+    background-color: #64ffdb33;
+    width: 85%;
+}
+.band {
+    width: 80%;
+    max-width: 1240px;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: 0.5fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+}
+
+@media (min-width: 30em) {
+    .band {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 60em) {
+    .band {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 760px){
+    .band{
+        grid-template-columns: 1fr;
+    }
+    .container{
+        width: 90%;
+        margin: 1.5rem auto;
+    }
+    .title{
+        font-size: 1.4rem;
+    }
+    .author, .date{
+        font-size: 0.9rem;
+        color: slategrey;
+    }
+    .heading hr{
+        margin-top: 1rem;
+        margin-bottom: 0;
+    }
+    .otherBlogs{
+        width: 90%;
+    }
+    .heading1 span{
+        font-size: 0.8rem;
+    }
+    .heading1 hr{
+        width: 70%;
+    }
+    .blogContent{
+        width: 100%;
+    }
+}

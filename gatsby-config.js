@@ -8,5 +8,15 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  plugins: [],
+  plugins: [
+    `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-source-sanity`,
+      options: {
+        projectId: `36qpzati`,
+        dataset: `production`
+      }
+    },
+    `gatsby-plugin-sharp`,
+  ],
 }

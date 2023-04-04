@@ -1,0 +1,117 @@
+.container {
+    width: 80%;
+    margin: 0 auto
+}
+
+.heading {
+    color: azure;
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.subHeading {
+    display: flex;
+}
+
+.subHeading span {
+    color: #64ffda;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    margin: 0 0.5rem 0 0;
+}
+
+.subHeading p {
+    width: 100%;
+    margin: auto;
+}
+
+.subHeading p hr {
+    height: 2px;
+    border: none;
+    border-radius: 1rem;
+    background-color: #64ffdb33;
+}
+
+.band {
+    width: 100%;
+    max-width: 1240px;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: 0.5fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+}
+
+.linkTag {
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: #64ffda;
+}
+
+.linkTag h4 {
+    margin: 0.5rem;
+    margin-top: 1rem;
+}
+
+.linkTag:hover {
+    border-bottom: 1px solid #64ffda;
+
+}
+
+.categoryList {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 2rem auto;
+}
+
+.categoryListItem {
+    color: #64ffda;
+    margin: 0 0.5rem;
+}
+
+.activeCategoryListItem{
+    color: #444242;
+    margin: 0 0.5rem;
+    padding: 0.2rem 0.5rem;
+    border: 1px solid green;
+    border-radius: 0.8rem;
+    background-color: #64ffda;
+}
+
+.activeCategoryListItem:hover, .categoryListItem:hover{
+    cursor: pointer;
+}
+
+@media (min-width: 30em) { 
+    .band {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 60em) {
+    .band {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 760px) {
+    .band {
+        grid-template-columns: 1fr;
+    }
+    .heading{
+        margin: 2rem 0;
+        font-size: 1.2rem
+    }
+    .subHeading{
+        margin: 0 0 2rem 0;
+    }
+    .subHeading span{
+        font-size: 1.1rem;
+        margin: 0;
+    }
+}

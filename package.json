@@ -13,15 +13,20 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "aos": "^2.3.4",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@mui/icons-material": "^5.11.11",
     "@mui/material": "^5.11.13",
-    "typewriter-effect": "^2.19.0",
+    "@portabletext/react": "^2.0.2",
+    "@sanity/asset-utils": "^1.3.0",
+    "aos": "^2.3.4",
     "gatsby": "^5.8.0",
+    "gatsby-plugin-image": "^3.8.0",
+    "gatsby-plugin-sharp": "^5.8.1",
+    "gatsby-source-sanity": "^7.6.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "typewriter-effect": "^2.19.0"
   },
   "repository": {
     "type": "git",

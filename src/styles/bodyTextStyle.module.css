@@ -1,0 +1,27 @@
+.paragraph{
+    font-size: 1.2rem;
+    color: azure;
+}
+.blockQuote{
+    font-size: 1.4rem;
+    border-left: 5px solid #64ffda;
+    color: azure;
+    padding: 0.5rem 1rem;
+    margin: 0.8rem 0;
+    border-radius: 0.2rem;
+}
+.bodyImage{
+    max-width: 80%;
+    margin: 2rem auto;
+}
+@media (max-width: 760px){
+    .paragraph{
+        font-size: 0.9rem;
+    }
+    .blockQuote{
+        font-size: 1rem;
+    }
+    .bodyImage{
+        max-width: 90%;
+    }
+}
