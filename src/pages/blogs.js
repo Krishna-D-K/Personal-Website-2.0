@@ -4,6 +4,7 @@ import Layout from '../Components/Layout';
 import BlogCards from "../Components/BlogCards"
 import * as Styles from "../styles/blogPageStyle.module.css";
 import CategoryBlogs from '../Components/CategoryBlogs';
+import { Helmet } from 'react-helmet';
 
 // Check if window is defined (so if in the browser or in node.js).
 const isBrowser = typeof window !== "undefined"
@@ -19,6 +20,10 @@ function Blogs({ data }) {
 
   return (
     <Layout>
+      <Helmet>
+        <title>Blogs | Krishna's Blogs</title>
+        <meta name="description" content="Logging my thoughts into my blogs..."></meta>
+      </Helmet>
       <div className={Styles.container}>
         <div className={Styles.heading}>MY BLOGS</div>
         <div>

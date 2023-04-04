@@ -1,8 +1,14 @@
-.paragraph{
+.paragraph {
     font-size: 1.2rem;
     color: azure;
+    letter-spacing: 0.5px;
 }
-.blockQuote{
+
+.paragraph a {
+    color: #64ffda
+}
+
+.blockQuote {
     font-size: 1.4rem;
     border-left: 5px solid #64ffda;
     color: azure;
@@ -10,18 +16,22 @@
     margin: 0.8rem 0;
     border-radius: 0.2rem;
 }
-.bodyImage{
+
+.bodyImage {
     max-width: 80%;
     margin: 2rem auto;
 }
-@media (max-width: 760px){
-    .paragraph{
+
+@media (max-width: 760px) {
+    .paragraph {
         font-size: 0.9rem;
     }
-    .blockQuote{
+
+    .blockQuote {
         font-size: 1rem;
     }
-    .bodyImage{
+
+    .bodyImage {
         max-width: 90%;
     }
 }
