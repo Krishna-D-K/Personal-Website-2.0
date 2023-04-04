@@ -31,7 +31,7 @@ function BodyText(props) {
             }
         }
     }
-    console.log(props.data);
+    // console.log(props.data);
     return (
         <PortableText value={props.data} components={components}></PortableText>
     )

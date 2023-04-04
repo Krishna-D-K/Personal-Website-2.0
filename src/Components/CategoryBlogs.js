@@ -4,8 +4,8 @@ import BlogCards from './BlogCards';
 import * as Styles from "../styles/categoryBlogStyle.module.css";
 
 function CategoryBlogs({ blogs, category }) {
-    console.log(blogs.nodes)
-    console.log(blogs.nodes)
+    // console.log(blogs.nodes)
+    // console.log(blogs.nodes)
     return (
         <div className={Styles.band}>
             {blogs && blogs.nodes.map((item, index) => {

@@ -1,6 +1,6 @@
 import { Avatar, Tooltip } from '@mui/material';
 import React, { useState } from 'react'
-import * as Styles from "../Styles/navbarStyle.module.css";
+import * as Styles from "../styles/navbarStyle.module.css";
 import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
 import avatar from "../Images/avatar.png";
 import { Link } from 'gatsby';
@@ -37,7 +37,7 @@ function Navbar() {
     if (!window.location.pathname.includes("blogs")) {
         return (
             <>
-                <div className={Styles.container} id="Navbar" onScroll={() => { console.log(document.getElementById("Navbar").scrollTop) }}>
+                <div className={Styles.container} id="Navbar">
                     <div className={Styles.avatar}>
                         <a href="/">
                             <Avatar src={avatar} />
@@ -62,7 +62,7 @@ function Navbar() {
     else{
         return (
             <>
-                <div className={Styles.container} id="Navbar" onScroll={() => { console.log(document.getElementById("Navbar").scrollTop) }}>
+                <div className={Styles.container} id="Navbar">
                     <div className={Styles.avatar}>
                         <Link to="/">
                             <Avatar src={avatar} />
