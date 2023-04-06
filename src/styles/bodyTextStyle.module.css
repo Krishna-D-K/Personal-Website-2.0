@@ -30,7 +30,7 @@ ul li{
 }
 
 @media (max-width: 760px) {
-    .paragraph {
+    .paragraph, ul {
         font-size: 0.9rem;
     }
 
