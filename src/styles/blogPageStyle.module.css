@@ -22,12 +22,12 @@
     margin: 0 0.5rem 0 0;
 }
 
-.subHeading p {
+.subHeading section {
     width: 100%;
     margin: auto;
 }
 
-.subHeading p hr {
+.subHeading section hr {
     height: 2px;
     border: none;
     border-radius: 1rem;

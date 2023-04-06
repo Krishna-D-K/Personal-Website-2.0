@@ -69,8 +69,8 @@ function Projects() {
                         <span>MaterialUI</span>
                     </div>
                     <div className={Styles.links}>
-                        <a href="" target="_blank" rel="noreferrer"><GitHubIcon /></a>
-                        <a href="" target="_blank" rel="noreferrer"><LaunchIcon /></a>
+                        <a href="https://github.com/Krishna-D-K/Personal-Website-2.0" target="_blank" rel="noreferrer" aria-label='Link'><GitHubIcon /></a>
+                        <a href="https://krishna-d-k.vercel.app/blogs" target="_blank" rel="noreferrer" aria-label='Link'><LaunchIcon /></a>
                     </div>
                 </div>
                 <div className={Styles.projectPreview}>

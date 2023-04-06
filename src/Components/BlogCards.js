@@ -9,7 +9,7 @@ function BlogCards({ title, time, image, description, altText, index }) {
             <div className={Styles.item1}>
                 <div className={Styles.card}>
                     <div className={Styles.thumb}>
-                        <GatsbyImage image={image} alt={altText} className={Styles.gatsbyImage}/>
+                        <GatsbyImage image={image} alt={altText||"error"} className={Styles.gatsbyImage}/>
                     </div>
                     <article>
                         <h1>{title}</h1>

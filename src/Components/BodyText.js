@@ -10,13 +10,13 @@ function BodyText(props) {
     const components = {
         block: {
             normal: ({ children }) => <div className={Styles.paragraph}>{children}</div>,
-            blockquote: ({children}) => <div className={Styles.blockQuote}>{children}</div>
+            blockquote: ({ children }) => <div className={Styles.blockQuote}>{children}</div>,
         },
         types: {
-            customImage: ({value})=>{
+            customImage: ({ value }) => {
                 const imageData = getImageAsset(value.asset, gatsbyConfig.plugins[1].options);
-                const {height, width} = getImageDimensions(value);
-                const image={
+                const { height, width } = getImageDimensions(value);
+                const image = {
                     url: imageData.url,
                     height: height,
                     width: width
@@ -26,12 +26,11 @@ function BodyText(props) {
                     layout: "constrained",
                 });
                 return (
-                    <div className={Styles.bodyImage}><GatsbyImage image={gatsbyImageData} alt={value.altText} class/></div>
+                    <div className={Styles.bodyImage}><GatsbyImage image={gatsbyImageData} alt={value.altText} class /></div>
                 )
             }
         }
     }
-    // console.log(props.data);
     return (
         <PortableText value={props.data} components={components}></PortableText>
     )

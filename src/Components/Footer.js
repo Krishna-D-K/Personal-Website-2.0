@@ -14,11 +14,11 @@ function Footer() {
         <div className={Styles.container}>
             <hr />
             {<div className={Styles.social}>
-                <a href="https://github.com/Krishna-D-K" target="_blank" rel="noreferrer" aria-label="Link"><GitHubIcon sx={{ fontSize: 30, color: "aliceblue" }} /></a>
-                <a href="https://www.facebook.com/profile.php?id=100074550491680" target="_blank" rel="noreferrer" aria-label="Link"><FacebookOutlinedIcon sx={{ fontSize: 30, color: "aliceblue" }} /></a>
-                <a href="https://www.instagram.com/krishna_d_k/" target="_blank" rel="noreferrer" aria-label="Link"><InstagramIcon sx={{ fontSize: 30, color: "aliceblue" }} /></a>
-                <a href="https://www.linkedin.com/in/krishna-d-k/" target="_blank" rel="noreferrer" aria-label="Link"><LinkedInIcon sx={{ fontSize: 30, color: "aliceblue" }} /></a>
-                <a href="https://twitter.com/krishna_d_k" target="_blank" rel="noreferrer" aria-label="Link"><TwitterIcon sx={{ fontSize: 30, color: "aliceblue" }} /></a>
+                <a href="https://github.com/Krishna-D-K" target="_blank" rel="noreferrer" aria-label="Link"><GitHubIcon sx={{ fontSize: 30 }} /></a>
+                <a href="https://www.facebook.com/profile.php?id=100074550491680" target="_blank" rel="noreferrer" aria-label="Link"><FacebookOutlinedIcon sx={{ fontSize: 30 }} /></a>
+                <a href="https://www.instagram.com/krishna_d_k/" target="_blank" rel="noreferrer" aria-label="Link"><InstagramIcon sx={{ fontSize: 30 }} /></a>
+                <a href="https://www.linkedin.com/in/krishna-d-k/" target="_blank" rel="noreferrer" aria-label="Link"><LinkedInIcon sx={{ fontSize: 30 }} /></a>
+                <a href="https://twitter.com/krishna_d_k" target="_blank" rel="noreferrer" aria-label="Link"><TwitterIcon sx={{ fontSize: 30 }} /></a>
             </div>}
             <div className={Styles.copyright}>
                 Copyright © {date.getFullYear()} Krishna Kolte <div><a href='mailto:krishnadk8203@gmail.com' target="_blank" rel="noreferrer">krishnadk8203@gmail.com</a></div>

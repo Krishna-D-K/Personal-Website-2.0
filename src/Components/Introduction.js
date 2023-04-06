@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import Typewriter from "typewriter-effect";
 import * as styles from "../styles/introductionStyle.module.css"
-import my_img from "../Images/my_img.png";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 

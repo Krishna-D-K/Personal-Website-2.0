@@ -47,9 +47,9 @@ function Navbar() {
                             </a>
                         </div>
                         <div className={Styles.options}>
-                            <span onClick={() => scrollToView("Blogs")}>Blogs</span>
-                            <span onClick={() => scrollToView("Projects")}>Projects</span>
-                            <span onClick={() => scrollToView("Connect")}>Connect</span>
+                            <span onClick={() => scrollToView("Blogs")} role="presentation">Blogs</span>
+                            <span onClick={() => scrollToView("Projects")} role="presentation">Projects</span>
+                            <span onClick={() => scrollToView("Connect")} role="presentation">Connect</span>
                         </div>
                     </div>
                     {visible &&

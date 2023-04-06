@@ -111,7 +111,9 @@
     color: rgb(17, 34, 64);
     margin: 0.4rem 0;
 }
-
+.descriptionText{
+    
+}
 .rightDescription {
     width: 120%;
     position: relative;

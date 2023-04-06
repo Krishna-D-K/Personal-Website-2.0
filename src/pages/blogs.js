@@ -28,14 +28,14 @@ function Blogs({ data }) {
         <div className={Styles.heading}>MY BLOGS</div>
         <div>
           <div className={Styles.subHeading}>
-            <span>Featured</span><p><hr /></p>
+            <span>Featured</span><section><hr /></section>
           </div>
         </div>
         <div className={Styles.band}>
           {featured && featured.nodes.map((item, index) => {
             const value = item.featured[0];
             return (
-              <Link to={`/blogs/${value.slug.current}`} style={{ textDecoration: "none" }}>
+              <Link to={`/blogs/${value.slug.current}`} style={{ textDecoration: "none" }} key={index}>
                 <BlogCards title={value.title} image={value.coverImage.asset.gatsbyImageData} time={value.createdAt} description={value.description} index={index} />
               </Link>
             )
@@ -43,14 +43,14 @@ function Blogs({ data }) {
         </div>
         <div>
           <div className={Styles.subHeading}>
-            <span>Categories </span><p><hr /></p>
+            <span>Categories </span><section><hr /></section>
           </div>
           <div className={Styles.categoryList}>
             {categories && categories.nodes.map((value, index) => {
               return <div className={Index === index ? Styles.activeCategoryListItem : Styles.categoryListItem} onClick={() => {
                 setIndex(index);
                 setCategory(value.title);
-              }}>{value.title}</div>
+              }} role="presentation" key={index}>{value.title}</div>
             })}
           </div>
           <CategoryBlogs blogs={blogs} category={category} />

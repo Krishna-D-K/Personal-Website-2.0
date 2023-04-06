@@ -1,9 +1,16 @@
-.paragraph {
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+.paragraph, ul{
     font-size: 1.2rem;
     color: azure;
     letter-spacing: 0.5px;
+    margin: 0 0 1rem 0;
+    font-weight: lighter;
+    font-family: 'Open Sans', sans-serif;
 }
-
+ul li{
+    margin: 0.5rem 0;
+}
 .paragraph a {
     color: #64ffda
 }
