@@ -26,7 +26,12 @@ function BodyText(props) {
                     layout: "constrained",
                 });
                 return (
-                    <div className={Styles.bodyImage}><GatsbyImage image={gatsbyImageData} alt={value.altText} class /></div>
+                    <div className={Styles.bodyImage}>
+                        <GatsbyImage image={gatsbyImageData} alt={value.altText} />
+                        <div className={Styles.imageCaption}>
+                            {value.caption}
+                        </div>
+                    </div>
                 )
             }
         }
