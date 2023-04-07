@@ -80,7 +80,7 @@ query MyQuery {
         }
       }
     }
-    categories: allSanityCategories {
+    categories: allSanityCategories(sort: {title: ASC}) {
           nodes {
             title
           }
