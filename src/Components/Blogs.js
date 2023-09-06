@@ -10,6 +10,9 @@ function Blogs() {
           nodes {
             featured {
               title
+              category{
+                title
+              }
               slug {
                 current
               }
@@ -31,7 +34,7 @@ function Blogs() {
   return (
     <>
       <div className={Styles.blogContainer} id="Blogs">
-        <span className={Styles.heading}><span>BLOGS</span><hr /></span>
+        <span className={Styles.heading}><span>My Blogs</span><hr /></span>
         <p>
           Why do I write blog? First of all, it's a great way to express myself and share my thoughts with the world. And second, it's a nice feeling to see that people actually read and enjoy my blog. Here are some featured blogs of them...
         </p>
@@ -40,12 +43,12 @@ function Blogs() {
             const value = item.featured[0];
             return (
               <Link to={`/blogs/${value.slug.current}`} style={{ textDecoration: "none" }} key={index}>
-                <BlogCards title={value.title} image={value.coverImage.asset.gatsbyImageData} time={value.createdAt} description={value.description} index={index} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} />
+                <BlogCards title={value.title} categories={value.category} image={value.coverImage.asset.gatsbyImageData} time={value.createdAt} description={value.description} index={index} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} />
               </Link>
             )
           })}
         </div>
-        <Link to="/blogs" className={Styles.linkTag}><h4 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} role="presentation">SEE MORE</h4></Link>
+        <Link to="/blogs" className={Styles.linkTag}><h4 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} role="presentation">...and some more</h4></Link>
       </div>
     </>
   )

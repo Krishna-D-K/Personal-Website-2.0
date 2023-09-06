@@ -9,7 +9,7 @@ const isBrowser = typeof window !== "undefined"
 function notFound() {
 
     if (isBrowser) {
-        document.body.style.backgroundColor = "#0a192f";
+        // document.body.style.backgroundColor = "#000000";
     }
 
     return (

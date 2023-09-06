@@ -37,19 +37,18 @@ function Navbar() {
         };
 
         window.addEventListener('scroll', toggleVisible);
-        if (!window.location.pathname.includes("blogs")) {
+        if (window.location.pathname!=="/") {
             return (
                 <>
                     <div className={Styles.container} id="Navbar">
                         <div className={Styles.avatar}>
-                            <a href="/">
+                            <Link to="/">
                                 <Avatar src={avatar} />
-                            </a>
+                            </Link>
                         </div>
                         <div className={Styles.options}>
-                            <span onClick={() => scrollToView("Blogs")} role="presentation">Blogs</span>
-                            <span onClick={() => scrollToView("Projects")} role="presentation">Projects</span>
-                            <span onClick={() => scrollToView("Connect")} role="presentation">Connect</span>
+                            <Link to="/"><span>Home</span></Link>
+                            <Link to="/blogs"><span>Blogs&emsp;&emsp;</span></Link>
                         </div>
                     </div>
                     {visible &&
@@ -67,13 +66,14 @@ function Navbar() {
                 <>
                     <div className={Styles.container} id="Navbar">
                         <div className={Styles.avatar}>
-                            <Link to="/">
+                            <a href="/">
                                 <Avatar src={avatar} />
-                            </Link>
+                            </a>
                         </div>
                         <div className={Styles.options}>
-                            <Link to="/"><span>Home</span></Link>
-                            <Link to="/blogs"><span>Blogs&emsp;&emsp;</span></Link>
+                            <span onClick={() => scrollToView("Blogs")} role="presentation">Blogs</span>
+                            <span onClick={() => scrollToView("About")} role="presentation">About</span>
+                            <span onClick={() => scrollToView("Connect")} role="presentation">Connect</span>
                         </div>
                     </div>
                     {visible &&

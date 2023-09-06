@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Layout from "./Components/Layout"
 import { Link, graphql } from 'gatsby';
 import * as Styles from "./styles/singleBlogPageStyle.module.css"
@@ -28,12 +28,15 @@ query singleBlogQuery($id: String!){
           title
         }
     },
-    featured: allSanityFeatured {
+    featured: allSanityFeatured(sort: {_createdAt: DESC}) {
       nodes {
         featured {
           title
           slug {
             current
+          }
+          category{
+            title
           }
           description
           coverImage {
@@ -48,9 +51,23 @@ query singleBlogQuery($id: String!){
     }
   }
 `
+
+// Check if window is defined (so if in the browser or in node.js).
+const isBrowser = typeof window !== "undefined"
+
 function blogTemplate({ data }) {
   const { blog, featured } = data;
-  const date = new Date(blog.createdAt);
+  const _time = new Date(blog.createdAt);
+    const day = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+    const dayString = _time.toDateString();
+    const date = dayString.substring(4) + ", " + day[_time.getDay()];
+
+  if (isBrowser) {
+    console.log("TRUE")
+    document.body.scrollTop = 0;
+  }
+
+
   return (
     <Layout>
       <Helmet>
@@ -66,7 +83,7 @@ function blogTemplate({ data }) {
               <PersonIcon />&nbsp; {blog.author}&emsp;
             </div>
             <div className={Styles.date}>
-              <CalendarMonthOutlinedIcon />&nbsp;{date.toDateString()}
+              <CalendarMonthOutlinedIcon />&nbsp;{date}
             </div>
           </div>
           <div className={Styles.categories}>
@@ -88,7 +105,7 @@ function blogTemplate({ data }) {
           const value = item.featured[0];
           return (
             <Link to={`/blogs/${value.slug.current}`} style={{ textDecoration: "none" }} key={index}>
-              <BlogCards title={value.title} image={value.coverImage.asset.gatsbyImageData} time={value.createdAt} description={value.description} index={index} />
+              <BlogCards title={value.title} categories={value.category} image={value.coverImage.asset.gatsbyImageData} time={value.createdAt} description={value.description} index={index} />
             </Link>
           )
         })}

@@ -15,7 +15,7 @@ function Blogs({ data }) {
   const [Index, setIndex] = useState(0);
 
   if (isBrowser) {
-    document.body.style.background = "#0a192f";
+    // document.body.style.background = "#000000";
   }
 
   return (
@@ -35,8 +35,8 @@ function Blogs({ data }) {
           {featured && featured.nodes.map((item, index) => {
             const value = item.featured[0];
             return (
-              <Link to={`/blogs/${value.slug.current}`} style={{ textDecoration: "none" }} key={index}>
-                <BlogCards title={value.title} image={value.coverImage.asset.gatsbyImageData} time={value.createdAt} description={value.description} index={index} />
+              <Link to={`/blogs/${value.slug.current}`} style={{ textDecoration: "none" }} key={index} autoscroll="true">
+                <BlogCards title={value.title} categories={value.category} image={value.coverImage.asset.gatsbyImageData} time={value.createdAt} description={value.description} index={index} />
               </Link>
             )
           })}
@@ -62,10 +62,13 @@ function Blogs({ data }) {
 
 export const data = graphql`
 query MyQuery {
-    featured: allSanityFeatured {
+    featured: allSanityFeatured(sort: {_createdAt: DESC}) {
       nodes {
         featured {
           title
+          category{
+            title
+          }
           slug {
             current
           }

@@ -13,29 +13,30 @@
     width: 100%;
 }
 .heading span{
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: #64ffda;
     margin-top: 0;
     text-align: center;
     margin: 0 0.5rem 0 4rem;
+    font-style: italic;
 }
 .heading hr{
     height: 2px;
     border: none;
     border-radius: 1rem;
     background-color: #64ffdb33;
-    width: 100%;
+    width: 85%;
 }
 .blogContainer p{
     width: 70%;
     text-align: left;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: whitesmoke;
     margin: 4rem 0;
     font-weight: lighter;
 }
 .band {
-    width: 90%;
+    width: 80%;
     max-width: 1240px;
     margin: 0 auto;
     display: grid;
@@ -57,10 +58,10 @@
 .linkTag h4{
     margin: 0.5rem;
     margin-top: 1rem;
+    font-weight: lighter;
 }
 .linkTag:hover{
     border-bottom: 1px solid #64ffda;
-
 }
 
 @media (min-width: 30em) {
@@ -77,6 +78,7 @@
 @media (max-width: 760px){
     .band{
         grid-template-columns: 1fr;
+        width: 90%;
     }
     .blogContainer{
         padding: 0 0 2rem 0;
@@ -87,11 +89,14 @@
         font-size: 0.8rem;
     }
     .heading{
-        margin: 0 0 2rem 0;
+        margin: 0 0 1rem 0;
     }
     .heading span{
-        font-size: 1.1rem;
-        margin: 0;
+        font-size: 1rem;
+        margin: 0 1rem 0 0.5rem;
+    }
+    .heading hr{
+        width: 73%;
     }
     .linkTag{
         font-size: 0.9rem;

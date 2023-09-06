@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+.container{
+    margin: 5rem auto;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+}
+
+.leftHalf{
+  width: 40vw;
+  padding: 4rem 1rem 4rem 4rem;
+}
+.rightHalf{
+  width: 60vw;
+  height: 90vh;
+}
+.rightHalf::-webkit-scrollbar{
+  display: none;
+}
+.name {
+  font-family: 'Inter', sans-serif;;
+  color: rgb(255 255 255);
+  font-size: 3rem;
+  font-weight: 600;
+}
+.subname{
+  padding: 0.8rem 0;
+  font-family: 'Inter', sans-serif;;
+  color: rgb(255 255 255);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.shortIntro{
+  margin: 2rem 0;
+  color: gray;
+  font-size: 1rem;
+  line-height: 1.6rem;
+}
+.rightHalf{
+  overflow-y: scroll;
+}
+
+
+@media (max-width: 760px) {
+  .container{
+    flex-direction: column;
+    margin: 6rem auto;
+    overflow-y: visible;
+  }
+  .leftHalf, .rightHalf{
+    width: 90vw;
+    height: auto;
+  }
+  .leftHalf{
+    padding: 0;
+  }
+  .name{
+    font-size: 1.6rem
+  }
+  .subname{
+    font-size: 1.2rem;
+  }
+  .shortIntro{
+    margin: 1rem 0 2rem 0;
+    line-height: 1.2rem;
+  }
+}
+  

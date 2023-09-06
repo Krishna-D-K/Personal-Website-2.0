@@ -20,9 +20,9 @@ function Introduction() {
     }, [])
     return (
         <div className={styles.container}>
-            <div className={styles.imgContainer} data-aos="fade">
+            {/* <div className={styles.imgContainer} data-aos="fade">
                 <div></div>
-            </div>
+            </div> */}
             <div className={styles.introduction}>
                 {<Typewriter onInit={(typewriter) => {
                     typewriter

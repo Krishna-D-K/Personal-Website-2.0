@@ -5,23 +5,25 @@
     color: azure;
     letter-spacing: 0.5px;
     margin: 0 0 1rem 0;
-    font-weight: lighter;
+    font-weight: lighter !important;
     font-family: 'Open Sans', sans-serif;
 }
 ul li{
     margin: 0.5rem 0;
+    font-weight: normal !important;
 }
 .paragraph a {
     color: #64ffda
 }
 
 .blockQuote {
-    font-size: 1.4rem;
+    font-size: 1.2rem !important;
     border-left: 5px solid #64ffda;
     color: azure;
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 1rem;
     margin: 0.8rem 0;
     border-radius: 0.2rem;
+    font-weight: lighter !important;
 }
 
 .imageCaption{

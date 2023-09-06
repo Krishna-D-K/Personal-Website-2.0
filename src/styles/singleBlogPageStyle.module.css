@@ -1,17 +1,17 @@
 body{
-    background: #0a192f;
+    background: #000000;
 }
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%;
-    margin: 3rem auto;
+    width: 70%;
+    margin: 5rem auto;
 }
 
 .title {
     width: 100%;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 200;
     color: azure;
     margin: 1rem auto;
@@ -26,7 +26,7 @@ body{
     display: flex;
 }
 .author, .date{
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: slategrey;
     margin: 0 0.5rem 0.5rem 0;
     display: flex;
@@ -38,9 +38,13 @@ body{
     border-radius: 0.5rem;
     margin: 1rem 0;
 }
-.blogContent{
-    width: 95%;
+.blogContent div, .blogContent ul li{
+    width: 100%;
     margin: 1rem auto;
+    font-size: 1.05rem;
+    word-spacing: 2px;
+    font-weight: bold;
+    color: #f0ffffe5;
 }
 .coverImage{
     max-height: 60vh;
@@ -82,7 +86,7 @@ body{
     width: 85%;
 }
 .band {
-    width: 80%;
+    width: 72%;
     max-width: 1240px;
     margin: 2rem auto;
     display: grid;

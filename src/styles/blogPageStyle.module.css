@@ -1,6 +1,6 @@
 .container {
-    width: 80%;
-    margin: 0 auto
+    width: 90%;
+    margin: 15vh auto 0 auto;
 }
 
 .heading {
@@ -12,6 +12,8 @@
 
 .subHeading {
     display: flex;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .subHeading span {
@@ -35,7 +37,7 @@
 }
 
 .band {
-    width: 100%;
+    width: 80%;
     max-width: 1240px;
     margin: 2rem auto;
     display: grid;
@@ -63,7 +65,7 @@
 
 .categoryList {
     display: flex;
-    width: 100%;
+    width: 80%;
     flex-wrap: wrap;
     align-items: center;
     margin: 2rem auto;
@@ -100,8 +102,12 @@
 }
 
 @media (max-width: 760px) {
+    .container{
+        margin-top: 6rem;
+    }
     .band {
         grid-template-columns: 1fr;
+        width: 90%;
     }
     .heading{
         margin: 2rem 0;
@@ -111,7 +117,24 @@
         margin: 0 0 2rem 0;
     }
     .subHeading span{
-        font-size: 1.1rem;
-        margin: 0;
+        font-size: 1rem;
+        margin: 0 0.5rem 0 1rem;
+    }
+    .subHeading section hr{
+        width: 110%;
+    }
+    .categoryList{
+        width: 90%;
+        display: flex;
+        align-items: center;
+        /* justify-content: center; */
+    }
+    .categoryListItem{
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+        margin: 0 0.3rem;
+    }
+    .activeCategoryListItem{
+        font-size: 0.9rem;
     }
 }

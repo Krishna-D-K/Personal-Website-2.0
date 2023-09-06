@@ -1,7 +1,12 @@
 .container {
     display: flex;
-    height: 85vh;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
     /* border: 2px solid red */
+    background-image: url("../Images/dark_space.jpg");
+    background-size: cover;
+    background-blend-mode: darken;
 }
 
 .displayNone {
@@ -58,10 +63,11 @@
 
 .introduction {
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     font-size: 1.5rem;
     color: #64ffda;
     padding: 0 0 20vh 0;
+    width: 80%;
 }
 
 .lightIntroduction {

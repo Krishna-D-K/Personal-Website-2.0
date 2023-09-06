@@ -1,0 +1,238 @@
+.container {
+    width: 90%;
+    padding: 4rem 0;
+    margin: 0 auto;
+}
+
+.heading{
+    display: flex;
+    align-items: center;
+    margin: 0 0 4rem 0;
+}
+.heading span{
+    color: #64ffda;
+    margin-top: 0;
+    text-align: center;
+    margin: 0 0.5rem 0 4rem;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+.heading hr{
+    height: 2px;
+    border: none;
+    border-radius: 1rem;
+    background-color: #64ffdb33;
+    width: 80%;
+}
+.lightContainer {
+    width: 100%;
+    background: rgb(157, 151, 255);
+    background: linear-gradient(157deg, rgba(157, 151, 255, 1) 0%, rgba(71, 71, 226, 1) 21%, rgba(156, 10, 141, 1) 100%);
+    padding: 4rem 0;
+}
+
+.lightContainer h1 {
+    color: azure;
+    margin-top: 0;
+    text-align: center;
+}
+
+.prose {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    margin: 0 auto;
+}
+.prose p{
+    color: aliceblue;
+    font-size: 1.1rem;
+    /* font-style: italic; */
+    font-weight: lighter;
+    text-align: left;
+    letter-spacing: 0.8px;
+    line-height: 3rem;
+}
+.prose p a{
+    font-style: italic;
+    color: #64ffda;
+}
+
+/* For Mobile Portrait View */
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+    .container{
+        padding: 2rem 0;
+    }
+    .container h1,
+    .lightContainer h1 {
+        font-size: 1.3rem;
+    }
+    .heading{
+        margin-bottom: 2rem;
+    }
+    .heading hr{
+        width: 60%;
+    }
+    .heading span{
+        font-size: 1rem;
+        margin: 0 1rem 0 0.5rem;
+    }
+    .prose {
+        width: 80%;
+    }
+    .prose p{
+        font-size: 0.8rem;
+        line-height: 1.8rem;
+        letter-spacing: 0px;
+    }
+}
+
+/* For Mobile Landscape View */
+@media screen and (max-device-width: 640px) and (orientation: landscape) {
+    .container{
+        padding: 2rem 0;
+    }
+    .container h1,
+    .lightContainer h1 {
+        font-size: 1.3rem;
+    }
+    .heading{
+        margin-bottom: 2rem;
+    }
+    .heading hr{
+        width: 60%;
+    }
+    .heading span{
+        font-size: 1rem;
+        margin: 0 1rem 0 0.5rem;
+    }
+    .prose {
+        width: 80%;
+    }
+    .prose p{
+        font-size: 0.8rem;
+        line-height: 1.8rem;
+        letter-spacing: 0px;
+    }
+    
+}
+
+/* For Mobile Phones Portrait or Landscape View */
+@media screen and (max-device-width: 640px) {
+    .container{
+        padding: 2rem 0;
+    }
+    .container h1,
+    .lightContainer h1 {
+        font-size: 1.3rem;
+    }
+    .heading{
+        margin-bottom: 2rem;
+    }
+    .heading hr{
+        width: 60%;
+    }
+    .heading span{
+        font-size: 1rem;
+        margin: 0 1rem 0 0.5rem;
+    }
+    .prose {
+        width: 80%;
+    }
+    .prose p{
+        font-size: 0.8rem;
+        line-height: 1.8rem;
+        letter-spacing: 0px;
+    }
+    
+}
+
+/* For iPhone 4 Portrait or Landscape View */
+@media screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+    .container{
+        padding: 2rem 0;
+    }
+    .container h1,
+    .lightContainer h1 {
+        font-size: 1.3rem;
+    }
+    .heading{
+        margin-bottom: 2rem;
+    }
+    .heading hr{
+        width: 60%;
+    }
+    .heading span{
+        font-size: 1rem;
+        margin: 0 1rem 0 0.5rem;
+    }
+    .prose {
+        width: 80%;
+    }
+    .prose p{
+        font-size: 0.8rem;
+        line-height: 1.8rem;
+        letter-spacing: 0px;
+    }
+    
+}
+
+/* For iPhone 5 Portrait or Landscape View */
+@media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+    .container{
+        padding: 2rem 0;
+    }
+    .container h1,
+    .lightContainer h1 {
+        font-size: 1.3rem;
+    }
+    .heading{
+        margin-bottom: 2rem;
+    }
+    .heading hr{
+        width: 60%;
+    }
+    .heading span{
+        font-size: 1rem;
+        margin: 0 1rem 0 0.5rem;
+    }
+    .prose {
+        width: 80%;
+    }
+    .prose p{
+        font-size: 0.8rem;
+        line-height: 1.8rem;
+        letter-spacing: 0px;
+    }
+    
+}
+
+/* For iPhone 6 and 6 plus Portrait or Landscape View */
+@media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3) {
+    .container{
+        padding: 2rem 0;
+    }
+    .container h1,
+    .lightContainer h1 {
+        font-size: 1.3rem;
+    }
+    .heading{
+        margin-bottom: 2rem;
+    }
+    .heading hr{
+        width: 60%;
+    }
+    .heading span{
+        font-size: 1rem;
+        margin: 0 1rem 0 0.5rem;
+    }
+    .prose {
+        width: 80%;
+    }
+    .prose p{
+        font-size: 0.8rem;
+        line-height: 1.8rem;
+        letter-spacing: 0px;
+    }
+    
+}

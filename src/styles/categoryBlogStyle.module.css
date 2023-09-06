@@ -1,5 +1,5 @@
 .band {
-    width: 100%;
+    width: 80%;
     max-width: 1240px;
     margin: 2rem auto;
     display: grid;
@@ -23,5 +23,6 @@
 @media (max-width: 760px) {
     .band {
         grid-template-columns: 1fr;
+        width: 90%;
     }
 }

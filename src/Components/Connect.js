@@ -60,7 +60,7 @@ function Connect() {
 
     return (
         <div className={Styles.container} id='Connect'>
-            <span className={Styles.heading}><span>CONNECT</span><hr /></span>
+            <span className={Styles.heading}><span>Still something?</span><hr /></span>
             <div>
                 <div className={Styles.message}>
                     Message me if you wish to know me, collaborate with me, ask me something, or just for a casual chit-chat !!

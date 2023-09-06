@@ -19,14 +19,15 @@
 
 .copyright {
     color: aliceblue;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: center;
     margin: 0.5rem 0;
 }
 
 .copyright a {
     color: #64ffda;
-    font-size: 1rem
+    font-size: 1rem;
+    font-weight: lighter;
 }
 
 .lightCopyright {

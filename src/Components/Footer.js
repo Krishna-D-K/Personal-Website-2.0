@@ -21,7 +21,7 @@ function Footer() {
                 <a href="https://twitter.com/krishna_d_k" target="_blank" rel="noreferrer" aria-label="Link"><TwitterIcon sx={{ fontSize: 30 }} /></a>
             </div>}
             <div className={Styles.copyright}>
-                Copyright © {date.getFullYear()} Krishna Kolte <div><a href='mailto:krishnadk8203@gmail.com' target="_blank" rel="noreferrer">krishnadk8203@gmail.com</a></div>
+                © {date.getFullYear()} Krishna Kolte <a href='mailto:krishnadk8203@gmail.com' target="_blank" rel="noreferrer">krishnadk8203@gmail.com</a>
             </div>
         </div>
     )

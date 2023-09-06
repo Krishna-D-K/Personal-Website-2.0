@@ -2,6 +2,7 @@ import React from 'react'
 import Connect from '../Components/Connect';
 import Introduction from '../Components/Introduction';
 import Layout from '../Components/Layout';
+import About from "../Components/About";
 import Projects from '../Components/Projects';
 import TechStack from '../Components/TechStack';
 import "../styles/index.css";
@@ -14,7 +15,7 @@ const isBrowser = typeof window !== "undefined"
 const Home = () => {
 
     if (isBrowser) {
-        document.body.style.backgroundColor = "#0a192f";
+        // document.body.style.backgroundColor = "#000000";
     }
 
     return (
@@ -25,9 +26,10 @@ const Home = () => {
             </Helmet>
             <Layout>
                 <Introduction />
-                <TechStack />
-                <Projects />
+                {/* <TechStack />
+                <Projects /> */}
                 <Blogs />
+                <About />
                 <Connect />
             </Layout>
         </div>
