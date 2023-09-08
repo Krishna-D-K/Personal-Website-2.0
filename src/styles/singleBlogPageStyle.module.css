@@ -112,7 +112,7 @@ body{
     }
     .container{
         width: 90%;
-        margin: 1.5rem auto;
+        margin: 6rem auto 2rem auto;
     }
     .title{
         font-size: 1.4rem;
@@ -136,5 +136,40 @@ body{
     }
     .blogContent{
         width: 100%;
+    }
+    .blogContent div, .blogContent ul li{
+        width: 100%;
+        margin: 0.5rem auto;
+        font-size: 0.9rem;
+        word-spacing: 0px;
+        font-weight: bold;
+        color: #f0ffffe5;
+    }
+    .title {
+        width: 100%;
+        font-size: 1.2rem;
+        font-weight: 200;
+        color: azure;
+        margin: 1rem auto 0.5rem auto;
+    }
+    .subtitle{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+    }
+    .subtitle div{
+        display: flex;
+    }
+    .author, .date{
+        font-size: 0.8rem;
+        color: slategrey;
+        margin: 0 0.5rem 0.5rem 0;
+        display: flex;
+        align-items: center;
+    }
+    .categories span{
+        color: #64ffda;
+        font-size: 0.8rem;
     }
 }
