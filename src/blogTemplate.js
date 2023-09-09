@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Layout from "./Components/Layout"
 import { Link, graphql } from 'gatsby';
 import * as Styles from "./styles/singleBlogPageStyle.module.css"
@@ -8,6 +8,7 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import BodyText from './Components/BodyText';
 import BlogCards from './Components/BlogCards';
 import { Helmet } from 'react-helmet';
+import Comments from './Components/Comments';
 
 export const data = graphql`
 query singleBlogQuery($id: String!){
@@ -97,6 +98,7 @@ function blogTemplate({ data }) {
           <BodyText data={blog._rawPostContent} />
         </div>
       </div>
+      <Comments />
       <div className={Styles.otherBlogs}>
         <span className={Styles.heading1}><span>OTHER BLOGS</span><hr /></span>
       </div>
