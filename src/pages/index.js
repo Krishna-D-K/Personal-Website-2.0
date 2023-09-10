@@ -3,8 +3,6 @@ import Connect from '../Components/Connect';
 import Introduction from '../Components/Introduction';
 import Layout from '../Components/Layout';
 import About from "../Components/About";
-import Projects from '../Components/Projects';
-import TechStack from '../Components/TechStack';
 import "../styles/index.css";
 import Blogs from '../Components/Blogs';
 import { Helmet } from 'react-helmet';

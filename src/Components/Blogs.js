@@ -6,7 +6,7 @@ import BlogCards from './BlogCards';
 function Blogs() {
   const data = useStaticQuery(graphql`
     {
-        allSanityFeatured {
+        allSanityFeatured (sort: {_createdAt: DESC}) {
           nodes {
             featured {
               title

@@ -1,18 +1,5 @@
 import React, { useEffect } from 'react'
 import * as Styles from "../styles/aboutStyle.module.css"
-import HTML from "../Images/html.png";
-import CSS from "../Images/css.png";
-import JAVASCRIPT from "../Images/js.png";
-import REACT from "../Images/react.png";
-import BOOTSTRAP from "../Images/bootstrap.png";
-import C from "../Images/c.png";
-import CPP from "../Images/cpp.png";
-import GIT from "../Images/git.png";
-import GITHUB from "../Images/github.png";
-import MONGODB from "../Images/mongodb.png";
-import NODEJS from "../Images/nodejs.png";
-import PYTHON from "../Images/python.png";
-import SQL from "../Images/sql.png";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Link } from 'gatsby';

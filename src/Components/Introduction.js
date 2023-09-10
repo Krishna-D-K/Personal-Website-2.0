@@ -6,9 +6,11 @@ import 'aos/dist/aos.css';
 
 function Introduction() {
 
-    const introMessage1 = `<span style="color: whitesmoke">This is</span><br />Krishna Kolte, <br />`;
-    const introMessage2 = `<span style="color: whitesmoke">passionate full-stack developer</span>`;
-    const introMessage3 = `<span style="color: whitesmoke"><br />currently, a second year student of Electrical Engineering.</span>`;
+    const introMessage1P1 = `<i>" </i><span style="color: whitesmoke">There is</span> proving, `;
+    const introMessage1P2 = `<span style="color: whitesmoke">then there is</span> knowing.<i>"</i>`;
+    const introMessage2P1 = `<i>" </i><span style="color: whitesmoke">The hardest </span> choices `;
+    const introMessage2P2 = `<span style="color: whitesmoke">require the strongest </span>wills.<i>"</i>`;
+    const introMessage3 = `<i>" </i><span style="color: whitesmoke; font-style: italic">This too, shall </span><i>PASS."</i>`
 
     useEffect(() => {
         AOS.init({
@@ -26,17 +28,21 @@ function Introduction() {
             <div className={styles.introduction}>
                 {<Typewriter onInit={(typewriter) => {
                     typewriter
-                        .typeString(`<span id="welcomeMessage">Welcome !!!<br /></span>`)
+                        .changeDelay(110)
+                        .typeString(introMessage1P1)
                         .pauseFor(1000)
-                        .changeDelay(80)
-                        .typeString(introMessage1)
-                        .typeString(`<span style="color: whitesmoke">A full-stack</span>`)
-                        .pauseFor(600)
-                        .deleteChars(10)
-                        .typeString(introMessage2)
-                        .pauseFor(600)
+                        .typeString(introMessage1P2)
+                        .pauseFor(1500)
+                        .deleteAll(30)
+                        .pauseFor(1000)
+                        .typeString(introMessage2P1)
+                        .pauseFor(500)
+                        .typeString(introMessage2P2)
+                        .pauseFor(1500)
+                        .deleteAll(30)
+                        .pauseFor(1500)
                         .typeString(introMessage3)
-                        .start();
+                        .start()
                 }} />}
             </div>
         </div>
