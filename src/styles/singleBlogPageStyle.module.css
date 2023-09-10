@@ -109,6 +109,7 @@ body{
 @media (max-width: 760px){
     .band{
         grid-template-columns: 1fr;
+        width: 85%;
     }
     .container{
         width: 90%;
