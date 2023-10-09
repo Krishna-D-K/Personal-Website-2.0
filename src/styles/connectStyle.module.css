@@ -160,38 +160,20 @@
     margin-right: 1.5rem;
 }
 
-#lightResetButton {
-    background-color: transparent;
-    border: 1px solid #242b8f;
-    color: #242b8f;
-    font-size: 1.2rem;
-    padding: 0.2rem 0.8rem;
-    border-radius: 0.3rem;
-    margin-right: 1.5rem;
-}
-
 #submitButton:hover {
-    cursor: pointer;
+    /* cursor: pointer; */
     background-color: #00ffc3;
     color: black;
 }
 
-#lightSubmitButton:hover {
-    cursor: pointer;
-    background-color: #242b8f;
-}
-
 #resetButton:hover {
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
-#lightResetButton:hover {
-    cursor: pointer;
-    background-color: #242b8f;
-    color: aliceblue;
-    border: 1px solid #242b8f;
+#submitButton[disabled=disabled], #submitButton:disabled,  #resetButton[disabled=disabled], #resetButton:disabled{
+    opacity: 50%;
+    cursor: not-allowed;
 }
-
 #success {
     display: flex;
     justify-content: space-between;
