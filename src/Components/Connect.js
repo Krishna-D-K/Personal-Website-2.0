@@ -73,7 +73,7 @@ function Connect() {
                         </span>
                         <input type="text" data-aos="fade" value={subject} onChange={(e)=>setSubject(e.target.value)} name="Subject" placeholder='Subject' id={Styles.subject} required />
                         <textarea data-aos="fade" value={message} onChange={(e)=>setMessage(e.target.value)} placeholder='Your message' name="Message" id={Styles.message} required />
-                        {loading && <div>Loading...</div>}
+                        {loading && <div style={{color: "aquamarine"}}>Loading...</div>}
                         {success && <div id={Styles.success}>
                             <span style={{width: "auto"}}>Cool !! I'll get in touch with you soon.</span>
                             <CloseIcon onClick={()=>setSuccess(false)}/>
@@ -83,8 +83,8 @@ function Connect() {
                             <CloseIcon onClick={()=>setError(false)}/>
                         </div>}
                         <span id={Styles.buttons}>
-                            <button id={Styles.submitButton} type="submit">Submit</button>
-                            <button id={Styles.resetButton} onClick={()=>resetData()}>Reset</button>
+                            <button id={Styles.submitButton} type="submit" disabled={loading}>Submit</button>
+                            <button id={Styles.resetButton} onClick={()=>resetData()} disabled={loading}>Reset</button>
                         </span>
                     </form>
                 </div>
