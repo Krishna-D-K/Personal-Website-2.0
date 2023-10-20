@@ -24,8 +24,6 @@ const Home = () => {
             </Helmet>
             <Layout>
                 <Introduction />
-                {/* <TechStack />
-                <Projects /> */}
                 <Blogs />
                 <About />
                 <Connect />

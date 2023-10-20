@@ -43,7 +43,7 @@ function Navbar() {
                     <div className={Styles.container} id="Navbar">
                         <div className={Styles.avatar}>
                             <Link to="/">
-                                <Avatar src={avatar} />
+                                <Avatar src={avatar} alt='avatar'/>
                             </Link>
                         </div>
                         <div className={Styles.options}>

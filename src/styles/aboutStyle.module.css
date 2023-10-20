@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
 .container {
     width: 90%;
     padding: 4rem 0;
@@ -48,7 +50,8 @@
     color: aliceblue;
     font-size: 1.1rem;
     /* font-style: italic; */
-    font-weight: lighter;
+    font-family: 'Courgette', cursive;
+    font-weight: lighter !important;
     text-align: left;
     letter-spacing: 0.8px;
     line-height: 3rem;

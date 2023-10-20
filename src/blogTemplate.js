@@ -14,6 +14,9 @@ export const data = graphql`
 query singleBlogQuery($id: String!){
     blog: sanityBlog(id: {eq: $id}) {
         id
+        slug {
+          current
+        }
         title
         author
         coverImage {
@@ -58,16 +61,11 @@ const isBrowser = typeof window !== "undefined"
 
 function blogTemplate({ data }) {
   const { blog, featured } = data;
+  let count=0;
   const _time = new Date(blog.createdAt);
-    const day = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-    const dayString = _time.toDateString();
-    const date = dayString.substring(4) + ", " + day[_time.getDay()];
-
-  if (isBrowser) {
-    console.log("TRUE")
-    document.body.scrollTop = 0;
-  }
-
+  const day = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+  const dayString = _time.toDateString();
+  const date = dayString.substring(4) + ", " + day[_time.getDay()];
 
   return (
     <Layout>
@@ -105,11 +103,17 @@ function blogTemplate({ data }) {
       <div className={Styles.band}>
         {featured && featured.nodes.map((item, index) => {
           const value = item.featured[0];
-          return (
-            <Link to={`/blogs/${value.slug.current}`} style={{ textDecoration: "none" }} key={index}>
-              <BlogCards title={value.title} categories={value.category} image={value.coverImage.asset.gatsbyImageData} time={value.createdAt} description={value.description} index={index} />
-            </Link>
-          )
+          if(value.slug.current!==blog.slug.current && count<3){
+            count++;
+              return (
+              <Link to={`/blogs/${value.slug.current}`} style={{ textDecoration: "none" }} key={index}>
+                <BlogCards title={value.title} categories={value.category} image={value.coverImage.asset.gatsbyImageData} time={value.createdAt} description={value.description} index={index} />
+              </Link>
+            )
+          }
+          else{
+            return null;
+          }
         })}
       </div>
     </Layout>

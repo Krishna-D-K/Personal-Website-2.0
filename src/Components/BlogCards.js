@@ -19,8 +19,8 @@ function BlogCards({ title, time, image, description, altText, index, categories
                         <h1>{title}</h1>
                         <span className={Styles.date}>{date}</span>
                         <span className={Styles.category}>
-                            {categories && categories.map((val)=>{
-                                return <>{val.title} </>
+                            {categories && categories.map((val, index)=>{
+                                return <span key={index}>{val.title} </span>
                             })}
                         </span>
                         <span className={Styles.desc}>{description}</span>
