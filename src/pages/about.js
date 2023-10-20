@@ -7,7 +7,7 @@ import TechStack from '../Components/TechStack';
 // import ImageCarousel from '../Components/ImageCarousel';
 
 function AboutMe() {
-  document.body.style.backgroundColor = "#000000";
+  // document.body.style.backgroundColor = "#000000";
   const scrollToView = (id) => {
     const element = document.getElementById(id);
     if (element) {
