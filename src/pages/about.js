@@ -4,7 +4,7 @@ import Layout from '../Components/Layout';
 import { Helmet } from 'react-helmet';
 import Projects from '../Components/Projects';
 import TechStack from '../Components/TechStack';
-import ImageCarousel from '../Components/ImageCarousel';
+// import ImageCarousel from '../Components/ImageCarousel';
 
 function AboutMe() {
   document.body.style.backgroundColor = "#000000";
