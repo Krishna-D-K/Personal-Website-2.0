@@ -1,29 +1,48 @@
 exports.createPages = async ({ graphql, actions }) => {
 
-    const blogTemplate = require.resolve("./src/blogTemplate.js")
+  const blogTemplate = require.resolve("./src/blogTemplate.js");
+  const tagsTemplate = require.resolve("./src/tagsTemplate.js");
 
-    const { createPage } = actions;
-    const result = await graphql(`
+  const { createPage } = actions;
+  const blogData = await graphql(`
     {
-        allSanityBlog {
-          nodes {
-            slug {
-              current
-            }
-            id
-          }
+      allContentfulBlogPost {
+        nodes {
+          slug
+          id
         }
       }
-    `)
+    }`)
 
-    if (result.error) throw result.error;
-    const blogs = result.data.allSanityBlog.nodes;
+  const allTags = await graphql(`
+    {
+      allContentfulTags {
+        nodes {
+          tags
+        }
+      }
+    }`)
 
-    blogs.forEach((blog) => {
-        createPage({
-            path: `/blogs/${blog.slug.current}`,
-            component: blogTemplate,
-            context: { id: blog.id }
-        })
+  if (blogData.error) throw blogData.error;
+  const blogs = blogData.data.allContentfulBlogPost.nodes;
+
+  blogs.forEach((blog) => {
+    createPage({
+      path: `/blogs/${blog.slug}`,
+      component: blogTemplate,
+      context: { id: blog.id }
     })
+  })
+
+  if(allTags.error) throw allTags.error;
+  const tags = allTags.data.allContentfulTags.nodes;
+  console.log(tags);
+
+  tags.forEach((item) => {
+    createPage({
+      path: `/tags/${item.tags.substring(1)}`,
+      component: tagsTemplate,
+      context: {tag: item.tags}
+    })
+  })
 }

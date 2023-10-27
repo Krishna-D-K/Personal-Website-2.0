@@ -7,7 +7,6 @@ function BlogCards({ title, time, image, description, altText, index, categories
     const day = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
     const dayString = _time.toDateString();
     const date = dayString.substring(4) + ", " + day[_time.getDay()];
-    // console.log(categories);
     return (
         <>
             <div className={Styles.item1}>
@@ -20,7 +19,7 @@ function BlogCards({ title, time, image, description, altText, index, categories
                         <span className={Styles.date}>{date}</span>
                         <span className={Styles.category}>
                             {categories && categories.map((val, index)=>{
-                                return <span key={index}>{val.title} </span>
+                                return <span key={index}>{val.tags} </span>
                             })}
                         </span>
                         <span className={Styles.desc}>{description}</span>

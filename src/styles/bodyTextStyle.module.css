@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
-.paragraph, ul{
-    font-size: 1.2rem;
+.paragraph, ul, ol{
+    font-size: 1.05rem;
     color: azure;
     letter-spacing: 0.5px;
     margin: 0 0 1rem 0;
     font-weight: lighter !important;
     font-family: 'Open Sans', sans-serif;
 }
-ul li{
+ul li, ol li{
     margin: 0.5rem 0;
     font-weight: normal !important;
 }
@@ -37,6 +37,10 @@ ul li{
 .bodyImage {
     max-width: 80%;
     margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (max-width: 760px) {

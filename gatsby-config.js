@@ -7,16 +7,18 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+
+require("dotenv").config({path: "./config.env"});
 module.exports = {
   plugins: [
     `gatsby-plugin-image`,
-    {
-      resolve: `gatsby-source-sanity`,
-      options: {
-        projectId: `36qpzati`,
-        dataset: `production`
-      }
-    },
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
   ],
 }

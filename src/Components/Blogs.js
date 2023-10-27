@@ -6,30 +6,25 @@ import BlogCards from './BlogCards';
 function Blogs() {
   const data = useStaticQuery(graphql`
     {
-        allSanityFeatured (sort: {_createdAt: DESC}) {
-          nodes {
-            featured {
-              title
-              category{
-                title
-              }
-              slug {
-                current
-              }
-              description
-              coverImage {
-                asset {
-                  gatsbyImageData(placeholder: BLURRED)
-                }
-                altText
-              }
-              createdAt
+      allContentfulFeaturedBlogs {
+        nodes {
+          blogs {
+            title
+            shortDescription
+            slug
+            publishingDate(locale: "en-GB")
+            tags {
+              tags
             }
+            coverImage {
+              gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+            }
+            createdAt
           }
         }
       }
-    `)
-  // console.log(data);
+    }`)
+  console.log(data);
 
   return (
     <>
@@ -39,11 +34,10 @@ function Blogs() {
           Why do I write blog? First of all, it's a great way to express myself and share my thoughts with the world. And second, it's a nice feeling to see that people actually read and enjoy my blog. Here are some featured blogs of them...
         </p>
         <div className={Styles.band}>
-          {data && data.allSanityFeatured.nodes.map((item, index) => {
-            const value = item.featured[0];
+          {data && data.allContentfulFeaturedBlogs.nodes[0].blogs.map((value, index) => {
             return (
-              <Link to={`/blogs/${value.slug.current}`} style={{ textDecoration: "none" }} key={index}>
-                <BlogCards title={value.title} categories={value.category} image={value.coverImage.asset.gatsbyImageData} time={value.createdAt} description={value.description} index={index} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} />
+              <Link to={`/blogs/${value.slug}`} style={{ textDecoration: "none" }} key={index}>
+                <BlogCards title={value.title} categories={value.tags} image={value.coverImage.gatsbyImageData} time={value.createdAt} description={value.shortDescription} index={index} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} />
               </Link>
             )
           })}

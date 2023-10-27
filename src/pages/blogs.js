@@ -11,7 +11,7 @@ const isBrowser = typeof window !== "undefined"
 
 function Blogs({ data }) {
   const { categories, featured, blogs } = data;
-  const [category, setCategory] = useState(categories.nodes[0].title);
+  const [category, setCategory] = useState(categories.nodes[0].tags);
   const [Index, setIndex] = useState(0);
 
   if (isBrowser) {
@@ -32,11 +32,10 @@ function Blogs({ data }) {
           </div>
         </div>
         <div className={Styles.band}>
-          {featured && featured.nodes.map((item, index) => {
-            const value = item.featured[0];
+          {featured && featured.nodes[0].blogs.map((value, index) => {
             return (
-              <Link to={`/blogs/${value.slug.current}`} style={{ textDecoration: "none" }} key={index} autoscroll="true">
-                <BlogCards title={value.title} categories={value.category} image={value.coverImage.asset.gatsbyImageData} time={value.createdAt} description={value.description} index={index} />
+              <Link to={`/blogs/${value.slug}`} style={{ textDecoration: "none" }} key={index}>
+                <BlogCards title={value.title} categories={value.tags} image={value.coverImage.gatsbyImageData} time={value.createdAt} description={value.shortDescription} index={index} />
               </Link>
             )
           })}
@@ -49,8 +48,8 @@ function Blogs({ data }) {
             {categories && categories.nodes.map((value, index) => {
               return <div className={Index === index ? Styles.activeCategoryListItem : Styles.categoryListItem} onClick={() => {
                 setIndex(index);
-                setCategory(value.title);
-              }} role="presentation" key={index}>{value.title}</div>
+                setCategory(value.tags);
+              }} role="presentation" key={index}>{value.tags}</div>
             })}
           </div>
           <CategoryBlogs blogs={blogs} category={category} />
@@ -61,52 +60,42 @@ function Blogs({ data }) {
 }
 
 export const data = graphql`
-query MyQuery {
-    featured: allSanityFeatured(sort: {_createdAt: DESC}) {
-      nodes {
-        featured {
-          title
-          category{
-            title
-          }
-          slug {
-            current
-          }
-          description
-          coverImage {
-            asset {
-              gatsbyImageData(placeholder: BLURRED)
-            }
-            altText
-          }
-          createdAt
-        }
-      }
-    }
-    categories: allSanityCategories(sort: {title: ASC}) {
-          nodes {
-            title
-          }
-    }
-    blogs: allSanityBlog {
-      nodes {
-        category {
-          title
-        }
-        slug {
-          current
-        }
+{
+  featured: allContentfulFeaturedBlogs(sort: {createdAt: DESC}) {
+    nodes {
+      blogs {
         title
-        coverImage {
-          altText
-          asset {
-            gatsbyImageData(placeholder: BLURRED)
-          }
+        tags {
+          tags
         }
-        description
+        slug
+        shortDescription
+        coverImage {
+          gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+        }
         createdAt
       }
     }
   }
+  categories: allContentfulTags(sort: {tags: ASC}) {
+    nodes {
+      tags
+    }
+  }
+  blogs: allContentfulBlogPost {
+    nodes {
+      tags {
+        tags
+      }
+      title
+      slug
+      coverImage {
+        gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+      }
+      shortDescription
+      createdAt
+    }
+  }
+}
 `
 export default Blogs;

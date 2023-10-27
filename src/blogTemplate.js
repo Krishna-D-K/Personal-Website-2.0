@@ -12,42 +12,42 @@ import Comments from './Components/Comments';
 
 export const data = graphql`
 query singleBlogQuery($id: String!){
-    blog: sanityBlog(id: {eq: $id}) {
-        id
-        slug {
-          current
-        }
-        title
-        author
-        coverImage {
-          asset {
-            id
-            gatsbyImageData(placeholder: BLURRED)
-            altText
-          }
-        }
-        _rawPostContent
-        createdAt
-        category {
-          title
-        }
-    },
-    featured: allSanityFeatured(sort: {_createdAt: DESC}) {
-      nodes {
-        featured {
-          title
-          slug {
-            current
-          }
-          category{
+    blog: contentfulBlogPost(id: {eq: $id}) {
+      id
+      slug
+      title
+      author
+      coverImage {
+        gatsbyImageData(layout: CONSTRAINED)
+      }
+      createdAt
+      blogContent {
+        raw
+        references {
+          ... on ContentfulAsset {
+            contentful_id
             title
+            description
+            gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+            __typename
           }
-          description
+        }
+      }
+      tags {
+        tags
+      }
+    },
+    featured: allContentfulFeaturedBlogs(sort: {createdAt: DESC}) {
+      nodes {
+        blogs {
+          title
+          slug
+          tags {
+            tags
+          }
+          shortDescription
           coverImage {
-            asset {
-              gatsbyImageData(placeholder: BLURRED)
-            }
-            altText
+            gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
           }
           createdAt
         }
@@ -61,7 +61,8 @@ const isBrowser = typeof window !== "undefined"
 
 function blogTemplate({ data }) {
   const { blog, featured } = data;
-  let count=0;
+  console.log(featured);
+  let count = 0;
   const _time = new Date(blog.createdAt);
   const day = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
   const dayString = _time.toDateString();
@@ -74,26 +75,26 @@ function blogTemplate({ data }) {
         <meta name="description" content="Logging my thoughts into my blogs..."></meta>
       </Helmet>
       <div className={Styles.container}>
-        <GatsbyImage image={blog.coverImage.asset.gatsbyImageData} className={Styles.coverImage} alt={blog.coverImage.asset.altText || "error"} />
+        <GatsbyImage image={blog.coverImage.gatsbyImageData} className={Styles.coverImage} alt="error" />
         <div className={Styles.title}>{blog.title}</div>
         <div className={Styles.subtitle}>
           <div>
             <div className={Styles.author}>
-              <PersonIcon />&nbsp; {blog.author}&emsp;
+              <Link to="/about"><PersonIcon />&nbsp; {blog.author}&emsp;</Link>
             </div>
             <div className={Styles.date}>
               <CalendarMonthOutlinedIcon />&nbsp;{date}
             </div>
           </div>
           <div className={Styles.categories}>
-            {blog.category.length && blog.category.map((value, index) => {
-              return <span key={index}> {value.title} &nbsp;</span>
+            {blog.tags.map((value, index) => {
+              return <Link to={`/tags/${value.tags.substring(1)}`}><span key={index}> {value.tags} &nbsp;</span></Link>
             })}
           </div>
         </div>
         <span className={Styles.heading}><hr /></span>
         <div className={Styles.blogContent}>
-          <BodyText data={blog._rawPostContent} />
+          <BodyText raw={blog.blogContent} />
         </div>
       </div>
       <Comments />
@@ -101,17 +102,16 @@ function blogTemplate({ data }) {
         <span className={Styles.heading1}><span>OTHER BLOGS</span><hr /></span>
       </div>
       <div className={Styles.band}>
-        {featured && featured.nodes.map((item, index) => {
-          const value = item.featured[0];
-          if(value.slug.current!==blog.slug.current && count<3){
+        {featured && featured.nodes[0].blogs.map((value, index) => {
+          if (value.slug !== blog.slug && count < 3) {
             count++;
-              return (
-              <Link to={`/blogs/${value.slug.current}`} style={{ textDecoration: "none" }} key={index}>
-                <BlogCards title={value.title} categories={value.category} image={value.coverImage.asset.gatsbyImageData} time={value.createdAt} description={value.description} index={index} />
+            return (
+              <Link to={`/blogs/${value.slug}`} style={{ textDecoration: "none" }} key={index}>
+                <BlogCards title={value.title} categories={value.tags} image={value.coverImage.gatsbyImageData} time={value.createdAt} description={value.shortDescription} index={index} />
               </Link>
             )
           }
-          else{
+          else {
             return null;
           }
         })}
