@@ -13,6 +13,9 @@ query singleBlogQuery($tag: String!){
         }
         blog_post {
           title
+          fields {
+            timeToRead
+          }
           shortDescription
           slug
           publishingDate(locale: "en-GB")
@@ -28,7 +31,7 @@ query singleBlogQuery($tag: String!){
 }
 `
 const tagsTemplate = ({ pageContext, data }) => {
-    console.log(pageContext, data);
+    // console.log(pageContext, data);
     return (
         <>
             <Layout>
@@ -43,7 +46,7 @@ const tagsTemplate = ({ pageContext, data }) => {
                         {data && data.contentfulTags.blog_post.map((value, index) => {
                             return (
                                 <Link to={`/blogs/${value.slug}`} style={{ textDecoration: "none" }} key={index}>
-                                    <BlogCards title={value.title} categories={value.tags} image={value.coverImage.gatsbyImageData} time={value.createdAt} description={value.shortDescription} index={index} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} />
+                                    <BlogCards title={value.title} categories={value.tags} image={value.coverImage.gatsbyImageData} time={value.createdAt} description={value.shortDescription} readingTime={value.fields.timeToRead} index={index} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} />
                                 </Link>
                             )
                         })}

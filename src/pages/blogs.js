@@ -35,7 +35,7 @@ function Blogs({ data }) {
           {featured && featured.nodes[0].blogs.map((value, index) => {
             return (
               <Link to={`/blogs/${value.slug}`} style={{ textDecoration: "none" }} key={index}>
-                <BlogCards title={value.title} categories={value.tags} image={value.coverImage.gatsbyImageData} time={value.createdAt} description={value.shortDescription} index={index} />
+                <BlogCards title={value.title} categories={value.tags} image={value.coverImage.gatsbyImageData} time={value.createdAt} description={value.shortDescription} readingTime={value.fields.timeToRead} index={index} />
               </Link>
             )
           })}
@@ -65,6 +65,9 @@ export const data = graphql`
     nodes {
       blogs {
         title
+        fields {
+          timeToRead
+        }
         tags {
           tags
         }
@@ -88,6 +91,9 @@ export const data = graphql`
         tags
       }
       title
+      fields {
+        timeToRead
+      }
       slug
       coverImage {
         gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)

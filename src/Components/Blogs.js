@@ -10,6 +10,9 @@ function Blogs() {
         nodes {
           blogs {
             title
+            fields {
+              timeToRead
+            }
             shortDescription
             slug
             publishingDate(locale: "en-GB")
@@ -24,7 +27,7 @@ function Blogs() {
         }
       }
     }`)
-  console.log(data);
+  // console.log(data);
 
   return (
     <>
@@ -37,7 +40,7 @@ function Blogs() {
           {data && data.allContentfulFeaturedBlogs.nodes[0].blogs.map((value, index) => {
             return (
               <Link to={`/blogs/${value.slug}`} style={{ textDecoration: "none" }} key={index}>
-                <BlogCards title={value.title} categories={value.tags} image={value.coverImage.gatsbyImageData} time={value.createdAt} description={value.shortDescription} index={index} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} />
+                <BlogCards title={value.title} categories={value.tags} image={value.coverImage.gatsbyImageData} time={value.createdAt} description={value.shortDescription} readingTime={value.fields.timeToRead} index={index} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} />
               </Link>
             )
           })}

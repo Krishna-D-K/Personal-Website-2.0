@@ -16,6 +16,9 @@ query singleBlogQuery($id: String!){
       id
       slug
       title
+      fields {
+        timeToRead
+      }
       author
       coverImage {
         gatsbyImageData(layout: CONSTRAINED)
@@ -41,6 +44,9 @@ query singleBlogQuery($id: String!){
       nodes {
         blogs {
           title
+          fields {
+            timeToRead
+          }
           slug
           tags {
             tags
@@ -61,7 +67,7 @@ const isBrowser = typeof window !== "undefined"
 
 function blogTemplate({ data }) {
   const { blog, featured } = data;
-  console.log(featured);
+  // console.log(featured);
   let count = 0;
   const _time = new Date(blog.createdAt);
   const day = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
@@ -85,10 +91,13 @@ function blogTemplate({ data }) {
             <div className={Styles.date}>
               <CalendarMonthOutlinedIcon />&nbsp;{date}
             </div>
+            <div className={Styles.date}>
+              &nbsp;• &nbsp;{blog.fields.timeToRead} min read
+            </div>
           </div>
           <div className={Styles.categories}>
             {blog.tags.map((value, index) => {
-              return <Link to={`/tags/${value.tags.substring(1)}`}><span key={index}> {value.tags} &nbsp;</span></Link>
+              return <Link to={`/tags/${value.tags.substring(1)}`} key={index}><span> {value.tags} &nbsp;</span></Link>
             })}
           </div>
         </div>

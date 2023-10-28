@@ -83,7 +83,6 @@ const options = {
       ),
       [BLOCKS.HR]: () => <hr className="mb-6" />,
       [BLOCKS.EMBEDDED_ASSET]: (node) => {
-        console.log(node.data.target)
         const { gatsbyImageData, description, title } = node.data.target
   
         return (
@@ -100,8 +99,6 @@ const options = {
   }
 
 function BodyText({ raw }) {
-    console.log(raw);
-    console.log(renderRichText(raw, options));
     return (
         <div>{renderRichText(raw, options)}</div>
     )

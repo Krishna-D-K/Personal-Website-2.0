@@ -46,6 +46,12 @@
     grid-gap: 20px;
 }
 
+.band a:first-child {
+    @media (min-width: 60em) {
+        grid-column: 1 / span 2;
+    }
+}
+
 .linkTag {
     text-decoration: none;
     font-size: 1.2rem;
@@ -76,7 +82,7 @@
     margin: 0 0.5rem;
 }
 
-.activeCategoryListItem{
+.activeCategoryListItem {
     color: #444242;
     margin: 0 0.5rem;
     padding: 0.2rem 0.5rem;
@@ -85,11 +91,12 @@
     background-color: #64ffda;
 }
 
-.activeCategoryListItem:hover, .categoryListItem:hover{
+.activeCategoryListItem:hover,
+.categoryListItem:hover {
     cursor: pointer;
 }
 
-@media (min-width: 30em) { 
+@media (min-width: 30em) {
     .band {
         grid-template-columns: 1fr 1fr;
     }
@@ -102,39 +109,47 @@
 }
 
 @media (max-width: 760px) {
-    .container{
+    .container {
         margin-top: 6rem;
     }
+
     .band {
         grid-template-columns: 1fr;
         width: 90%;
     }
-    .heading{
+
+    .heading {
         margin: 2rem 0;
         font-size: 1.2rem
     }
-    .subHeading{
+
+    .subHeading {
         margin: 0 0 2rem 0;
     }
-    .subHeading span{
+
+    .subHeading span {
         font-size: 1rem;
         margin: 0 0.5rem 0 1rem;
     }
-    .subHeading section hr{
+
+    .subHeading section hr {
         width: 110%;
     }
-    .categoryList{
+
+    .categoryList {
         width: 90%;
         display: flex;
         align-items: center;
         /* justify-content: center; */
     }
-    .categoryListItem{
+
+    .categoryListItem {
         font-size: 0.9rem;
         line-height: 1.5rem;
         margin: 0 0.3rem;
     }
-    .activeCategoryListItem{
+
+    .activeCategoryListItem {
         font-size: 0.9rem;
     }
 }
