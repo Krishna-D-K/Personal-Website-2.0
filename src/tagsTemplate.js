@@ -35,6 +35,10 @@ const tagsTemplate = ({ pageContext, data }) => {
     return (
         <>
             <Layout>
+                <Helmet>
+                    <title>Tags | Krishna's Blogs</title>
+                    <meta name="description" content="Logging my thoughts into my blogs..."></meta>
+                </Helmet>
                 <div className={Styles.container}>
                     <div className={Styles.heading}>
                         {pageContext.tag}
