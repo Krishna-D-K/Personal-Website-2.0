@@ -49,20 +49,3 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 }
-
-exports.onCreateNode = ({ node, actions }) => {
-  const { createNodeField } = actions;
-  const timeToRead = (content) => {
-    const countPerMinute = 200;
-    const totalWords = words(content).length;
-    const time = Math.round(totalWords / countPerMinute);
-    if (time === 0) return 1;
-    return time;
-  }
-  if (node.internal.type === 'ContentfulBlogPost') {
-    // Match the "bodyContent" below to match the name of your rich text field
-    const data = JSON.parse(node.blogContent.raw);
-    const allText = documentToPlainTextString(data);
-    createNodeField({ node, name: 'timeToRead', value: timeToRead(allText) })
-  }
-}

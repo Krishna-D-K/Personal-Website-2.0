@@ -16,9 +16,6 @@ query singleBlogQuery($id: String!){
       id
       slug
       title
-      fields {
-        timeToRead
-      }
       author
       coverImage {
         gatsbyImageData(layout: CONSTRAINED)
@@ -44,9 +41,7 @@ query singleBlogQuery($id: String!){
       nodes {
         blogs {
           title
-          fields {
-            timeToRead
-          }
+
           slug
           tags {
             tags
@@ -92,7 +87,7 @@ function blogTemplate({ data }) {
               <CalendarMonthOutlinedIcon />&nbsp;{date}
             </div>
             <div className={Styles.date}>
-              &nbsp;• &nbsp;{blog.fields.timeToRead} min read
+              {/* &nbsp;• &nbsp;{blog.fields.timeToRead} min read */}
             </div>
           </div>
           <div className={Styles.categories}>

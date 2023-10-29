@@ -65,9 +65,6 @@ export const data = graphql`
     nodes {
       blogs {
         title
-        fields {
-          timeToRead
-        }
         tags {
           tags
         }
@@ -91,9 +88,6 @@ export const data = graphql`
         tags
       }
       title
-      fields {
-        timeToRead
-      }
       slug
       coverImage {
         gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
