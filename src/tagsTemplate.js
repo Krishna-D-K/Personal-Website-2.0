@@ -4,6 +4,7 @@ import Layout from './Components/Layout';
 import * as Styles from "./styles/tagsPageStyle.module.css"
 import BodyText from './Components/BodyText';
 import BlogCards from './Components/BlogCards';
+import { Helmet } from 'react-helmet';
 
 export const data = graphql`
 query singleBlogQuery($tag: String!){
