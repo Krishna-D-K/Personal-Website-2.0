@@ -25,6 +25,18 @@ function Introduction() {
             {/* <div className={styles.imgContainer} data-aos="fade">
                 <div></div>
             </div> */}
+            <section className={styles.fallingStars}>
+                <span></span>
+                <span></span>
+                <span></span>
+                {/* <span></span>
+                <span></span>
+                <span></span> */}
+                <span></span>
+                {/* <span></span> */}
+                {/* <span></span> */}
+                {/* <span></span> */}
+            </section>
             <div className={styles.introduction}>
                 {<Typewriter onInit={(typewriter) => {
                     typewriter

@@ -50,12 +50,12 @@
 .date{
     font-size: 0.8rem;
     font-weight: lighter;
-    color: #999;
+    color: #8892b0;
     margin: 1rem 0 0 0;
 }
 .desc{
     font-size: 0.9rem;
-    color: #999;
+    color: #ccd6f6;
     /* text-transform: uppercase; */
     letter-spacing: 0.05em;
     margin: 1rem 0 0 0;

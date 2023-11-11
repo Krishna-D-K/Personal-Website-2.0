@@ -13,7 +13,7 @@ function CategoryBlogs({ blogs, category }) {
                 if (data) {
                     return (
                         <Link to={`/blogs/${item.slug}`} style={{ textDecoration: "none" }} key={index}>
-                            <BlogCards title={item.title} categories={item.tags} image={item.coverImage.gatsbyImageData} time={item.createdAt} description={item.shortDescription} index={index} />
+                            <BlogCards title={item.title} categories={item.tags} image={item.coverImage.gatsbyImageData} readingTime = {item.fields.timeToRead} time={item.createdAt} description={item.shortDescription} index={index} />
                         </Link>
                     )
                 }

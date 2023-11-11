@@ -16,6 +16,9 @@ query singleBlogQuery($id: String!){
       id
       slug
       title
+      fields {
+        timeToRead
+      }
       author
       coverImage {
         gatsbyImageData(layout: CONSTRAINED)
@@ -41,7 +44,9 @@ query singleBlogQuery($id: String!){
       nodes {
         blogs {
           title
-
+          fields {
+            timeToRead
+          }
           slug
           tags {
             tags
@@ -87,7 +92,7 @@ function blogTemplate({ data }) {
               <CalendarMonthOutlinedIcon />&nbsp;{date}
             </div>
             <div className={Styles.date}>
-              {/* &nbsp;• &nbsp;{blog.fields.timeToRead} min read */}
+              &nbsp;• &nbsp;{blog.fields.timeToRead} min read
             </div>
           </div>
           <div className={Styles.categories}>
@@ -100,8 +105,8 @@ function blogTemplate({ data }) {
         <div className={Styles.blogContent}>
           <BodyText raw={blog.blogContent} />
         </div>
-      </div>
       <Comments />
+      </div>
       <div className={Styles.otherBlogs}>
         <span className={Styles.heading1}><span>OTHER BLOGS</span><hr /></span>
       </div>
@@ -111,7 +116,7 @@ function blogTemplate({ data }) {
             count++;
             return (
               <Link to={`/blogs/${value.slug}`} style={{ textDecoration: "none" }} key={index}>
-                <BlogCards title={value.title} categories={value.tags} image={value.coverImage.gatsbyImageData} time={value.createdAt} description={value.shortDescription} index={index} />
+                <BlogCards title={value.title} categories={value.tags} image={value.coverImage.gatsbyImageData} time={value.createdAt} readingTime = {value.fields.timeToRead} description={value.shortDescription} index={index} />
               </Link>
             )
           }

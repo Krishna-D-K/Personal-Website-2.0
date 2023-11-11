@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import "../styles/commentStyle.css";
 
 const COMMENTS_ID = 'graphcomment';
 

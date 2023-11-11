@@ -4,9 +4,6 @@
     justify-content: center;
     height: 100vh;
     /* border: 2px solid red */
-    background-image: url("../Images/dark_space.jpg");
-    background-size: cover;
-    background-blend-mode: darken;
 }
 
 .displayNone {
@@ -37,7 +34,7 @@
 
 .imgContainer div,
 .lightImgContainer div {
-    background-image: linear-gradient(to bottom, #ffffff00, #2a4e4654),url("../Images/my_img.png");
+    background-image: linear-gradient(to bottom, #ffffff00, #2a4e4654), url("../Images/my_img.png");
     filter: grayscale(80%);
     height: 70%;
     width: 70%;
@@ -55,7 +52,7 @@
 
 .imgContainer div:hover,
 .lightImgContainer div:hover {
-    background-image: linear-gradient(to bottom, #64ffdb12, #64ffdb12),url("../Images/my_img.png");
+    background-image: linear-gradient(to bottom, #64ffdb12, #64ffdb12), url("../Images/my_img.png");
     filter: contrast(120%);
     border: 2px solid #00ffc254;
     border-radius: 3rem;
@@ -79,87 +76,256 @@
     font-weight: bold;
 }
 
+
+
+.fallingStars {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #0a192f;
+    background-size: cover;
+    animation: animateBg 50s linear infinite;
+    overflow-x: hidden;
+}
+
+@keyframes animateBg {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.fallingStars span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 0.1);
+    animation: animate 3s linear infinite;
+}
+
+.fallingStars span::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 1px;
+    background: linear-gradient(90deg, #fff, transparent);
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(315deg) translateX(0);
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(315deg) translateX(-1000px);
+        opacity: 0;
+    }
+}
+
+.fallingStars span:nth-child(1) {
+    top: 0;
+    right: 500px;
+    left: initial;
+    animation-delay: 0s;
+    animation-duration: 4s;
+}
+
+.fallingStars span:nth-child(2) {
+    top: 0;
+    right: 80px;
+    left: initial;
+    animation-delay: 0.2s;
+    animation-duration: 3s;
+}
+
+.fallingStars span:nth-child(3) {
+    top: -50px;
+    right: -25px;
+    left: initial;
+    animation-delay: 1.2s;
+    animation-duration: 3s;
+}
+
+.fallingStars span:nth-child(4) {
+    top: 0;
+    right: 180px;
+    left: initial;
+    animation-delay: 3s;
+    animation-duration: 5s;
+}
+
+.fallingStars span:nth-child(5) {
+    top: 0;
+    right: 400px;
+    left: initial;
+    animation-delay: 0.8s;
+    animation-duration: 2.5s;
+}
+
+.fallingStars span:nth-child(6) {
+    top: 0;
+    right: 600px;
+    left: initial;
+    animation-delay: 1s;
+    animation-duration: 3s;
+}
+
+.fallingStars span:nth-child(7) {
+    top: 300px;
+    right: 0px;
+    left: initial;
+    animation-delay: 1.2s;
+    animation-duration: 1.75s;
+}
+
+.fallingStars span:nth-child(8) {
+    top: 0px;
+    right: 700px;
+    left: initial;
+    animation-delay: 1.4s;
+    animation-duration: 1.25s;
+}
+
+.fallingStars span:nth-child(9) {
+    top: 0px;
+    right: 1000px;
+    left: initial;
+    animation-delay: 0.75s;
+    animation-duration: 2.25s;
+}
+
+.fallingStars span:nth-child(9) {
+    top: 0px;
+    right: 450px;
+    left: initial;
+    animation-delay: 2.75s;
+    animation-duration: 2.75s;
+}
+
 /* For Tablet View */
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-    .container{
+    .container {
         height: auto;
         margin-top: 5rem;
     }
-    .imgContainer, .lightImgContainer{
+
+    .imgContainer,
+    .lightImgContainer {
         margin: 3rem 0.5rem 0 0.5rem;
         width: 45vw;
         height: 25vh;
     }
-    .introduction, .lightIntroduction{
+
+    .introduction,
+    .lightIntroduction {
         font-size: 1.1rem;
         padding-bottom: 2rem;
     }
-    .imgContainer img, .lightImgContainer img{
+
+    .imgContainer img,
+    .lightImgContainer img {
         max-width: 50vw;
     }
 }
 
 /* For Mobile Portrait View */
 @media screen and (max-device-width: 480px) and (orientation: portrait) {
-    .container{
+    .container {
         height: auto;
         margin-top: 5rem;
     }
-    .imgContainer, .lightImgContainer{
+
+    .imgContainer,
+    .lightImgContainer {
         margin: 3rem 0.5rem 0 0.5rem;
         width: 45vw;
         height: 25vh;
     }
-    .introduction, .lightIntroduction{
+
+    .introduction,
+    .lightIntroduction {
         font-size: 1.1rem;
         padding-bottom: 2rem;
     }
-    .imgContainer img, .lightImgContainer img{
+
+    .imgContainer img,
+    .lightImgContainer img {
         max-width: 50vw;
     }
 }
 
 /* For Mobile Landscape View */
 @media screen and (max-device-width: 640px) and (orientation: landscape) {
-    .container{
+    .container {
         height: auto;
         margin-top: 5rem;
     }
-    .imgContainer, .lightImgContainer{
+
+    .imgContainer,
+    .lightImgContainer {
         margin: 3rem 0.5rem 0 0.5rem;
         width: 45vw;
         height: 25vh;
     }
-    .introduction, .lightIntroduction{
+
+    .introduction,
+    .lightIntroduction {
         font-size: 1.1rem;
         padding-bottom: 2rem;
     }
-    .imgContainer img, .lightImgContainer img{
+
+    .imgContainer img,
+    .lightImgContainer img {
         max-width: 50vw;
     }
 }
 
 /* For Mobile Phones Portrait or Landscape View */
 @media screen and (max-device-width: 640px) {
-    .container{
+    .container {
         height: auto;
         margin-top: 5rem;
     }
-    .introduction{
+
+    .introduction {
         width: 50vw;
         min-height: 30vh;
         font-size: 1rem;
     }
-    .imgContainer, .lightImgContainer{
+
+    .imgContainer,
+    .lightImgContainer {
         margin: 3rem 0.5rem 0 0.5rem;
         width: 45vw;
         height: 25vh;
     }
-    .imgContainer div{
+
+    .imgContainer div {
         width: 100%;
         height: 100%;
     }
-    .introduction, .lightIntroduction{
+
+    .introduction,
+    .lightIntroduction {
         font-size: 1.1rem;
         padding-bottom: 2rem;
     }
@@ -168,60 +334,78 @@
 
 /* For iPhone 4 Portrait or Landscape View */
 @media screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
-    .container{
+    .container {
         height: auto;
         margin-top: 5rem;
     }
-    .imgContainer, .lightImgContainer{
+
+    .imgContainer,
+    .lightImgContainer {
         margin: 3rem 0.5rem 0 0.5rem;
         width: 45vw;
         height: 25vh;
     }
-    .introduction, .lightIntroduction{
+
+    .introduction,
+    .lightIntroduction {
         font-size: 1.1rem;
         padding-bottom: 2rem;
     }
-    .imgContainer img, .lightImgContainer img{
+
+    .imgContainer img,
+    .lightImgContainer img {
         max-width: 50vw;
     }
 }
 
 /* For iPhone 5 Portrait or Landscape View */
 @media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
-    .container{
+    .container {
         height: auto;
         margin-top: 5rem;
     }
-    .imgContainer, .lightImgContainer{
+
+    .imgContainer,
+    .lightImgContainer {
         margin: 3rem 0.5rem 0 0.5rem;
         width: 45vw;
         height: 25vh;
     }
-    .introduction, .lightIntroduction{
+
+    .introduction,
+    .lightIntroduction {
         font-size: 1.1rem;
         padding-bottom: 2rem;
     }
-    .imgContainer img, .lightImgContainer img{
+
+    .imgContainer img,
+    .lightImgContainer img {
         max-width: 50vw;
     }
 }
 
 /* For iPhone 6 and 6 plus Portrait or Landscape View */
 @media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3) {
-    .container{
+    .container {
         height: auto;
         margin-top: 5rem;
     }
-    .imgContainer, .lightImgContainer{
+
+    .imgContainer,
+    .lightImgContainer {
         margin: 3rem 0.5rem 0 0.5rem;
         width: 45vw;
         height: 25vh;
     }
-    .introduction, .lightIntroduction{
+
+    .introduction,
+    .lightIntroduction {
         font-size: 1.1rem;
         padding-bottom: 2rem;
     }
-    .imgContainer img, .lightImgContainer img{
+
+    .imgContainer img,
+    .lightImgContainer img {
         max-width: 50vw;
     }
 }

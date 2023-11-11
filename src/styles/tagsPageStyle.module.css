@@ -1,5 +1,5 @@
 body {
-    background: #000000;
+    background: #0a192f;
 }
 .container {
     display: flex;
@@ -23,6 +23,7 @@ body {
     margin: 2rem 0;
     width: 60%;
     text-align: center;
+    color: aliceblue;
 }
 
 .band {
