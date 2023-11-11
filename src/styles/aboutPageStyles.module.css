@@ -24,21 +24,21 @@
   scroll-behavior: smooth;
 }
 .name {
-  font-family: 'Inter', sans-serif !important;
-  color: rgb(255 255 255);
+  font-family: 'Calibre','Inter','San Francisco','SF Pro Text',-apple-system,system-ui,sans-serif;
+  color: #ccd6f6;
   font-size: 3rem;
   font-weight: 600;
 }
 .subname{
   padding: 0.8rem 0;
-  font-family: 'Inter', sans-serif !important;
-  color: rgb(255 255 255);
+  color: #8892b0;
+  font-family: 'Calibre','Inter','San Francisco','SF Pro Text',-apple-system,system-ui,sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
 }
 .shortIntro{
   margin: 2rem 0 !important;
-  color: gray;
+  color:  #8892b0;
   font-size: 1rem;
   line-height: 1.6rem;
 }
@@ -65,14 +65,14 @@
   transition: all 0.1s ease-in;
 }
 .navOption hr{
-  color: #ffffff59;
+  color:  #8892b0;
   width: 10%;
   margin: auto 0.5rem;
   transition: all 0.1s ease-in;
 }
 
 .navOption:hover, .navOption hr:hover{
-  color: #ffff;
+  color: #ccd6f6;
   cursor: pointer;
 }
 .navOption:hover{
