@@ -22,7 +22,7 @@ function Blogs({ data }) {
                 <meta name="description" content="Logging my thoughts into my blogs..."></meta>
             </Helmet>
             <div className={Styles.container}>
-                <div className={Styles.breadcrumb}><Breadcrumb path={window.location.pathname}/></div> 
+                <div className={Styles.breadcrumb}>{typeof window!=="undefined" && <Breadcrumb path={window.location.pathname}/>}</div> 
                 <div>
                     <div className={Styles.subHeading}>
                         <span>TAGS </span>

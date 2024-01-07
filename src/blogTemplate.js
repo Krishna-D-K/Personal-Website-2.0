@@ -82,7 +82,7 @@ function blogTemplate({ data }) {
         <title>Blogs | Recuerdos</title>
         <meta name="description" content="Logging my thoughts into my blogs..."></meta>
       </Helmet>
-      <div className={Styles.breadcrumb}><Breadcrumb path={window.location.pathname}/></div> 
+      <div className={Styles.breadcrumb}>{typeof window!=="undefined" && <Breadcrumb path={window.location.pathname}/>}</div> 
       <div className={Styles.container}>
         <GatsbyImage image={blog.coverImage.gatsbyImageData} className={Styles.coverImage} alt="error" />
         <div className={Styles.title}>{blog.title}</div>

@@ -24,7 +24,7 @@ function AboutMe() {
       </Helmet>
       <div className={Styles.container} id="about-container">
         <div className={Styles.leftHalf}>
-          <div className={Styles.breadcrumb}><Breadcrumb path={window.location.pathname} /></div>
+          <div className={Styles.breadcrumb}>{typeof window!=="undefined" && <Breadcrumb path={window.location.pathname}/>}</div>
           <div className={Styles.name}>
             Krishna Kolte
           </div>
