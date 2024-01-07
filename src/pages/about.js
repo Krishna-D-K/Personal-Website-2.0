@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet';
 import Projects from '../Components/Projects';
 import TechStack from '../Components/TechStack';
 import ImageCarousel from '../Components/ImageCarousel';
+import Breadcrumb from '../Components/Breadcrumb';
 
 function AboutMe() {
   // document.body.style.backgroundColor = "#000000";
@@ -18,11 +19,12 @@ function AboutMe() {
   return (
     <Layout>
       <Helmet>
-        <title>Blogs | Krishna's Blogs</title>
+        <title>About | Recuerdos</title>
         <meta name="description" content="Logging my thoughts into my blogs..."></meta>
       </Helmet>
-      <div className={Styles.container} id = "about-container">
+      <div className={Styles.container} id="about-container">
         <div className={Styles.leftHalf}>
+          <div className={Styles.breadcrumb}><Breadcrumb path={window.location.pathname} /></div>
           <div className={Styles.name}>
             Krishna Kolte
           </div>
@@ -31,23 +33,23 @@ function AboutMe() {
           </div>
           <div className={Styles.shortIntro}>
             <p>
-              Currently pursuing B.Tech in Electrical Engineering, I am a software developer by passion, and compassionate soul by heart :)  
+              Currently pursuing B.Tech in Electrical Engineering, I am a software developer by passion, and compassionate soul by heart :)
             </p>
             <p>
               In my spare time, I write blogs on this platform, love to binge watch movies and sitcoms, and play sports sometimes.
             </p>
           </div>
           <div className={Styles.pageNav}>
-            <div className={Styles.navOption} onClick={()=>{scrollToView("Projects")}}>01 <hr/>PROJECTS</div>
-            <div className={Styles.navOption} onClick={()=>{scrollToView("TechStack")}}>02 <hr/>TECH STACK</div>
-            <div className={Styles.navOption} onClick={()=>{scrollToView("Gallery")}}>03 <hr/>GALLERY</div>
+            <div className={Styles.navOption} onClick={() => { scrollToView("Projects") }}>01 <hr />PROJECTS</div>
+            <div className={Styles.navOption} onClick={() => { scrollToView("TechStack") }}>02 <hr />TECH STACK</div>
+            <div className={Styles.navOption} onClick={() => { scrollToView("Gallery") }}>03 <hr />GALLERY</div>
           </div>
         </div>
         <div className={Styles.rightHalf}>
-          <div id="Projects"><Projects/></div> 
-          <div id="TechStack"><TechStack/></div>
-          <div id="Gallery"><ImageCarousel/></div>
-        </div>     
+          <div id="Projects"><Projects /></div>
+          <div id="TechStack"><TechStack /></div>
+          <div id="Gallery"><ImageCarousel /></div>
+        </div>
       </div>
     </Layout>
   )

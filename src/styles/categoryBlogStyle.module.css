@@ -23,6 +23,6 @@
 @media (max-width: 760px) {
     .band {
         grid-template-columns: 1fr;
-        width: 90%;
+        width: 85%;
     }
 }

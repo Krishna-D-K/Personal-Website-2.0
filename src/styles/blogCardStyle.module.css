@@ -65,7 +65,7 @@
     font-size: 0.9rem;
     color: #64ffda;
     word-spacing: 5px;
-    line-height: 2rem;
+    line-height: 1.5rem;
 }
 
 .card .thumb {
@@ -94,11 +94,11 @@
         font-size: 0.8rem;
     }
     .card article h1{
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
     .date{
         font-size: 0.7rem;
-        margin-top: 0.8rem;
+        margin-top: 0.7rem;
     }
     .category {
         font-size: 0.8rem;

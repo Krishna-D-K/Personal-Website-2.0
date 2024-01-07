@@ -4,11 +4,13 @@ import { Link, graphql } from 'gatsby';
 import * as Styles from "./styles/singleBlogPageStyle.module.css"
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
 import PersonIcon from '@mui/icons-material/Person';
+import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import BodyText from './Components/BodyText';
 import BlogCards from './Components/BlogCards';
 import { Helmet } from 'react-helmet';
 import Comments from './Components/Comments';
+import Breadcrumb from './Components/Breadcrumb';
 
 export const data = graphql`
 query singleBlogQuery($id: String!){
@@ -77,22 +79,23 @@ function blogTemplate({ data }) {
   return (
     <Layout>
       <Helmet>
-        <title>Blogs | Krishna's Blogs</title>
+        <title>Blogs | Recuerdos</title>
         <meta name="description" content="Logging my thoughts into my blogs..."></meta>
       </Helmet>
+      <div className={Styles.breadcrumb}><Breadcrumb path={window.location.pathname}/></div> 
       <div className={Styles.container}>
         <GatsbyImage image={blog.coverImage.gatsbyImageData} className={Styles.coverImage} alt="error" />
         <div className={Styles.title}>{blog.title}</div>
         <div className={Styles.subtitle}>
           <div>
             <div className={Styles.author}>
-              <Link to="/about"><PersonIcon />&nbsp; {blog.author}&emsp;</Link>
+              <Link to="/about"><PersonIcon />&nbsp;{blog.author}&emsp;</Link>
             </div>
             <div className={Styles.date}>
-              <CalendarMonthOutlinedIcon />&nbsp;{date}
+              <CalendarMonthOutlinedIcon />&nbsp;{date}&emsp;
             </div>
             <div className={Styles.date}>
-              &nbsp;• &nbsp;{blog.fields.timeToRead} min read
+              <FiberManualRecordIcon style={{fontSize: "15px"}}/> &nbsp;{blog.fields.timeToRead} min read
             </div>
           </div>
           <div className={Styles.categories}>
@@ -108,14 +111,14 @@ function blogTemplate({ data }) {
       <Comments />
       </div>
       <div className={Styles.otherBlogs}>
-        <span className={Styles.heading1}><span>OTHER BLOGS</span><hr /></span>
+        <span className={Styles.heading1}><span>Other Blogs</span><hr /></span>
       </div>
       <div className={Styles.band}>
         {featured && featured.nodes[0].blogs.map((value, index) => {
           if (value.slug !== blog.slug && count < 3) {
             count++;
             return (
-              <Link to={`/blogs/${value.slug}`} style={{ textDecoration: "none" }} key={index}>
+              <Link to={`/${value.slug}`} style={{ textDecoration: "none" }} key={index}>
                 <BlogCards title={value.title} categories={value.tags} image={value.coverImage.gatsbyImageData} time={value.createdAt} readingTime = {value.fields.timeToRead} description={value.shortDescription} index={index} />
               </Link>
             )

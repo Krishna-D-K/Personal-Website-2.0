@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+
+.container {
+    margin: 0;
+}
+.link {
+    font-family: 'Crimson Text', serif;
+    color: aliceblue;
+    font-size: 1.1rem;
+}
+.link a {
+    font-family: 'Crimson Text', serif;
+    color: aquamarine;
+}

@@ -15,7 +15,7 @@ function notFound() {
     return (
         <>
             <Helmet>
-                <title>404 | Krishna's Blogs</title>
+                <title>404 | Recuerdos</title>
                 <meta name="description" content="Logging my thoughts into my blogs..."></meta>
             </Helmet>
             <Navbar darkTheme={true} />

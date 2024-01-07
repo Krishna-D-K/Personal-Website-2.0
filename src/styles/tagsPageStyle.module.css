@@ -7,10 +7,14 @@ body {
     justify-content: center;
     align-items: center;
     width: 90%;
-    padding: 6rem 0;
+    padding: 2rem 0;
     margin: 0 auto;
 }
 
+.breadcrumb {
+    width: 80%;
+    margin: 1rem auto;
+}
 .heading {
     color: #64ffda;
     font-size: 2.5rem;
@@ -51,16 +55,17 @@ body {
 
 @media (max-width: 760px) {
     .container{
-        margin-top: 2rem;
-        padding: 2rem;
+        margin-top: 0rem;
+        padding: 0;
+        width: 100%;
     }
     .band {
         grid-template-columns: 1fr;
-        width: 90%;
+        width: 85%;
     }
     .heading{
         margin: 2rem 0;
-        font-size: 1.2rem
+        font-size: 1.6rem;
     }
     .subHeading{
         margin: 0 0 1rem 0;

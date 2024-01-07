@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+
 body{
     background: #0a192f;
 }
@@ -6,18 +8,24 @@ body{
     flex-direction: column;
     align-items: center;
     width: 65%;
-    margin: 5rem auto;
+    margin: 1rem auto;
     background-color: #ffffff08;
     padding: 1rem;
     box-shadow: 11px -4px 20px 4px #ffc0cb05;
 }
 
+.breadcrumb {
+    width: 65%;
+    margin: 2rem auto 0.5rem auto;
+}
+
 .title {
     width: 100%;
-    font-size: 1.5rem;
-    font-weight: 200;
+    font-size: 1.7rem;
+    /* font-weight: 200; */
     color: #ccd6f6;
     margin: 1rem auto;
+    font-family: 'Crimson Text', serif;
 }
 .subtitle{
     display: flex;
@@ -31,10 +39,11 @@ body{
 }
 .author a, .date{
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #8892b0;
     display: flex;
     align-items: center;
+    font-family: 'Crimson Text', serif;
 }
 .hr{
     color: #64ffdb33;
@@ -121,7 +130,11 @@ body{
     }
     .container{
         width: 90%;
-        margin: 6rem auto 2rem auto;
+        margin: 1rem auto 2rem auto;
+    }
+    .breadcrumb{
+        width: 90%;
+        margin: 2rem auto 1rem auto;
     }
     .title{
         font-size: 1.4rem;
@@ -138,10 +151,10 @@ body{
         width: 90%;
     }
     .heading1 span{
-        font-size: 0.8rem;
+        font-size: 1.2rem;
     }
     .heading1 hr{
-        width: 70%;
+        width: 65%;
     }
     .blogContent{
         width: 100%;
@@ -156,7 +169,7 @@ body{
     }
     .title {
         width: 100%;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         font-weight: 200;
         color: azure;
         margin: 1rem auto 0.5rem auto;
@@ -170,15 +183,15 @@ body{
     .subtitle div{
         display: flex;
     }
-    .author, .date{
-        font-size: 0.8rem;
+    .author a, .date{
+        /* font-size: 1rem; */
         color: slategrey;
-        margin: 0 0.5rem 0.5rem 0;
+        margin: 0;
         display: flex;
         align-items: center;
     }
     .categories span{
         color: #64ffda;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 }

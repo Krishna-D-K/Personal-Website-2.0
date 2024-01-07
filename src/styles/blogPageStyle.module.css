@@ -1,11 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+
 .container {
     width: 90%;
-    margin: 15vh auto 0 auto;
+    margin: 0 auto 0 auto;
 }
 
+.quote {
+    color: #64ffda;
+    font-family: 'Crimson Text', serif;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 4rem auto;
+}
 .heading {
     color: azure;
-    font-size: 1.8rem;
+    font-family: 'Crimson Text', serif;
+    font-size: 1.6rem;
     text-align: center;
     margin: 3rem 0;
 }
@@ -110,12 +122,17 @@
 
 @media (max-width: 760px) {
     .container {
-        margin-top: 6rem;
+        margin-top: 3rem;
+        width: 98%;
     }
 
+    .quote {
+        font-size: 1.2rem;
+        width: 100%;
+    }
     .band {
         grid-template-columns: 1fr;
-        width: 90%;
+        width: 85%;
     }
 
     .heading {
@@ -128,7 +145,7 @@
     }
 
     .subHeading span {
-        font-size: 1rem;
+        font-size: 1.2rem;
         margin: 0 0.5rem 0 1rem;
     }
 

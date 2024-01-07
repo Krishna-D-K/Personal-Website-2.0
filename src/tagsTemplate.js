@@ -5,6 +5,7 @@ import * as Styles from "./styles/tagsPageStyle.module.css"
 import BodyText from './Components/BodyText';
 import BlogCards from './Components/BlogCards';
 import { Helmet } from 'react-helmet';
+import Breadcrumb from './Components/Breadcrumb';
 
 export const data = graphql`
 query singleBlogQuery($tag: String!){
@@ -37,10 +38,11 @@ const tagsTemplate = ({ pageContext, data }) => {
         <>
             <Layout>
                 <Helmet>
-                    <title>{pageContext.tag.substring(1)} | Krishna's Blogs</title>
+                    <title>{pageContext.tag.substring(1)} | Recuerdos</title>
                     <meta name="description" content="Logging my thoughts into my blogs..."></meta>
                 </Helmet>
                 <div className={Styles.container}>
+                    <div className={Styles.breadcrumb}><Breadcrumb path={window.location.pathname} /></div>
                     <div className={Styles.heading}>
                         {pageContext.tag}
                     </div>
@@ -50,8 +52,8 @@ const tagsTemplate = ({ pageContext, data }) => {
                     <div className={Styles.band}>
                         {data && data.contentfulTags.blog_post.map((value, index) => {
                             return (
-                                <Link to={`/blogs/${value.slug}`} style={{ textDecoration: "none" }} key={index}>
-                                    <BlogCards title={value.title} categories={value.tags} image={value.coverImage.gatsbyImageData} time={value.createdAt} readingTime = {value.fields.timeToRead} description={value.shortDescription} index={index} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} />
+                                <Link to={`/${value.slug}`} style={{ textDecoration: "none" }} key={index}>
+                                    <BlogCards title={value.title} categories={value.tags} image={value.coverImage.gatsbyImageData} time={value.createdAt} readingTime={value.fields.timeToRead} description={value.shortDescription} index={index} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} />
                                 </Link>
                             )
                         })}

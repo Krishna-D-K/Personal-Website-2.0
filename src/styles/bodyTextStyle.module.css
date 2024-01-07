@@ -1,14 +1,11 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap'); */
-/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
 
 .paragraph, ul, ol{
-    font-size: 1rem;
+    font-size: 1.25rem;
     color: #8892b0;
-    letter-spacing: 0.5px;
     margin: 0 0 1rem 0;
     font-weight: lighter !important;
-    font-family:'Open Sans', sans-serif;
+    font-family: 'Crimson Text', serif;
 }
 ul li, ol li{
     margin: 0.5rem 0;
@@ -19,7 +16,8 @@ ul li, ol li{
 }
 
 .blockQuote {
-    font-size: 1.2rem !important;
+    font-size: 1.4rem !important;
+    font-family: 'Crimson Text', serif;
     border-left: 5px solid #64ffda;
     color: #ccd6f6;
     padding: 0.8rem 1rem;
@@ -32,9 +30,10 @@ ul li, ol li{
     margin: 1rem 0;
     text-align: center;
     font-weight: lighter !important;
-    font-family: 'Calibre','Inter','San Francisco','SF Pro Text',-apple-system,system-ui,sans-serif;
+    /* font-family: 'Calibre','Inter','San Francisco','SF Pro Text',-apple-system,system-ui,sans-serif; */
+    font-family: 'Crimson Text', serif;
     color: #8892b0;
-    font-style: italic;
+    /* font-style: italic; */
 }
 
 .bodyImage {
@@ -48,11 +47,11 @@ ul li, ol li{
 
 @media (max-width: 760px) {
     .paragraph, ul {
-        font-size: 0.9rem;
+        font-size: 1.1rem;
     }
 
     .blockQuote {
-        font-size: 1rem !important;
+        font-size: 1.2rem !important;
     }
 
     .bodyImage {

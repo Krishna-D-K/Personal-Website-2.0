@@ -12,7 +12,7 @@ function CategoryBlogs({ blogs, category }) {
                 const data = item.tags.find(value => value.tags === category)
                 if (data) {
                     return (
-                        <Link to={`/blogs/${item.slug}`} style={{ textDecoration: "none" }} key={index}>
+                        <Link to={`/${item.slug}`} style={{ textDecoration: "none" }} key={index}>
                             <BlogCards title={item.title} categories={item.tags} image={item.coverImage.gatsbyImageData} readingTime = {item.fields.timeToRead} time={item.createdAt} description={item.shortDescription} index={index} />
                         </Link>
                     )

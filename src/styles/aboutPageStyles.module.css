@@ -2,7 +2,7 @@
 /* @import url('https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css'); */
 
 .container{
-    margin: 5rem auto 0 auto;
+    margin: 1rem auto 0 auto;
     padding: 0;
     width: 90%;
     display: flex;
@@ -11,9 +11,12 @@
     height: 90vh;
 }
 
+.breadcrumb {
+  margin: 1rem auto 2rem auto;
+}
 .leftHalf{
   width: 40vw;
-  padding: 4rem 1rem 4rem 4rem;
+  padding: 2rem 1rem 4rem 4rem;
 }
 .rightHalf{
   width: 60vw;
@@ -83,7 +86,7 @@
   .container{
     height: auto;
     flex-direction: column;
-    margin: 6rem auto;
+    margin: 1rem auto;
     overflow-y: visible;
   }
   .leftHalf, .rightHalf{

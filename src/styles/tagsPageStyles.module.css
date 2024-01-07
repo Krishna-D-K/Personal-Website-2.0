@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+
+.container {
+    width: 90%;
+    padding: 2rem 0;
+    margin: 0 auto;
+}
+
+.subHeading {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.subHeading span {
+    color: #ccd6f6;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    margin: 0 0.5rem 0 0;
+    font-family: 'Crimson Text', serif;
+}
+
+.subHeading section {
+    width: 100%;
+    margin: auto;
+}
+
+.breadcrumb {
+    width: 80%;
+    margin: 1rem auto;
+}
+
+.categoryList {
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto;
+}
+
+.categoryList a {
+    color: #64ffda;
+    padding: 0.8rem;
+    font-family: 'Crimson Text', serif;
+    font-size: 1.3rem;
+}
+
+@media (min-width: 30em) {
+}
+
+@media (min-width: 60em) {
+}
+
+@media (max-width: 760px) {
+    .container {
+        margin: 0 auto;
+        width: 100%;
+        padding: 0;
+    }
+
+    .subHeading {
+        margin: 0 0 2rem 0;
+    }
+
+    .subHeading span {
+        font-size: 1.6rem;
+        margin: 0 0.5rem 0 1rem;
+    }
+
+    .categoryList a{
+        padding: 0.5rem;
+    }
+}
