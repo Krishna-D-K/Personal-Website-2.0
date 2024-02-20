@@ -13,7 +13,7 @@
 > ## Description
 <br />
 
-Personal portfolio-cum-blogging website made using GatsbyJS for static page generator, Graphql, Sanity.io for headless CMS, animations library AOS, and MaterialUI library. Static single-page application hosted on [vercel](https://krishna-d-k.vercel.app), and licensed under [MIT](https://en.wikipedia.org/wiki/MIT_License).
+Personal portfolio-cum-blogging website made using GatsbyJS for static page generator, Graphql, contentful for headless CMS, animations library AOS, and MaterialUI library. Static single-page application hosted on [vercel](https://krishna-d-k.vercel.app), and licensed under [MIT](https://en.wikipedia.org/wiki/MIT_License).
 
 <br />
 
