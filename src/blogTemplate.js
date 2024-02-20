@@ -26,6 +26,7 @@ query singleBlogQuery($id: String!){
       author
       coverImage {
         gatsbyImageData(layout: CONSTRAINED)
+        url
       }
       createdAt
       blogContent {
@@ -136,5 +137,5 @@ function blogTemplate({ data }) {
 export default blogTemplate
 
 export const Head = ({data}) => (
-  <SEO title = {data.blog.title} description={data.blog.shortDescription} pathname = {data.blog.slug}/>
+  <SEO title = {data.blog.title} description={data.blog.shortDescription} pathname = {data.blog.slug} image={data.blog.coverImage.url}/>
 )
