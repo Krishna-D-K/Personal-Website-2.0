@@ -6,6 +6,7 @@ import BodyText from './Components/BodyText';
 import BlogCards from './Components/BlogCards';
 import { Helmet } from 'react-helmet';
 import Breadcrumb from './Components/Breadcrumb';
+import { SEO } from './Components/Seo';
 
 export const data = graphql`
 query singleBlogQuery($tag: String!){
@@ -39,7 +40,6 @@ const tagsTemplate = ({ pageContext, data }) => {
             <Layout>
                 <Helmet>
                     <title>{pageContext.tag.substring(1)} | Recuerdos</title>
-                    <meta name="description" content="Logging my thoughts into my blogs..."></meta>
                 </Helmet>
                 <div className={Styles.container}>
                     <div className={Styles.breadcrumb}>{typeof window!=="undefined" && <Breadcrumb path={window.location.pathname}/>}</div>
@@ -65,3 +65,7 @@ const tagsTemplate = ({ pageContext, data }) => {
 }
 
 export default tagsTemplate
+
+export const Head = ({data, pageContext}) => (
+    <SEO title={pageContext.tag.substring(1)} pathname={`tags/${pageContext.tag.substring(1)}`} />
+  )

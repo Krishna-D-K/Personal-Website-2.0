@@ -5,6 +5,7 @@ import BlogCards from "../Components/BlogCards";
 import "../styles/index.css";
 import * as Styles from "../styles/blogPageStyle.module.css";
 import CategoryBlogs from '../Components/CategoryBlogs';
+import { SEO } from '../Components/Seo';
 import { Helmet } from 'react-helmet';
 
 // Check if window is defined (so if in the browser or in node.js).
@@ -23,13 +24,12 @@ function Blogs({ data }) {
     <Layout>
       <Helmet>
         <title>Home | Recuerdos</title>
-        <meta name="description" content="Logging my thoughts into my blogs..."></meta>
       </Helmet>
       <div className={Styles.container}>
         <div className={Styles.quote}>
           <span className={Styles.heading}>"
             I wish there was a way to know you're in the good old days, before you've actually left them.
-          "</span>
+            "</span>
           ~ Andy Bernard, The Office
         </div>
         <div>
@@ -41,7 +41,7 @@ function Blogs({ data }) {
           {featured && featured.nodes[0].blogs.map((value, index) => {
             return (
               <Link to={`/${value.slug}`} style={{ textDecoration: "none" }} key={index}>
-                <BlogCards title={value.title} categories={value.tags} image={value.coverImage.gatsbyImageData} time={value.createdAt} readingTime = {value.fields.timeToRead} description={value.shortDescription} index={index} />
+                <BlogCards title={value.title} categories={value.tags} image={value.coverImage.gatsbyImageData} time={value.createdAt} readingTime={value.fields.timeToRead} description={value.shortDescription} index={index} />
               </Link>
             )
           })}
@@ -64,6 +64,10 @@ function Blogs({ data }) {
     </Layout>
   )
 }
+
+export const Head = () => (
+  <SEO />
+)
 
 export const data = graphql`
 {

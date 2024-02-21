@@ -4,6 +4,7 @@ import Layout from '../Components/Layout';
 import * as Styles from "../styles/tagsPageStyles.module.css";
 import { Helmet } from 'react-helmet';
 import Breadcrumb from '../Components/Breadcrumb';
+import { SEO } from '../Components/Seo';
 
 // Check if window is defined (so if in the browser or in node.js).
 const isBrowser = typeof window !== "undefined"
@@ -19,10 +20,9 @@ function Blogs({ data }) {
         <Layout>
             <Helmet>
                 <title>Tags | Recuerdos</title>
-                <meta name="description" content="Logging my thoughts into my blogs..."></meta>
             </Helmet>
             <div className={Styles.container}>
-                <div className={Styles.breadcrumb}>{typeof window!=="undefined" && <Breadcrumb path={window.location.pathname}/>}</div> 
+                <div className={Styles.breadcrumb}>{typeof window !== "undefined" && <Breadcrumb path={window.location.pathname} />}</div>
                 <div>
                     <div className={Styles.subHeading}>
                         <span>TAGS </span>
@@ -37,6 +37,10 @@ function Blogs({ data }) {
         </Layout>
     )
 }
+
+export const Head = () => (
+    <SEO title="Tags" />
+)
 
 export const data = graphql`
 {

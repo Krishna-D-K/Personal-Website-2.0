@@ -2,6 +2,7 @@ import React from 'react'
 import Footer from '../Components/Footer';
 import Navbar from '../Components/Navbar';
 import { Helmet } from 'react-helmet';
+import { SEO } from '../Components/Seo';
 
 // Check if window is defined (so if in the browser or in node.js).
 const isBrowser = typeof window !== "undefined"
@@ -16,7 +17,6 @@ function notFound() {
         <>
             <Helmet>
                 <title>404 | Recuerdos</title>
-                <meta name="description" content="Logging my thoughts into my blogs..."></meta>
             </Helmet>
             <Navbar darkTheme={true} />
             <div style={{ height: "75vh", color: "#f5f5f5b5", display: "flex", "alignItems": "center", justifyContent: "center" }}>
@@ -27,4 +27,8 @@ function notFound() {
     )
 }
 
-export default notFound
+export default notFound;
+
+export const Head = () => (
+    <SEO title="404" pathname={"404"} />
+)

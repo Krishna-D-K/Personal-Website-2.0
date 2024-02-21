@@ -8,9 +8,10 @@ import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import BodyText from './Components/BodyText';
 import BlogCards from './Components/BlogCards';
-import { Helmet } from 'react-helmet';
 import Comments from './Components/Comments';
 import Breadcrumb from './Components/Breadcrumb';
+import { SEO } from './Components/Seo';
+import { Helmet } from 'react-helmet';
 
 export const data = graphql`
 query singleBlogQuery($id: String!){
@@ -18,6 +19,7 @@ query singleBlogQuery($id: String!){
       id
       slug
       title
+      shortDescription
       fields {
         timeToRead
       }
@@ -69,7 +71,7 @@ const isBrowser = typeof window !== "undefined"
 
 function blogTemplate({ data }) {
   const { blog, featured } = data;
-  // console.log(featured);
+  console.log(data);
   let count = 0;
   const _time = new Date(blog.createdAt);
   const day = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
@@ -79,10 +81,9 @@ function blogTemplate({ data }) {
   return (
     <Layout>
       <Helmet>
-        <title>Blogs | Recuerdos</title>
-        <meta name="description" content="Logging my thoughts into my blogs..."></meta>
+          <title>{blog.title} | Recuerdos</title>
       </Helmet>
-      <div className={Styles.breadcrumb}>{typeof window!=="undefined" && <Breadcrumb path={window.location.pathname}/>}</div> 
+      <div className={Styles.breadcrumb}>{typeof window !== "undefined" && <Breadcrumb path={window.location.pathname} />}</div>
       <div className={Styles.container}>
         <GatsbyImage image={blog.coverImage.gatsbyImageData} className={Styles.coverImage} alt="error" />
         <div className={Styles.title}>{blog.title}</div>
@@ -95,7 +96,7 @@ function blogTemplate({ data }) {
               <CalendarMonthOutlinedIcon />&nbsp;{date}&emsp;
             </div>
             <div className={Styles.date}>
-              <FiberManualRecordIcon style={{fontSize: "15px"}}/> &nbsp;{blog.fields.timeToRead} min read
+              <FiberManualRecordIcon style={{ fontSize: "15px" }} /> &nbsp;{blog.fields.timeToRead} min read
             </div>
           </div>
           <div className={Styles.categories}>
@@ -108,7 +109,7 @@ function blogTemplate({ data }) {
         <div className={Styles.blogContent}>
           <BodyText raw={blog.blogContent} />
         </div>
-      <Comments />
+        <Comments />
       </div>
       <div className={Styles.otherBlogs}>
         <span className={Styles.heading1}><span>Other Blogs</span><hr /></span>
@@ -119,7 +120,7 @@ function blogTemplate({ data }) {
             count++;
             return (
               <Link to={`/${value.slug}`} style={{ textDecoration: "none" }} key={index}>
-                <BlogCards title={value.title} categories={value.tags} image={value.coverImage.gatsbyImageData} time={value.createdAt} readingTime = {value.fields.timeToRead} description={value.shortDescription} index={index} />
+                <BlogCards title={value.title} categories={value.tags} image={value.coverImage.gatsbyImageData} time={value.createdAt} readingTime={value.fields.timeToRead} description={value.shortDescription} index={index} />
               </Link>
             )
           }
@@ -133,3 +134,7 @@ function blogTemplate({ data }) {
 }
 
 export default blogTemplate
+
+export const Head = ({data}) => (
+  <SEO title = {data.blog.title} description={data.blog.shortDescription} pathname = {data.blog.slug}/>
+)

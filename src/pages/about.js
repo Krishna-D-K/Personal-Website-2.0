@@ -6,6 +6,7 @@ import Projects from '../Components/Projects';
 import TechStack from '../Components/TechStack';
 import ImageCarousel from '../Components/ImageCarousel';
 import Breadcrumb from '../Components/Breadcrumb';
+import { SEO } from '../Components/Seo';
 
 function AboutMe() {
   // document.body.style.backgroundColor = "#000000";
@@ -20,11 +21,10 @@ function AboutMe() {
     <Layout>
       <Helmet>
         <title>About | Recuerdos</title>
-        <meta name="description" content="Logging my thoughts into my blogs..."></meta>
       </Helmet>
       <div className={Styles.container} id="about-container">
         <div className={Styles.leftHalf}>
-          <div className={Styles.breadcrumb}>{typeof window!=="undefined" && <Breadcrumb path={window.location.pathname}/>}</div>
+          <div className={Styles.breadcrumb}>{typeof window !== "undefined" && <Breadcrumb path={window.location.pathname} />}</div>
           <div className={Styles.name}>
             Krishna Kolte
           </div>
@@ -56,3 +56,7 @@ function AboutMe() {
 }
 
 export default AboutMe;
+
+export const Head = () => (
+  <SEO title="About" pathname={"about"} />
+)
