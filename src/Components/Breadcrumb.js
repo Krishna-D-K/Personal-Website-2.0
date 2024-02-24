@@ -4,26 +4,26 @@ import { Link } from 'gatsby';
 
 function Breadcrumb({ path }) {
   const links = path.split("/");
-  var path = "/"
+  var pathname = "/"
   // console.log(links)
   return (
     <>
       <div className={Styles.container}>
         <span className={Styles.link}>
-          <Link to={path}>Home</Link> /&nbsp;
+          <Link to={pathname}>Home</Link> /&nbsp;
         </span>
         {links.map((address, index) => {
           if (address !== '' && index !== links.length - 2) {
-            path += `${address}/`;
+            pathname += `${address}/`;
             return (
-              <span className={Styles.link}>
-                &nbsp;<Link to={path}>{address}</Link> /&nbsp;
+              <span className={Styles.link} key={index}>
+                &nbsp;<Link to={pathname}>{address}</Link> /&nbsp;
               </span>
             )
           }
           else if (address !== '' && index === links.length - 2) {
             return (
-              <span className={Styles.link}>
+              <span className={Styles.link} key={index}> 
                 {address}
               </span>
 

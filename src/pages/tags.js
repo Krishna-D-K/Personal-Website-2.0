@@ -29,7 +29,7 @@ function Blogs({ data }) {
                     </div>
                     <div className={Styles.categoryList}>
                         {categories && categories.nodes.map((value, index) => {
-                            return <Link to={`/tags/${value.tags.substring(1)}`}>{value.tags}</Link>
+                            return <Link to={`/tags/${value.tags.substring(1)}`} key={index}>{value.tags}</Link>
                         })}
                     </div>
                 </div>

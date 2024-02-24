@@ -72,7 +72,7 @@ const isBrowser = typeof window !== "undefined"
 
 function blogTemplate({ data }) {
   const { blog, featured } = data;
-  console.log(data);
+  // console.log(data);
   let count = 0;
   const _time = new Date(blog.createdAt);
   const day = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
