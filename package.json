@@ -5,8 +5,8 @@
   "version": "0.1.0",
   "license": "0BSD",
   "scripts": {
-    "build": "gatsby clean & gatsby build",
-    "develop": "gatsby clean & gatsby develop",
+    "build": "gatsby build",
+    "develop": "gatsby develop",
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
