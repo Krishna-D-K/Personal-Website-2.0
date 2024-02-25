@@ -1,14 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 .container {
     margin: 0;
 }
 .link {
-    font-family: 'Crimson Text', serif;
+    font-family: "Ubuntu", sans-serif;
     color: aliceblue;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 .link a {
-    font-family: 'Crimson Text', serif;
+    font-family: "Ubuntu", sans-serif;
     color: aquamarine;
+    text-decoration: underline 1px dashed;
 }

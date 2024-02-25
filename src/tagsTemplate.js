@@ -44,7 +44,7 @@ const tagsTemplate = ({ pageContext, data }) => {
                 <div className={Styles.container}>
                     <div className={Styles.breadcrumb}>{typeof window!=="undefined" && <Breadcrumb path={window.location.pathname}/>}</div>
                     <div className={Styles.heading}>
-                        {pageContext.tag}
+                        # {pageContext.tag.substring(1)}
                     </div>
                     <div className={Styles.subHeading}>
                         {data.contentfulTags.shortContent && <BodyText raw={data.contentfulTags.shortContent} />}

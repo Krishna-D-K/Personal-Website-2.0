@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 .container {
     width: 90%;
@@ -15,12 +15,12 @@
 }
 
 .subHeading span {
+    font-family: 'Ubuntu', sans-serif;
     color: #ccd6f6;
     font-size: 2rem;
     display: flex;
     align-items: center;
     margin: 0 0.5rem 0 0;
-    font-family: 'Crimson Text', serif;
 }
 
 .subHeading section {
@@ -43,10 +43,11 @@
 }
 
 .categoryList a {
+    font-family: 'Ubuntu', sans-serif;
     color: #64ffda;
+    text-decoration: underline dotted;
     padding: 0.8rem;
-    font-family: 'Crimson Text', serif;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 @media (min-width: 30em) {

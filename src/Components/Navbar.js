@@ -1,8 +1,7 @@
-import { Avatar, Tooltip } from '@mui/material';
+import { Tooltip } from '@mui/material';
 import React, { useState } from 'react'
 import * as Styles from "../styles/navbarStyle.module.css";
 import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
-import avatar from "../Images/avatar.png";
 import { Link } from 'gatsby';
 
 // Check if window is defined (so if in the browser or in node.js).

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 .container {
     width: 90%;
@@ -7,8 +7,8 @@
 
 .quote {
     color: #64ffda;
-    font-family: 'Crimson Text', serif;
-    font-size: 1.6rem;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1.2rem;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -16,8 +16,8 @@
 }
 .heading {
     color: azure;
-    font-family: 'Crimson Text', serif;
-    font-size: 1.6rem;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1.4rem;
     text-align: center;
     margin: 3rem 0;
 }
@@ -29,11 +29,13 @@
 }
 
 .subHeading span {
+    font-family: "Ubuntu", sans-serif;
     color: #64ffda;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     display: flex;
     align-items: center;
     margin: 0 0.5rem 0 0;
+    text-transform: uppercase;
 }
 
 .subHeading section {
@@ -58,12 +60,6 @@
     grid-gap: 20px;
 }
 
-.band a:first-child {
-    @media (min-width: 60em) {
-        grid-column: 1 / span 2;
-    }
-}
-
 .linkTag {
     text-decoration: none;
     font-size: 1.2rem;
@@ -78,7 +74,6 @@
 
 .linkTag:hover {
     border-bottom: 1px solid #64ffda;
-
 }
 
 .categoryList {
@@ -90,6 +85,7 @@
 }
 
 .categoryListItem {
+    font-family: "Ubuntu", sans-serif;
     color: #64ffda;
     margin: 0 0.5rem;
 }
@@ -127,7 +123,7 @@
     }
 
     .quote {
-        font-size: 1.2rem;
+        font-size: 1rem;
         width: 100%;
     }
     .band {
@@ -137,7 +133,7 @@
 
     .heading {
         margin: 2rem 0;
-        font-size: 1.2rem
+        font-size: 1rem
     }
 
     .subHeading {

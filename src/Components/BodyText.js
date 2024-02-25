@@ -90,6 +90,7 @@ const options = {
                 <GatsbyImage
                   image={getImage(gatsbyImageData)}
                   alt={title}
+                  className={Styles.actualImage}
                 />
                 <div className={Styles.imageCaption}>{description}</div>
             </div>

@@ -1,85 +1,106 @@
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
-body{
+body {
     background: #0a192f;
 }
+
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 65%;
+    width: 72%;
     margin: 1rem auto;
-    background-color: #ffffff08;
-    padding: 1rem;
-    box-shadow: 11px -4px 20px 4px #ffc0cb05;
 }
 
 .breadcrumb {
-    width: 65%;
+    width: 72%;
     margin: 2rem auto 0.5rem auto;
 }
 
 .title {
+    font-family: "Ubuntu", sans-serif;
     width: 100%;
     font-size: 1.7rem;
-    /* font-weight: 200; */
     color: #ccd6f6;
     margin: 1rem auto;
-    font-family: 'Crimson Text', serif;
 }
-.subtitle{
+
+.subtitle {
     display: flex;
     flex-direction: column;
     width: 100%;
     margin: 0;
 }
-.subtitle div{
+
+.subtitle div {
     display: flex;
     margin-bottom: 0.5rem;
 }
-.author a, .date{
+
+.author a,
+.date {
+    font-family: "Ubuntu", sans-serif;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #8892b0;
     display: flex;
     align-items: center;
-    font-family: 'Crimson Text', serif;
 }
-.hr{
+
+.hr {
     color: #64ffdb33;
     width: 100%;
     border-radius: 0.5rem;
     margin: 1rem 0;
 }
-.blogContent div, .blogContent ul li{
+
+.blogContent div,
+.blogContent ul li {
     width: 100%;
     margin: 1rem auto;
-    font-size: 1.05rem;
+    font-size: 1rem;
     word-spacing: 2px;
     font-weight: bold;
     color: #f0ffffe5;
 }
-.coverImage{
+
+.coverImage {
     max-height: 60vh;
+    border: 1px solid #64ffdb33;
 }
+
 .categories a {
     text-decoration: none;
 }
-.categories span{
+
+.categories span {
+    font-family: "Ubuntu", sans-serif;
     color: #64ffda;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    margin: 0 0.5rem 0 0;
 }
-.otherBlogs{
+
+.categories a span {
+    text-decoration: underline 1px #64ffda dashed;
+}
+
+.otherBlogs {
     width: 80%;
     margin: 1rem auto;
 }
-.heading, .heading1{
+
+.heading,
+.heading1 {
     display: flex;
     align-items: center;
     margin: 0 0 1rem 0;
     width: 100%;
 }
-.heading span, .heading1 span{
+
+.heading span,
+.heading1 span {
+    font-family: "Ubuntu", sans-serif;
+    text-transform: uppercase;
     color: #64ffda;
     font-size: 1.2rem;
     margin-top: 0;
@@ -87,7 +108,8 @@ body{
     margin: 0 0.5rem 0 0;
     display: flex;
 }
-.heading hr{
+
+.heading hr {
     height: 2px;
     border: none;
     border-radius: 1rem;
@@ -95,13 +117,15 @@ body{
     width: 100%;
     margin-top: 2rem;
 }
-.heading1 hr{
+
+.heading1 hr {
     height: 2px;
     border: none;
     border-radius: 1rem;
     background-color: #64ffdb33;
     width: 85%;
 }
+
 .band {
     width: 72%;
     max-width: 1240px;
@@ -123,43 +147,56 @@ body{
         grid-template-columns: repeat(3, 1fr);
     }
 }
-@media (max-width: 760px){
-    .band{
+
+@media (max-width: 760px) {
+    .band {
         grid-template-columns: 1fr;
         width: 85%;
     }
-    .container{
+
+    .container {
         width: 90%;
         margin: 1rem auto 2rem auto;
     }
-    .breadcrumb{
+
+    .breadcrumb {
         width: 90%;
         margin: 2rem auto 1rem auto;
     }
-    .title{
+
+    .title {
         font-size: 1.4rem;
     }
-    .author a, .date{
+
+    .author a,
+    .date {
         font-size: 0.9rem;
         color: slategrey;
     }
-    .heading hr{
+
+    .heading hr {
         margin-top: 1rem;
         margin-bottom: 0;
     }
-    .otherBlogs{
+
+    .otherBlogs {
         width: 90%;
     }
-    .heading1 span{
-        font-size: 1.2rem;
+
+    .heading1 span {
+        font-size: 1rem;
     }
-    .heading1 hr{
+
+    .heading1 hr {
         width: 65%;
     }
-    .blogContent{
+
+    .blogContent {
         width: 100%;
     }
-    .blogContent div, .blogContent ul li{
+
+    .blogContent div,
+    .blogContent ul li {
         width: 100%;
         margin: 0.5rem auto;
         font-size: 0.9rem;
@@ -167,6 +204,7 @@ body{
         font-weight: bold;
         color: #f0ffffe5;
     }
+
     .title {
         width: 100%;
         font-size: 1.4rem;
@@ -174,24 +212,30 @@ body{
         color: azure;
         margin: 1rem auto 0.5rem auto;
     }
-    .subtitle{
+
+    .subtitle {
         display: flex;
         flex-direction: column;
         width: 100%;
         margin: 0;
     }
-    .subtitle div{
+
+    .subtitle div {
         display: flex;
     }
-    .author a, .date{
+
+    .author a,
+    .date {
         /* font-size: 1rem; */
         color: slategrey;
         margin: 0;
         display: flex;
         align-items: center;
     }
-    .categories span{
+
+    .categories span {
         color: #64ffda;
         font-size: 0.9rem;
+        /* margin: 0 0.1rem 0 0; */
     }
 }

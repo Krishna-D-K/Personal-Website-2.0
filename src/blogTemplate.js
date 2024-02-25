@@ -102,7 +102,7 @@ function blogTemplate({ data }) {
           </div>
           <div className={Styles.categories}>
             {blog.tags.map((value, index) => {
-              return <Link to={`/tags/${value.tags.substring(1)}`} key={index}><span> {value.tags} &nbsp;</span></Link>
+              return <Link to={`/tags/${value.tags.substring(1)}`} key={index}><span> {value.tags} </span></Link>
             })}
           </div>
         </div>
