@@ -19,12 +19,6 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-disqus`,
-      options: {
-        shortname: `krishnadk`
-      }
-    },
-    {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,

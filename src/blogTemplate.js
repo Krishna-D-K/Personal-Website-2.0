@@ -12,7 +12,6 @@ import Comments from './Components/Comments';
 import Breadcrumb from './Components/Breadcrumb';
 import { SEO } from './Components/Seo';
 import { Helmet } from 'react-helmet';
-import { Disqus } from 'gatsby-plugin-disqus';
 
 export const data = graphql`
 query singleBlogQuery($id: String!){
@@ -111,8 +110,7 @@ function blogTemplate({ data }) {
         <div className={Styles.blogContent}>
           <BodyText raw={blog.blogContent} />
         </div>
-        {/* <Comments /> */}
-        <Disqus config={{ url: blog.slug, identifier: blog.slug, title: blog.title }}/>
+        <Comments />
       </div>
       <div className={Styles.otherBlogs}>
         <span className={Styles.heading1}><span>Other Blogs</span><hr /></span>
