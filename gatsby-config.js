@@ -8,9 +8,9 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 
-require("dotenv").config({path: "./config.env"});
+require("dotenv").config({ path: "./config.env" });
 module.exports = {
-  siteMetadata:{
+  siteMetadata: {
     title: `Recuerdos`,
     description: `Blogging for the sheer joy of expressing thoughts, connecting with like-minded souls, and maybe spreading a few smiles along the way. It's my digital playground of words!`,
     siteUrl: `https://krishnadk.vercel.app`,
@@ -18,6 +18,12 @@ module.exports = {
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `krishnadk`
+      }
+    },
     {
       resolve: `gatsby-source-contentful`,
       options: {
