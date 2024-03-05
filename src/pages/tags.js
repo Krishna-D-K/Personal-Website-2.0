@@ -20,6 +20,7 @@ function Blogs({ data }) {
         <Layout>
             <Helmet>
                 <title>Tags | Recuerdos</title>
+                <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
             </Helmet>
             <div className={Styles.container}>
                 <div className={Styles.breadcrumb}>{typeof window !== "undefined" && <Breadcrumb path={window.location.pathname} />}</div>

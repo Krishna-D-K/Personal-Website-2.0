@@ -20,6 +20,7 @@ function AboutMe() {
     <Layout>
       <Helmet>
         <title>About | Recuerdos</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
       </Helmet>
       <div className={Styles.container} id="about-container">
         <div className={Styles.leftHalf}>

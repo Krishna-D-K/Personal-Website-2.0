@@ -17,6 +17,7 @@ function notFound() {
         <>
             <Helmet>
                 <title>404 | Recuerdos</title>
+                <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
             </Helmet>
             <Navbar darkTheme={true} />
             <div style={{ height: "75vh", color: "#f5f5f5b5", display: "flex", "alignItems": "center", justifyContent: "center" }}>

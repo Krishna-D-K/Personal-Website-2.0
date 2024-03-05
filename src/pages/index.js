@@ -24,6 +24,7 @@ function Blogs({ data }) {
     <Layout>
       <Helmet>
         <title>Home | Recuerdos</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
       </Helmet>
       <div className={Styles.container}>
         <div className={Styles.quote}>
