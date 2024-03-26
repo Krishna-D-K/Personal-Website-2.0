@@ -12,59 +12,62 @@ import Comments from './Components/Comments';
 import Breadcrumb from './Components/Breadcrumb';
 import { SEO } from './Components/Seo';
 import { Helmet } from 'react-helmet';
+import { DiscussionEmbed, Recommendations } from 'disqus-react';
+import { FacebookRounded, Instagram, LinkedIn, Twitter } from '@mui/icons-material';
+
 
 export const data = graphql`
 query singleBlogQuery($id: String!){
-    blog: contentfulBlogPost(id: {eq: $id}) {
-      id
-      slug
-      title
-      shortDescription
-      fields {
-        timeToRead
-      }
-      author
-      coverImage {
-        gatsbyImageData(layout: CONSTRAINED)
-        url
-      }
-      createdAt
-      blogContent {
-        raw
-        references {
-          ... on ContentfulAsset {
-            contentful_id
-            title
-            description
-            gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
-            __typename
-          }
-        }
-      }
-      tags {
-        tags
-      }
-    },
-    featured: allContentfulFeaturedBlogs(sort: {createdAt: DESC}) {
-      nodes {
-        blogs {
+  blog: contentfulBlogPost(id: {eq: $id}) {
+    id
+    slug
+    title
+    shortDescription
+    fields {
+      timeToRead
+    }
+    author
+    coverImage {
+      gatsbyImageData(layout: CONSTRAINED)
+      url
+    }
+    createdAt
+    blogContent {
+      raw
+      references {
+        ... on ContentfulAsset {
+          contentful_id
           title
-          fields {
-            timeToRead
-          }
-          slug
-          tags {
-            tags
-          }
-          shortDescription
-          coverImage {
-            gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
-          }
-          createdAt
+          description
+          gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+          __typename
         }
       }
     }
+    tags {
+      tags
+    }
+  },
+  featured: allContentfulFeaturedBlogs(sort: {createdAt: DESC}) {
+    nodes {
+      blogs {
+        title
+        fields {
+          timeToRead
+        }
+        slug
+        tags {
+          tags
+        }
+        shortDescription
+        coverImage {
+          gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+        }
+        createdAt
+      }
+    }
   }
+}
 `
 
 // Check if window is defined (so if in the browser or in node.js).
@@ -78,11 +81,19 @@ function blogTemplate({ data }) {
   const day = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
   const dayString = _time.toDateString();
   const date = dayString.substring(4) + ", " + day[_time.getDay()];
+  const baseurl = "https://krishnadk.vercel.app/";
+  const disqusShortName = "krishnadk";
+
+  const disqusConfig = {
+    identifier: blog.id,
+    title: blog.title,
+    url: baseurl + blog.slug
+  }
 
   return (
     <Layout>
       <Helmet>
-          <title>{blog.title} | Recuerdos</title>
+        <title>{blog.title} | Recuerdos</title>
       </Helmet>
       <div className={Styles.breadcrumb}>{typeof window !== "undefined" && <Breadcrumb path={window.location.pathname} />}</div>
       <div className={Styles.container}>
@@ -109,8 +120,21 @@ function blogTemplate({ data }) {
         <span className={Styles.heading}><hr /></span>
         <div className={Styles.blogContent}>
           <BodyText raw={blog.blogContent} />
+          <div className={Styles.social}>
+            {/* <span className={Styles.heading}><hr style={{ backgroundImage: "linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75))" }} /></span> */}
+            <div>Share this post</div>
+            <div style={{ display: "flex", justifyContent: "space-evenly" }}>
+              <a href={`https://www.facebook.com/sharer/sharer.php?u=https://krishnadk.vercel.app/${blog.slug}`} target="_blank" rel="noreferrer" aria-label="Link"><FacebookRounded sx={{ fontSize: 50 }} /></a>
+              <a href={`https://www.instagram.com/?url=https://krishnadk.vercel.app/${blog.slug}`} target="_blank" rel="noreferrer" aria-label="Link"><Instagram sx={{ fontSize: 50 }} /></a>
+              <a href={`https://twitter.com/intent/tweet?text=${blog.title}&url=https://krishnadk.vercel.app/${blog.slug}`} target="_blank" rel="noreferrer" aria-label="Link"><Twitter sx={{ fontSize: 50 }} /></a>
+              <a href={`https://www.linkedin.com/shareArticle?mini=true&url=https://krishnadk.vercel.app/${blog.slug}&title=${blog.title}`} target="_blank" rel="noreferrer" aria-label="Link"><LinkedIn sx={{ fontSize: 50 }} /></a>
+            </div>
+            <span className={Styles.heading}><hr style={{ backgroundImage: "linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75))" }} /></span>
+          </div>
+          <DiscussionEmbed shortname={disqusShortName} config={disqusConfig} />
+          {/* <Recommendations shortname={disqusShortName} config={disqusConfig} /> */}
         </div>
-        <Comments />
+        {/* <Comments /> */}
       </div>
       <div className={Styles.otherBlogs}>
         <span className={Styles.heading1}><span>Other Blogs</span><hr /></span>
@@ -136,6 +160,6 @@ function blogTemplate({ data }) {
 
 export default blogTemplate
 
-export const Head = ({data}) => (
-  <SEO title = {data.blog.title} description={data.blog.shortDescription} pathname = {data.blog.slug} image={data.blog.coverImage.url}/>
+export const Head = ({ data }) => (
+  <SEO title={data.blog.title} description={data.blog.shortDescription} pathname={data.blog.slug} image={data.blog.coverImage.url} />
 )

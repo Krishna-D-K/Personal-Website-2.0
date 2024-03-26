@@ -136,6 +136,36 @@ body {
     grid-gap: 20px;
 }
 
+.social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: aliceblue;
+    margin: 0.5rem 0 0 0;
+}
+
+.social div {
+    font-size: 1.2rem;
+    color: aliceblue;
+    text-align: center;
+    width: 30%;
+}
+
+.social div > :nth-child(1) {
+    color: #1877F2;
+}
+.social div > :nth-child(2) {
+    color: #E1306C;
+}
+.social div> :nth-child(3) {
+    color: 	#1DA1F2;
+}
+.social div> :nth-child(4) {
+    color: 	#0077B5;
+}
+
 @media (min-width: 30em) {
     .band {
         grid-template-columns: 1fr 1fr;
