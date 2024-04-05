@@ -121,38 +121,20 @@ function blogTemplate({ data }) {
         <div className={Styles.blogContent}>
           <BodyText raw={blog.blogContent} />
           <div className={Styles.social}>
-            {/* <span className={Styles.heading}><hr style={{ backgroundImage: "linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75))" }} /></span> */}
-            <div>Share this post</div>
+            <span className={Styles.heading}><hr style={{ backgroundImage: "linear-gradient(to right, rgba(10, 25, 47, 1), rgba(15, 33, 59, 1), rgba(0, 0, 0, 0), rgba(15, 33, 59, 1), rgba(10, 25, 47, 1))" }} /></span>
+            {/* <div>Share this post</div>
             <div style={{ display: "flex", justifyContent: "space-evenly" }}>
               <a href={`https://www.facebook.com/sharer/sharer.php?u=https://krishnadk.vercel.app/${blog.slug}`} target="_blank" rel="noreferrer" aria-label="Link"><FacebookRounded sx={{ fontSize: 50 }} /></a>
               <a href={`https://www.instagram.com/?url=https://krishnadk.vercel.app/${blog.slug}`} target="_blank" rel="noreferrer" aria-label="Link"><Instagram sx={{ fontSize: 50 }} /></a>
               <a href={`https://twitter.com/intent/tweet?text=${blog.title}&url=https://krishnadk.vercel.app/${blog.slug}`} target="_blank" rel="noreferrer" aria-label="Link"><Twitter sx={{ fontSize: 50 }} /></a>
               <a href={`https://www.linkedin.com/shareArticle?mini=true&url=https://krishnadk.vercel.app/${blog.slug}&title=${blog.title}`} target="_blank" rel="noreferrer" aria-label="Link"><LinkedIn sx={{ fontSize: 50 }} /></a>
             </div>
-            <span className={Styles.heading}><hr style={{ backgroundImage: "linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75))" }} /></span>
+            <span className={Styles.heading}><hr style={{ backgroundImage: "linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75))" }} /></span> */}
           </div>
           <DiscussionEmbed shortname={disqusShortName} config={disqusConfig} />
           {/* <Recommendations shortname={disqusShortName} config={disqusConfig} /> */}
         </div>
         {/* <Comments /> */}
-      </div>
-      <div className={Styles.otherBlogs}>
-        <span className={Styles.heading1}><span>Other Blogs</span><hr /></span>
-      </div>
-      <div className={Styles.band}>
-        {featured && featured.nodes[0].blogs.map((value, index) => {
-          if (value.slug !== blog.slug && count < 3) {
-            count++;
-            return (
-              <Link to={`/${value.slug}`} style={{ textDecoration: "none" }} key={index}>
-                <BlogCards title={value.title} categories={value.tags} image={value.coverImage.gatsbyImageData} time={value.createdAt} readingTime={value.fields.timeToRead} description={value.shortDescription} index={index} />
-              </Link>
-            )
-          }
-          else {
-            return null;
-          }
-        })}
       </div>
     </Layout>
   )
